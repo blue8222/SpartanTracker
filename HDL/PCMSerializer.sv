@@ -4,7 +4,7 @@
 
 
 module PCMSerializer (
-    input logic bit_clock_in,          // Input bit clock from CLK wizard
+    input logic bit_clock_in,     
 
     input logic rst_active_high,
     
@@ -14,7 +14,7 @@ module PCMSerializer (
 
     input logic pcm_data_valid,        // PCM data valid check
 
-    output logic serial_data_out,      // Single-bit serial data out
+    output logic serial_data_out,      //serial data out
 
     output logic bit_clock_out         // Output bit clock to drive DAC
 
@@ -37,33 +37,37 @@ module PCMSerializer (
             LR_select <= 1'b0;        // Reset to left channel
             load_data <= 1'b1;        // Load on first cycle after reset
         end else begin
-            if (load_data || (bit_counter == 31)) begin
-                // Load new data at start of frame
-                if (pcm_data_valid) begin
-                    pcm_shift_reg <= {pcm_data_left, pcm_data_right}; // MSB-left first
-                    serial_data_out <= pcm_data_left[15]; // MSB of left channel
-                end else begin
-                    pcm_shift_reg <= 32'b0; // Load silence if data not valid
-                    serial_data_out <= 1'b0;
-                end
-                bit_counter <= 5'b0;
-                LR_select <= 1'b0; // Start with left channel
-                load_data <= 1'b0; // unlatch
+        if (bit_counter == 31) begin
+            
+            if (pcm_data_valid) begin
+
+                pcm_shift_reg <= {pcm_data_left, pcm_data_right};
+
             end else begin
-                // Shift left (MSB out) on each bit clock
-                pcm_shift_reg <= {pcm_shift_reg[30:0], 1'b0}; // Shift left, pad LSB with 0
 
-                serial_data_out <= pcm_shift_reg[30]; // Next bit after shift
-
-                bit_counter <= bit_counter + 1;
-
-                if (bit_counter + 1 < 16) begin
-                    LR_select <= 1'b0;
-                else
-                    LR_select <= 1'b1;
-                end
+                pcm_shift_reg <= 32'b0;
 
             end
+
+            serial_data_out <= pcm_shift_reg[31];
+            pcm_shift_reg <= {pcm_shift_reg[30:0], 1'b0};
+            
+            bit_counter <= 5'b0;
+            LR_select <= 1'b0;  // Will be Left next
+
+            
+
+        end else begin
+
+            bit_counter <= bit_counter + 1;
+            // Shift after output
+            serial_data_out <= pcm_shift_reg[31];
+            pcm_shift_reg <= {pcm_shift_reg[30:0], 1'b0};
+
+            // LR_select changes 1 cycle early
+            if (bit_counter == 5'd14) LR_select <= 1'b1; // Switch to Right early
+            if (bit_counter == 5'd30) LR_select <= 1'b0; // Switch to Left early
         end
     end
+end
 endmodule

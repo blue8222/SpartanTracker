@@ -1,7 +1,7 @@
 // DDS Sine Module
 
 module DDS_Sine #(
-    parameter int PHASE_WIDTH = 10,
+    parameter int PHASE_WIDTH = 32,
     parameter int DATA_WIDTH  = 16
 )(
     input  logic                         clk,
@@ -17,6 +17,7 @@ module DDS_Sine #(
    -
 
     
+
     PhaseAccumulator #(
         .PHASE_WIDTH(PHASE_WIDTH)
     ) phase_acc_i (
