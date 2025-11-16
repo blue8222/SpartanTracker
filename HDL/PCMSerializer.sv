@@ -14,7 +14,7 @@ module PCMSerializer (
 
     input logic pcm_data_valid,        // PCM data valid check
 
-    output logic [31:0] serial_data_out,      //serial data out
+    output logic serial_data_out,      //serial data out (1 bit)
 
     output logic bit_clock_out,         // Output bit clock to drive DAC
 
@@ -27,7 +27,7 @@ module PCMSerializer (
 
     logic [4:0] bit_counter;      // 0-31 for full frame of shift reg (32 bits)
 
-    logic load_data;              // Flag to load new data
+
 
     always_ff @(posedge bit_clock_in or posedge rst_active_high) begin
         if (rst_active_high) begin
@@ -38,22 +38,20 @@ module PCMSerializer (
             load_data <= 1'b1;        // Load on first cycle after reset
         end else begin
         if (bit_counter == 31) begin
-            
             if (pcm_data_valid) begin
-
                 pcm_shift_reg <= {pcm_data_left, pcm_data_right};
-
             end else begin
-
                 pcm_shift_reg <= 32'b0;
-
             end
-
-            serial_data_out <= pcm_shift_reg[31];
-            pcm_shift_reg <= {pcm_shift_reg[30:0], 1'b0};
-            
+            serial_data_out <= pcm_shift_reg[31];  // Output the last bit (LSB of right)
             bit_counter <= 5'b0;
-            LR_select <= 1'b0;  // Will be Left next
+            LR_select <= 1'b0;
+        end else begin
+            serial_data_out <= pcm_shift_reg[31];  // Output current MSB
+            pcm_shift_reg <= {pcm_shift_reg[30:0], 1'b0};  // Shift for next bit
+            bit_counter <= bit_counter + 1;
+    
+        end
 
             
 
@@ -65,8 +63,8 @@ module PCMSerializer (
             pcm_shift_reg <= {pcm_shift_reg[30:0], 1'b0};
 
             // LR_select changes 1 cycle early
-            if (bit_counter == 5'd14) LR_select <= 1'b1; // Switch to Right early
-            if (bit_counter == 5'd30) LR_select <= 1'b0; // Switch to Left early
+            if (bit_counter == 5'd15) LR_select <= 1'b1; // Switch to Right early
+            if (bit_counter == 5'd31) LR_select <= 1'b0; // Switch to Left early
         end
     end
 end
