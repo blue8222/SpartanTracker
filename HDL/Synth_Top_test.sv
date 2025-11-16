@@ -5,10 +5,11 @@ module top (
     
     //inputs
 
+    
     input logic reset_active_high,
     input logic clk,
-    input logic bit_clock_in,
-    input logic freq_word,
+   
+    
     input logic pcm_data_valid,
     
 
@@ -18,17 +19,33 @@ module top (
     output logic output_stream,
     output logic bit_clock_out,
     output logic LR_select,
-    output logic out_clk
+    output logic out_clk,
+    output logic gnd
 
 
 
-)
+);
 
+assign gnd = '0; //gnd pin
 
+logic [31:0] freq_word;
 
-logic sine;
+assign freq_word = 32'd2808; //hardcoded frequency C_2
+logic locked;
+logic bit_clock;
+
+logic [15:0] sine;
 
 assign out_clk = clk; //clk passthrough for DAC
+
+
+
+design_1 design_1_i (
+    .clk_100Mhz(clk),
+    .reset(reset_active_high),
+    .bit_clock(bit_clock),
+    .locked(locked)
+);
 
 DDS_Sine Sine (
     .clk(clk),
@@ -39,7 +56,7 @@ DDS_Sine Sine (
 
 PCMSerializer PCMSerializer (
     
-    .bit_clock_in(bit_clock_in),
+    .bit_clock_in(bit_clock),
 
     .rst_active_high(reset_active_high),
     
@@ -47,7 +64,7 @@ PCMSerializer PCMSerializer (
 
     .pcm_data_right(sine), // 16-bit right channel PCM
 
-    .pcm_data_valid(pcm_data_valid),        // PCM data valid check
+    .pcm_data_valid(locked),        // PCM data valid check
 
     .serial_data_out(output_stream),    //serial data out
 

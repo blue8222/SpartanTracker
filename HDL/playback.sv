@@ -70,20 +70,20 @@ module playback_phrase (
 
     assign tempo_clk = acc[ACC_WIDTH - 1]; //tempo clk is MSB of ACC
 
-    assign note = current_entry[15:10];
+    assign note = current_entry[15:8];
     
-    assign volume = current_entry[9:4];
+    assign volume = current_entry[7:2];
 
-    assign intrument = current_entry[3:2];
+    assign intrument = current_entry[1:0];
     
     assign output_stream = output_channel * volume; // I belive this will infer a multiplier in hardware
     
     // Tempo Clock generation:
 
-    always_ff @(posedge clk or posedge rst_active_high) begin
-        if (rst_active_high or ~play_enable) begin
+    always_ff @(posedge clk or posedge reset_active_high) begin
+        if (reset_active_high || ~play_enable) begin
             acc <= 0;
-            channel_phrase = '0;
+            output_stream = '0;
             line_count <= '0;
         end else begin
             if (tempo == 0) begin
@@ -237,7 +237,7 @@ module playback_phrase (
     DDS_Sine Sine (
         .clk(clk),
         .rst_active_high(reset_active_high),
-        .freq_word(freq_word)        
+        .freq_word(freq_word),        
         .sine_out(sine)
     );
 

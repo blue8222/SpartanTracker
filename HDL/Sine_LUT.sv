@@ -25,8 +25,8 @@ module SineLUT (
         16'h7641, 16'h76D8, 16'h776B, 16'h77FA, 16'h7884, 16'h7909, 16'h7989, 16'h7A05,
         16'h7A7C, 16'h7AEE, 16'h7B5C, 16'h7BC5, 16'h7C29, 16'h7C88, 16'h7CE3, 16'h7D39,
         16'h7D89, 16'h7DD5, 16'h7E1D, 16'h7E5F, 16'h7E9C, 16'h7ED5, 16'h7F09, 16'h7F37,
-        16'h7F61, 16'h7F86, 16'h7FA6, 16'h7FC1, 16'h7FD8, 16'h7FE9, 16'h7FF5, 16'h7FFD,
-        16'h7FFF  
+        16'h7F61, 16'h7F86, 16'h7FA6, 16'h7FC1, 16'h7FD8, 16'h7FE9, 16'h7FF5, 16'h7FFD
+        
     };
 
     logic [6:0] addr_quarter;  // 7-bit quarter address (0-127)

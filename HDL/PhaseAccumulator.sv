@@ -5,7 +5,7 @@
 
 module PhaseAccumulator #(
 
-    parameter PHASE_WIDTH = 32;
+    parameter PHASE_WIDTH = 32
 
 )(
     input logic clk,

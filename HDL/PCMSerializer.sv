@@ -16,7 +16,7 @@ module PCMSerializer (
 
     output logic serial_data_out,      //serial data out
 
-    output logic bit_clock_out         // Output bit clock to drive DAC
+    output logic bit_clock_out,         // Output bit clock to drive DAC
 
     output logic LR_select           // Left/Right channel select (0=Left, 1=Right)
 );
