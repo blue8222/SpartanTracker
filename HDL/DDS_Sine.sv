@@ -7,7 +7,7 @@ module DDS_Sine #(
     input  logic                         clk,
     input  logic                         rst_active_high,
     input  logic [PHASE_WIDTH-1:0]       freq_word,
-    output logic [15:0]                  sine_out
+    output signed [15:0]                  sine_out
 );
 
     // Internal signals
