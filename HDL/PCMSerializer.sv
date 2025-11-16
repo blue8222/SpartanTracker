@@ -14,7 +14,7 @@ module PCMSerializer (
 
     input logic pcm_data_valid,        // PCM data valid check
 
-    output logic serial_data_out,      //serial data out
+    output logic [31:0] serial_data_out,      //serial data out
 
     output logic bit_clock_out,         // Output bit clock to drive DAC
 
