@@ -5,11 +5,11 @@
 module SineLUT (
     input logic clk,
     input logic [8:0] addr_full,  // 9-bit full address (0-511)
-    output logic signed [15:0] data_out  // Signed 16-bit sine value
+    output logic [15:0] data_out  // Signed 16-bit sine value
 );
 
     // Store only first quarter (0 to pi/2, 128 entries) //may need to convert to BRAM storage depending on LUT usage
-    logic signed [15:0] sin_lut_quarter [0:127] = '{
+    logic [15:0] sin_lut_quarter [0:127] = '{
         16'h0000, 16'h0192, 16'h0324, 16'h04B6, 16'h0648, 16'h07D9, 16'h096A, 16'h0AFB, 
         16'h0C8C, 16'h0E1C, 16'h0FAB, 16'h113A, 16'h12C8, 16'h1455, 16'h15E2, 16'h176E,
         16'h18F9, 16'h1A82, 16'h1C0B, 16'h1D93, 16'h1F1A, 16'h209F, 16'h2223, 16'h23A6,
@@ -31,7 +31,7 @@ module SineLUT (
 
     logic [6:0] addr_quarter;  // 7-bit quarter address (0-127)
     logic [1:0] quadrant;            // 0-3 based on MSB bits
-    logic signed [15:0] lut_val;
+    logic [15:0] lut_val;
     logic sign_flip;
 
     always_comb begin

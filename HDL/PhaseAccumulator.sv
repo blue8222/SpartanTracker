@@ -16,7 +16,7 @@ module PhaseAccumulator #(
 
     logic [PHASE_WIDTH - 1:0] phase_accumulator_reg;
 
-    always_ff @(posedge clk or posedge rst_active_high) begin
+    always_ff @(posedge clk) begin
         if (rst_active_high) begin
             phase_accumulator_reg <= 0;
         end else begin

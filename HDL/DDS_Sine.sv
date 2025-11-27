@@ -7,13 +7,13 @@ module DDS_Sine #(
     input  logic                         clk,
     input  logic                         rst_active_high,
     input  logic [PHASE_WIDTH-1:0]       freq_word,
-    output signed [15:0]                  sine_out
+    output logic [15:0]                  sine_out
 );
 
     // Internal signals
     logic [PHASE_WIDTH-1:0]         phase_acc_out;
     logic [8:0]                     lut_addr;
-    logic signed [15:0]             lut_data;        // output of SineLUT (signed 16-bit)
+    logic [15:0]             lut_data;        // output of SineLUT (signed 16-bit)
    
 
     
@@ -42,11 +42,11 @@ module DDS_Sine #(
    
     // Register output on clock edge with synchronous active-high reset
 
-    always_ff @(posedge clk or posedge rst_active_high) begin
+    always_ff @(posedge clk) begin
         if (rst_active_high) begin
             sine_out <= '0;
         end else begin
-            sine_out <= lut_data;
+            sine_out <= ((16'h8000 + lut_data) >>> 1); //shifting for volume control
         end
     end
 
