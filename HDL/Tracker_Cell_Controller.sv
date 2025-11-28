@@ -1,4 +1,4 @@
-//Module to control tracker playback
+//Module to control cell updates
 
 
 
@@ -7,8 +7,9 @@ module TrackerCellController (
 
     //inputs
 
-    input logic 
+    input logic drawX, drawY
 
+    input logic 
 
 
     //outputs

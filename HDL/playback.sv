@@ -14,13 +14,14 @@ module playback_phrase (
 
     input logic [8:0] tempo, //supports (0 - 511) bpm
 
-    input logic loop_enable,
+    input logic loop_enable, //loop enabled = 1
 
     input logic play_enable, //if play is low we can assume a paused state
 
-    input logic reset_active_high,
+    input logic reset_active_high, 
 
     input logic [15:0] current_entry, //current phrase entry containing: {note [15:8], volume [7:2], instument [1:0]}
+    
 
 
         
@@ -28,7 +29,7 @@ module playback_phrase (
 
     //outputs 
 
-    output logic output_stream
+    output logic [15:0] output_stream
 
      
 
@@ -80,7 +81,7 @@ module playback_phrase (
     
     // Tempo Clock generation:
 
-    always_ff @(posedge clk or posedge reset_active_high) begin
+    always_ff @(posedge clk) begin
         if (reset_active_high || ~play_enable) begin
             acc <= 0;
             output_stream = '0;
