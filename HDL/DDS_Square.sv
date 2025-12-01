@@ -6,6 +6,7 @@ module DDS_Square #(
     input  logic                         clk,
     input  logic                         rst_active_high,
     input  logic [PHASE_WIDTH-1:0]       freq_word,
+    input  logic [5:0]                   vol,
     output signed [15:0]                  square_out
 );
 
@@ -46,7 +47,7 @@ module DDS_Square #(
         if (rst_active_high) begin
             square_out <= '0;
         end else begin
-            square_out <= ((16'h8000 + lut_data) >>> 1); //shifting for volume control
+            square_out <= (( $signed(lut_data) * vol ) >>> 6) + 16'h8000; //idk if the $signed is necessary
         end
     end
 

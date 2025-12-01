@@ -6,6 +6,7 @@ module DDS_Triangle #(
     input  logic                         clk,
     input  logic                         rst_active_high,
     input  logic [PHASE_WIDTH-1:0]       freq_word,
+    input  logic [5:0]                   vol,
     output signed [15:0]                  triangle_out
 );
 
@@ -46,7 +47,7 @@ module DDS_Triangle #(
         if (rst_active_high) begin
             triangle_out <= '0;
         end else begin
-            triangle_out <= ((16'h8000 + lut_data) >>> 1); //shifting for volume control;
+            triangle_out <= (( $signed(lut_data) * vol ) >>> 6) + 16'h8000; //idk if the $signed is necessary
         end
     end
 

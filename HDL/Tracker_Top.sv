@@ -7,8 +7,10 @@ module tracker_top (
     
     //inputs
     input logic reset_active_high,
-    input logic clk,
+    input logic clk, //100Mhz clock
     input logic [15:0] sw, //unused for now
+
+    input logic play_button, //button to toggle pause/play state
     
    
    
@@ -36,6 +38,9 @@ logic clk_48khz;
 logic clk_1536khz;
 logic clk_12Mhz;
 
+//phrase data signals for playback
+logic [15:0] phraseData_0, phraseData_1, phraseData_2, phraseData_3;
+logic [3:0] line_count;
 
 
 
@@ -59,7 +64,35 @@ design_1 design_1_i (
 );
 
 
+PhraseData PhraseData_i (
+    .clk(clk),
+    .rst_active_high(reset_active_high),
+    .row(line_count), 
+    .channel_0(phraseData_0),
+    .channel_1(phraseData_1),
+    .channel_2(phraseData_2),
+    .channel_3(phraseData_3),
 
+
+    //input for user editing
+    .entry_modifiable(),
+    .row_write(),
+    .channel_write(), 
+    .PhraseDataIn() 
+);
+
+playback_phrase playback_phrase_i (
+    .clk(clk_12Mhz),
+    .rst_active_high(reset_active_high),
+    .line_count(line_count),
+    .PhraseDataIn_0(phraseData_0),
+    .PhraseDataIn_1(phraseData_1),
+    .PhraseDataIn_2(phraseData_2),
+    .PhraseDataIn_3(phraseData_3),
+    .pcm_left(pcm_left),
+    .pcm_right(pcm_right),
+    .clk_48khz(clk_48khz)
+);
 
 
 

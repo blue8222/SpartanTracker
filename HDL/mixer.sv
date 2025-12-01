@@ -3,14 +3,14 @@
 
 
 module mixer (
-    input logic signed [15:0] stream1, stream2, stream3, stream4,
+    input logic signed [15:0] stream0, stream1, stream2, stream3,
     output logic signed [15:0] output_stream
 );
     logic signed [31:0] sum;
 
     always_comb begin
 
-        sum = (stream1 + stream2 + stream3 + stream4) / 4;
+        sum = (stream0 + stream1 + stream2 + stream3) / 4;
         
         
         //clamp output
