@@ -5,7 +5,6 @@
 #include "string.h"
 #include "sleep.h"
 #include "xil_printf.h"
-#include "ScreenArray.c"
  
  
 /************************** Function Definitions ***************************/
@@ -58,10 +57,6 @@ void setColorPalette (uint8_t color, uint8_t red, uint8_t green, uint8_t blue)
 	//fill in this function to set the color palette entry <color> to <red>, <green>, <blue> 12-bit color
 		hdmi_ctrl->COLORS[color/2] &= 0x0000FFFF << ((color+1)%2)*16;
 		hdmi_ctrl->COLORS[color/2] |= (red << 8 | green << 4 | blue) << ((color%2)*16);
- 
- 
- 
- 
 }
  
 void sleepframe(uint32_t frames)
@@ -100,7 +95,7 @@ void textHDMIColorScreenSaver()
 	}
 	while (1)
 	{
-		if (hdmi_ctrl->FRAME_COUNT % 10 == 0) //every 10 frames update forground
+		if (hdmi_ctrl->FRAME_COUNT % 10 == 0) //every 10 frames update foreground
 		{
 			//restore VRAM bytes into background to undo 'DVD' text
 			memcpy(&(hdmi_ctrl->VRAM[(dvd_y*COLUMNS + dvd_x) * 2]), old_string, strlen(dvd_string)*2);
@@ -150,7 +145,7 @@ void hdmiTestWeek2()
 void drawTracker()
 {
 	uint8_t background = 0x12;
-	uint8_t forground = 0x34;
+	uint8_t foreground = 0x34;
  
 	for (int i = 0; i < 16; i++) {
 		textHDMIDrawColorText(ScreenArray[i], 0, i, background, foreground); //write screen VRAM

@@ -1,0 +1,26 @@
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 8 -L xil_defaultlib -L microblaze_v11_0_10 -L lmb_v10_v3_0_12 -L lmb_bram_if_cntlr_v4_0_21 -L blk_mem_gen_v8_4_5 -L generic_baseblocks_v2_1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_27 -L fifo_generator_v13_2_7 -L axi_data_fifo_v2_1_26 -L axi_crossbar_v2_1_28 -L axi_lite_ipif_v3_0_4 -L axi_intc_v4_1_17 -L mdm_v3_2_23 -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L lib_pkg_v1_0_2 -L lib_srl_fifo_v1_0_2 -L axi_uartlite_v2_0_31 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot mb_usb_hdmi_top_behav xil_defaultlib.mb_usb_hdmi_top xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 9 for port 'm_axi_arprot' [D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/sim/mb_block.v:1387]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 9 for port 'm_axi_awprot' [D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/sim/mb_block.v:1391]
+WARNING: [VRFC 10-5021] port 'peripheral_reset' is not connected on this instance [D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/sim/mb_block.v:819]
+WARNING: [VRFC 10-5021] port 'aux0_din' is not connected on this instance [D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ipshared/9759/hdl/hdmi_text_controller_v1_0.sv:153]
+WARNING: [VRFC 10-5021] port 'lmb_rst' is not connected on this instance [D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/sim/mb_block.v:1572]
+WARNING: [VRFC 10-5021] port 'lmb_rst' is not connected on this instance [D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/sim/mb_block.v:1618]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/sim/mb_block.v" Line 422. Module mb_block has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_clk_wiz_0_0/mb_block_clk_wiz_0_0.v" Line 68. Module mb_block_clk_wiz_0_0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_clk_wiz_0_0/mb_block_clk_wiz_0_0_clk_wiz.v" Line 68. Module mb_block_clk_wiz_0_0_clk_wiz has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/ci/prod/2022.2/rdi_builds/continuous/2022_10_14_3671981/data/verilog/src/unisims/IBUF.v" Line 29. Module IBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/ci/prod/2022.2/rdi_builds/continuous/2022_10_14_3671981/data/verilog/src/unisims/MMCME2_ADV.v" Line 123. Module MMCME2_ADV(CLKFBOUT_MULT_F=10.0,CLKIN1_PERIOD=10.0,CLKOUT0_DIVIDE_F=10.0) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/ci/prod/2022.2/rdi_builds/continuous/2022_10_14_3671981/data/verilog/src/unisims/BUFG.v" Line 27. Module BUFG has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/ci/prod/2022.2/rdi_builds/continuous/2022_10_14_3671981/data/verilog/src/unisims/BUFG.v" Line 27. Module BUFG has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/sim/mb_block_hdmi_text_controller_0_0.sv" Line 55. Module mb_block_hdmi_text_controller_0_0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ipshared/9759/hdl/hdmi_text_controller_v1_0.sv" Line 10. Module hdmi_text_controller_v1_0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ipshared/9759/hdl/hdmi_text_controller_v1_0_AXI.sv" Line 28. Module hdmi_text_controller_v1_0_AXI_default has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/clk_wiz_ip/clk_wiz_ip.v" Line 69. Module clk_wiz_ip has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/clk_wiz_ip/clk_wiz_ip_clk_wiz.v" Line 69. Module clk_wiz_ip_clk_wiz has a timescale but at least one module in design doesn't have timescale.

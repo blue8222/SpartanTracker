@@ -15,9 +15,6 @@ module DDS_Sine #(
     logic [PHASE_WIDTH-1:0]         phase_acc_out;
     logic [8:0]                     lut_addr;
     logic [15:0]             lut_data;        // output of SineLUT (signed 16-bit)
-   
-
-    
 
     PhaseAccumulator #(
         .PHASE_WIDTH(PHASE_WIDTH)
