@@ -1,5 +1,6 @@
 -makelib xcelium_lib/xpm -sv \
   "C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+  "C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv" \
   "C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 -endlib
 -makelib xcelium_lib/xpm \
@@ -107,15 +108,52 @@
   "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/VRAMBlockMemory/sim/VRAMBlockMemory.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib -sv \
-  "../../../bd/mb_block/ipshared/f91f/hdl/Color_Mapper.sv" \
-  "../../../bd/mb_block/ipshared/f91f/hdl/VGA_controller.sv" \
-  "../../../bd/mb_block/ipshared/f91f/hdl/font_rom.sv" \
-  "../../../bd/mb_block/ipshared/f91f/hdl/hdmi_text_controller_v1_0_AXI.sv" \
-  "../../../bd/mb_block/ipshared/f91f/hdl/negedge_detector.sv" \
-  "../../../bd/mb_block/ipshared/f91f/hdl/hdmi_text_controller_v1_0.sv" \
+  "../../../bd/mb_block/ipshared/a35a/hdl/Color_Mapper.sv" \
+  "../../../bd/mb_block/ipshared/a35a/hdl/VGA_controller.sv" \
+  "../../../bd/mb_block/ipshared/a35a/hdl/font_rom.sv" \
+  "../../../bd/mb_block/ipshared/a35a/hdl/hdmi_text_controller_v1_0_AXI.sv" \
+  "../../../bd/mb_block/ipshared/a35a/hdl/negedge_detector.sv" \
+  "../../../bd/mb_block/ipshared/a35a/hdl/hdmi_text_controller_v1_0.sv" \
   "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/sim/mb_block_hdmi_text_controller_0_0.sv" \
 -endlib
+-makelib xcelium_lib/axi_timer_v2_0_29 \
+  "../../../../lab7_2.gen/sources_1/bd/mb_block/ipshared/22b2/hdl/axi_timer_v2_0_vh_rfs.vhd" \
+-endlib
 -makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/mb_block/ip/mb_block_axi_timer_0_0/sim/mb_block_axi_timer_0_0.vhd" \
+-endlib
+-makelib xcelium_lib/dist_mem_gen_v8_0_13 \
+  "../../../../lab7_2.gen/sources_1/bd/mb_block/ipshared/0bf5/simulation/dist_mem_gen_v8_0.v" \
+-endlib
+-makelib xcelium_lib/lib_fifo_v1_0_16 \
+  "../../../../lab7_2.gen/sources_1/bd/mb_block/ipshared/6c82/hdl/lib_fifo_v1_0_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/interrupt_control_v3_1_4 \
+  "../../../../lab7_2.gen/sources_1/bd/mb_block/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/axi_quad_spi_v3_2_26 \
+  "../../../../lab7_2.gen/sources_1/bd/mb_block/ipshared/75b9/hdl/axi_quad_spi_v3_2_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/mb_block/ip/mb_block_axi_quad_spi_0_0/sim/mb_block_axi_quad_spi_0_0.vhd" \
+-endlib
+-makelib xcelium_lib/xlconcat_v2_1_4 \
+  "../../../../lab7_2.gen/sources_1/bd/mb_block/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/mb_block/ip/mb_block_xlconcat_0_0/sim/mb_block_xlconcat_0_0.v" \
+-endlib
+-makelib xcelium_lib/axi_gpio_v2_0_29 \
+  "../../../../lab7_2.gen/sources_1/bd/mb_block/ipshared/6219/hdl/axi_gpio_v2_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/mb_block/ip/mb_block_axi_gpio_0_0/sim/mb_block_axi_gpio_0_0.vhd" \
+  "../../../bd/mb_block/ip/mb_block_axi_gpio_0_1/sim/mb_block_axi_gpio_0_1.vhd" \
+  "../../../bd/mb_block/ip/mb_block_axi_gpio_1_0/sim/mb_block_axi_gpio_1_0.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_clk_wiz.v" \
+  "../../../bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0.v" \
   "../../../bd/mb_block/sim/mb_block.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \

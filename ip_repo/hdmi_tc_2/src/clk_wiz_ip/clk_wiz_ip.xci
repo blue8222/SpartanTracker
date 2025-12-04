@@ -5,7 +5,7 @@
     "cell_name": "clk_wiz",
     "component_reference": "xilinx.com:ip:clk_wiz:6.0",
     "ip_revision": "11",
-    "gen_directory": "../../../../lab7_2/lab7_2.tmp/hdmi_tc_v2_v1_0_project/hdmi_tc_v2_v1_0_project.gen/sources_1/ip/clk_wiz_ip",
+    "gen_directory": "../../../../../../../../../users/administrator/ece385/vivado/spartantracker/lab7_2/lab7_2.tmp/hdmi_tc_v2_v1_0_project/hdmi_tc_v2_v1_0_project.gen/sources_1/ip/clk_wiz_ip",
     "parameters": {
       "component_parameters": {
         "Component_Name": [ { "value": "clk_wiz_ip", "resolve_type": "user", "usage": "all" } ],
@@ -602,7 +602,7 @@
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
         "IPREVISION": [ { "value": "11" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../lab7_2/lab7_2.tmp/hdmi_tc_v2_v1_0_project/hdmi_tc_v2_v1_0_project.gen/sources_1/ip/clk_wiz_ip" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../../../../users/administrator/ece385/vivado/spartantracker/lab7_2/lab7_2.tmp/hdmi_tc_v2_v1_0_project/hdmi_tc_v2_v1_0_project.gen/sources_1/ip/clk_wiz_ip" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "." } ],
         "SWVERSION": [ { "value": "2022.2" } ],

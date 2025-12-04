@@ -5,7 +5,7 @@
     "cell_name": "hdmi_text_controller_v1_0_AXI_inst/vram",
     "component_reference": "xilinx.com:ip:blk_mem_gen:8.4",
     "ip_revision": "5",
-    "gen_directory": "../../../../lab7_2/lab7_2.tmp/hdmi_tc_v2_v1_0_project/hdmi_tc_v2_v1_0_project.gen/sources_1/ip/VRAMBlockMemory",
+    "gen_directory": "../../../../../../../../../users/administrator/ece385/vivado/spartantracker/lab7_2/lab7_2.tmp/hdmi_tc_v2_v1_0_project/hdmi_tc_v2_v1_0_project.gen/sources_1/ip/VRAMBlockMemory",
     "parameters": {
       "component_parameters": {
         "Component_Name": [ { "value": "VRAMBlockMemory", "resolve_type": "user", "usage": "all" } ],
@@ -177,7 +177,7 @@
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
         "IPREVISION": [ { "value": "5" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../lab7_2/lab7_2.tmp/hdmi_tc_v2_v1_0_project/hdmi_tc_v2_v1_0_project.gen/sources_1/ip/VRAMBlockMemory" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../../../../users/administrator/ece385/vivado/spartantracker/lab7_2/lab7_2.tmp/hdmi_tc_v2_v1_0_project/hdmi_tc_v2_v1_0_project.gen/sources_1/ip/VRAMBlockMemory" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "." } ],
         "SWVERSION": [ { "value": "2022.2" } ],

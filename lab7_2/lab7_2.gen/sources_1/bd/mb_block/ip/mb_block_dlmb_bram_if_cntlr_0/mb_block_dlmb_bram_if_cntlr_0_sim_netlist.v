@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Thu Nov  6 15:00:50 2025
-// Host        : hein_yoga running 64-bit major release  (build 9200)
+// Date        : Thu Dec  4 15:00:37 2025
+// Host        : LAPTOP-9093UH2M running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               d:/vivado_dev/ece385_lab7_2/ece385_lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0_sim_netlist.v
+//               c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0_sim_netlist.v
 // Design      : mb_block_dlmb_bram_if_cntlr_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -124,7 +124,7 @@ module mb_block_dlmb_bram_if_cntlr_0
   (* C_LMB_AWIDTH = "32" *) 
   (* C_LMB_DWIDTH = "32" *) 
   (* C_LMB_PROTOCOL = "0" *) 
-  (* C_MASK = "64'b0000000000000000000000000000000000000000001000000000000000000000" *) 
+  (* C_MASK = "64'b0000000000000000000000000000000001000000000000000000000000000000" *) 
   (* C_MASK1 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) 
   (* C_MASK2 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) 
   (* C_MASK3 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) 
@@ -218,7 +218,7 @@ endmodule
 (* C_ECC_ONOFF_RESET_VALUE = "1" *) (* C_ECC_STATUS_REGISTERS = "0" *) (* C_FAMILY = "spartan7" *) 
 (* C_FAULT_INJECT = "0" *) (* C_HIGHADDR = "64'b0000000000000000000000000000000000000000000000011111111111111111" *) (* C_INTERCONNECT = "0" *) 
 (* C_LMB_AWIDTH = "32" *) (* C_LMB_DWIDTH = "32" *) (* C_LMB_PROTOCOL = "0" *) 
-(* C_MASK = "64'b0000000000000000000000000000000000000000001000000000000000000000" *) (* C_MASK1 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) (* C_MASK2 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) 
+(* C_MASK = "64'b0000000000000000000000000000000001000000000000000000000000000000" *) (* C_MASK1 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) (* C_MASK2 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) 
 (* C_MASK3 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) (* C_NUM_LMB = "1" *) (* C_S_AXI_CTRL_ADDR_WIDTH = "32" *) 
 (* C_S_AXI_CTRL_BASEADDR = "32'b11111111111111111111111111111111" *) (* C_S_AXI_CTRL_DATA_WIDTH = "32" *) (* C_S_AXI_CTRL_HIGHADDR = "32'b00000000000000000000000000000000" *) 
 (* C_UE_FAILING_REGISTERS = "0" *) (* C_WRITE_ACCESS = "2" *) (* ORIG_REF_NAME = "lmb_bram_if_cntlr" *) 
@@ -555,7 +555,7 @@ module mb_block_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr
   LUT3 #(
     .INIT(8'h40)) 
     \BRAM_WEN_A[0]_INST_0 
-       (.I0(LMB_ABus[10]),
+       (.I0(LMB_ABus[1]),
         .I1(LMB_WriteStrobe),
         .I2(LMB_BE[0]),
         .O(BRAM_WEN_A[0]));
@@ -563,7 +563,7 @@ module mb_block_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr
   LUT3 #(
     .INIT(8'h40)) 
     \BRAM_WEN_A[1]_INST_0 
-       (.I0(LMB_ABus[10]),
+       (.I0(LMB_ABus[1]),
         .I1(LMB_WriteStrobe),
         .I2(LMB_BE[1]),
         .O(BRAM_WEN_A[1]));
@@ -571,7 +571,7 @@ module mb_block_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr
   LUT3 #(
     .INIT(8'h40)) 
     \BRAM_WEN_A[2]_INST_0 
-       (.I0(LMB_ABus[10]),
+       (.I0(LMB_ABus[1]),
         .I1(LMB_WriteStrobe),
         .I2(LMB_BE[2]),
         .O(BRAM_WEN_A[2]));
@@ -579,7 +579,7 @@ module mb_block_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr
   LUT3 #(
     .INIT(8'h40)) 
     \BRAM_WEN_A[3]_INST_0 
-       (.I0(LMB_ABus[10]),
+       (.I0(LMB_ABus[1]),
         .I1(LMB_WriteStrobe),
         .I2(LMB_BE[3]),
         .O(BRAM_WEN_A[3]));
@@ -589,7 +589,7 @@ module mb_block_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr
   LUT2 #(
     .INIT(4'h1)) 
     \No_ECC.Sl_Rdy_i_1 
-       (.I0(LMB_ABus[10]),
+       (.I0(LMB_ABus[1]),
         .I1(LMB_Rst),
         .O(\No_ECC.Sl_Rdy_i_1_n_0 ));
   FDRE \No_ECC.Sl_Rdy_reg 
