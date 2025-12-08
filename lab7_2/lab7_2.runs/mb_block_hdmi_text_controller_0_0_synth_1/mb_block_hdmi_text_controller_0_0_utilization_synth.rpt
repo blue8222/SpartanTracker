@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Thu Dec  4 15:01:23 2025
+| Date         : Sun Dec  7 21:13:03 2025
 | Host         : LAPTOP-9093UH2M running 64-bit major release  (build 9200)
 | Command      : report_utilization -file mb_block_hdmi_text_controller_0_0_utilization_synth.rpt -pb mb_block_hdmi_text_controller_0_0_utilization_synth.pb
 | Design       : mb_block_hdmi_text_controller_0_0
@@ -151,16 +151,16 @@ Warning! LUT value is adjusted to account for LUT combining.
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| LUT6       |  409 |                 LUT |
-| LUT5       |  267 |                 LUT |
+| LUT6       |  410 |                 LUT |
+| LUT5       |  266 |                 LUT |
 | FDRE       |  229 |        Flop & Latch |
 | RAMD32     |  192 |  Distributed Memory |
 | FDCE       |   66 |        Flop & Latch |
 | RAMS32     |   64 |  Distributed Memory |
-| LUT4       |   60 |                 LUT |
-| LUT3       |   57 |                 LUT |
+| LUT4       |   58 |                 LUT |
+| LUT3       |   58 |                 LUT |
 | SRL16E     |   39 |  Distributed Memory |
-| LUT2       |   26 |                 LUT |
+| LUT2       |   28 |                 LUT |
 | MUXF7      |   16 |               MuxFx |
 | OSERDESE2  |    8 |                  IO |
 | MUXF8      |    8 |               MuxFx |

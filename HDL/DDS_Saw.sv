@@ -1,19 +1,19 @@
 // DDS Saw Module
 
 module DDS_Saw #(
-    parameter int PHASE_WIDTH = 32,
+    parameter int PHASE_WIDTH = 32
 )(
     input  logic                         clk,
     input  logic                         rst_active_high,
     input  logic [PHASE_WIDTH-1:0]       freq_word,
     input  logic [5:0]                   vol,
-    output signed [15:0]                  saw_out
+    output logic [15:0]                  saw_out
 );
 
     // Internal signals
     logic [PHASE_WIDTH-1:0]         phase_acc_out;
     logic [8:0]                     lut_addr;
-    logic signed [15:0]             lut_data;        // output of SawLUT (signed 16-bit)
+    logic [15:0]             lut_data;        // output of SawLUT (signed 16-bit)
    
 
     
@@ -35,7 +35,7 @@ module DDS_Saw #(
     
     SawLUT SawLUT (
         .clk(clk),
-        .reset(reset_active_high),
+        
         .addr_full(lut_addr),
         .data_out(lut_data)
     );

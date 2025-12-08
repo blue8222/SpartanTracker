@@ -98,23 +98,6 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/mb_block/ip/mb_block_clk_wiz_0_0/mb_block_clk_wiz_0_0_clk_wiz.v" \
   "../../../bd/mb_block/ip/mb_block_clk_wiz_0_0/mb_block_clk_wiz_0_0.v" \
-  "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_ip/hdl/encode.v" \
-  "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_ip/hdl/serdes_10_to_1.v" \
-  "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_ip/hdl/srldelay.v" \
-  "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_ip/hdl/hdmi_tx_v1_0.v" \
-  "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_ip/sim/hdmi_tx_ip.v" \
-  "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/clk_wiz_ip/clk_wiz_ip_clk_wiz.v" \
-  "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/clk_wiz_ip/clk_wiz_ip.v" \
-  "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/VRAMBlockMemory/sim/VRAMBlockMemory.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib -sv \
-  "../../../bd/mb_block/ipshared/a35a/hdl/Color_Mapper.sv" \
-  "../../../bd/mb_block/ipshared/a35a/hdl/VGA_controller.sv" \
-  "../../../bd/mb_block/ipshared/a35a/hdl/font_rom.sv" \
-  "../../../bd/mb_block/ipshared/a35a/hdl/hdmi_text_controller_v1_0_AXI.sv" \
-  "../../../bd/mb_block/ipshared/a35a/hdl/negedge_detector.sv" \
-  "../../../bd/mb_block/ipshared/a35a/hdl/hdmi_text_controller_v1_0.sv" \
-  "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/sim/mb_block_hdmi_text_controller_0_0.sv" \
 -endlib
 -makelib xcelium_lib/axi_timer_v2_0_29 \
   "../../../../lab7_2.gen/sources_1/bd/mb_block/ipshared/22b2/hdl/axi_timer_v2_0_vh_rfs.vhd" \
@@ -154,6 +137,30 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_clk_wiz.v" \
   "../../../bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/mb_block/ip/mb_block_axi_gpio_0_2/sim/mb_block_axi_gpio_0_2.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_ip/hdl/encode.v" \
+  "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_ip/hdl/serdes_10_to_1.v" \
+  "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_ip/hdl/srldelay.v" \
+  "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_ip/hdl/hdmi_tx_v1_0.v" \
+  "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_ip/sim/hdmi_tx_ip.v" \
+  "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/clk_wiz_ip/clk_wiz_ip_clk_wiz.v" \
+  "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/clk_wiz_ip/clk_wiz_ip.v" \
+  "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/VRAMBlockMemory/sim/VRAMBlockMemory.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib -sv \
+  "../../../bd/mb_block/ipshared/58e3/hdl/Color_Mapper.sv" \
+  "../../../bd/mb_block/ipshared/58e3/hdl/VGA_controller.sv" \
+  "../../../bd/mb_block/ipshared/58e3/hdl/font_rom.sv" \
+  "../../../bd/mb_block/ipshared/58e3/hdl/hdmi_text_controller_v1_0_AXI.sv" \
+  "../../../bd/mb_block/ipshared/58e3/hdl/negedge_detector.sv" \
+  "../../../bd/mb_block/ipshared/58e3/hdl/hdmi_text_controller_v1_0.sv" \
+  "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/sim/mb_block_hdmi_text_controller_0_0.sv" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
   "../../../bd/mb_block/sim/mb_block.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \

@@ -556,6 +556,9 @@ end
 
 // Add user logic here
 
+assign cursor_x = cm_col;
+assign cursor_y = cm_row;
+
 always_comb
 begin
     cm_col = drawX / 8;

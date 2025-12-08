@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log mb_usb_hdmi_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source mb_usb_hdmi_top.tcl" );
+         "-log tracker_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source tracker_top.tcl" );
 
 
 

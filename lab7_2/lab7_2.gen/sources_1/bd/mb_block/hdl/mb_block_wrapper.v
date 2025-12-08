@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-//Date        : Thu Dec  4 14:58:08 2025
+//Date        : Mon Dec  8 05:50:24 2025
 //Host        : LAPTOP-9093UH2M running 64-bit major release  (build 9200)
 //Command     : generate_target mb_block_wrapper.bd
 //Design      : mb_block_wrapper
@@ -16,8 +16,12 @@ module mb_block_wrapper
     HDMI_0_tmds_data_p,
     clk_100MHz,
     clk_12_288Mhz,
+    cursor_x_0,
+    cursor_x_tri_i,
+    cursor_y_0,
+    cursor_y_tri_i,
     gpio_usb_int_tri_i,
-    gpio_usb_keycode_0_tri_i,
+    gpio_usb_keycode_0_tri_o,
     gpio_usb_keycode_1_tri_o,
     gpio_usb_rst_tri_o,
     locked,
@@ -27,15 +31,20 @@ module mb_block_wrapper
     usb_spi_miso,
     usb_spi_mosi,
     usb_spi_sclk,
-    usb_spi_ss);
+    usb_spi_ss,
+    vsync_out_0);
   output HDMI_0_tmds_clk_n;
   output HDMI_0_tmds_clk_p;
   output [2:0]HDMI_0_tmds_data_n;
   output [2:0]HDMI_0_tmds_data_p;
   input clk_100MHz;
   output clk_12_288Mhz;
+  output [6:0]cursor_x_0;
+  input [6:0]cursor_x_tri_i;
+  output [6:0]cursor_y_0;
+  input [6:0]cursor_y_tri_i;
   input [0:0]gpio_usb_int_tri_i;
-  input [31:0]gpio_usb_keycode_0_tri_i;
+  output [31:0]gpio_usb_keycode_0_tri_o;
   output [31:0]gpio_usb_keycode_1_tri_o;
   output [0:0]gpio_usb_rst_tri_o;
   output locked;
@@ -46,6 +55,7 @@ module mb_block_wrapper
   output usb_spi_mosi;
   output usb_spi_sclk;
   output [0:0]usb_spi_ss;
+  output vsync_out_0;
 
   wire HDMI_0_tmds_clk_n;
   wire HDMI_0_tmds_clk_p;
@@ -53,8 +63,12 @@ module mb_block_wrapper
   wire [2:0]HDMI_0_tmds_data_p;
   wire clk_100MHz;
   wire clk_12_288Mhz;
+  wire [6:0]cursor_x_0;
+  wire [6:0]cursor_x_tri_i;
+  wire [6:0]cursor_y_0;
+  wire [6:0]cursor_y_tri_i;
   wire [0:0]gpio_usb_int_tri_i;
-  wire [31:0]gpio_usb_keycode_0_tri_i;
+  wire [31:0]gpio_usb_keycode_0_tri_o;
   wire [31:0]gpio_usb_keycode_1_tri_o;
   wire [0:0]gpio_usb_rst_tri_o;
   wire locked;
@@ -65,6 +79,7 @@ module mb_block_wrapper
   wire usb_spi_mosi;
   wire usb_spi_sclk;
   wire [0:0]usb_spi_ss;
+  wire vsync_out_0;
 
   mb_block mb_block_i
        (.HDMI_0_tmds_clk_n(HDMI_0_tmds_clk_n),
@@ -73,8 +88,12 @@ module mb_block_wrapper
         .HDMI_0_tmds_data_p(HDMI_0_tmds_data_p),
         .clk_100MHz(clk_100MHz),
         .clk_12_288Mhz(clk_12_288Mhz),
+        .cursor_x_0(cursor_x_0),
+        .cursor_x_tri_i(cursor_x_tri_i),
+        .cursor_y_0(cursor_y_0),
+        .cursor_y_tri_i(cursor_y_tri_i),
         .gpio_usb_int_tri_i(gpio_usb_int_tri_i),
-        .gpio_usb_keycode_0_tri_i(gpio_usb_keycode_0_tri_i),
+        .gpio_usb_keycode_0_tri_o(gpio_usb_keycode_0_tri_o),
         .gpio_usb_keycode_1_tri_o(gpio_usb_keycode_1_tri_o),
         .gpio_usb_rst_tri_o(gpio_usb_rst_tri_o),
         .locked(locked),
@@ -84,5 +103,6 @@ module mb_block_wrapper
         .usb_spi_miso(usb_spi_miso),
         .usb_spi_mosi(usb_spi_mosi),
         .usb_spi_sclk(usb_spi_sclk),
-        .usb_spi_ss(usb_spi_ss));
+        .usb_spi_ss(usb_spi_ss),
+        .vsync_out_0(vsync_out_0));
 endmodule

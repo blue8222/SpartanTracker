@@ -22,6 +22,9 @@ module hdmi_text_controller_v1_0 #
     output logic hdmi_clk_p,
     output logic [2:0] hdmi_tx_n,
     output logic [2:0] hdmi_tx_p,
+    
+    output logic [6:0] cursor_x, cursor_y,
+    output logic vsync_out,
 
     // User ports ends
     // Do not modify the ports beyond this line
@@ -67,6 +70,8 @@ hdmi_text_controller_v1_0_AXI # (
     .C_S_AXI_DATA_WIDTH(C_AXI_DATA_WIDTH),
     .C_S_AXI_ADDR_WIDTH(C_AXI_ADDR_WIDTH)
 ) hdmi_text_controller_v1_0_AXI_inst (
+
+   
     .drawX(drawX),
     .drawY(drawY),
     .red(red),
@@ -108,6 +113,7 @@ hdmi_text_controller_v1_0_AXI # (
         .clk_in1(axi_aclk)
     );
     
+    assign vsync_out = vsync;
     //VGA Sync signal generator
     vga_controller vga (
         .pixel_clk(clk_25MHz),

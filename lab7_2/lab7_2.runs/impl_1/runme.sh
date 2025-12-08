@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/viv/lab7_2/lab7_2.runs/impl_1'
+HD_PWD='C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log mb_usb_hdmi_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source mb_usb_hdmi_top.tcl -notrace
+EAStep vivado -log tracker_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source tracker_top.tcl -notrace
 
 

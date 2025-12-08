@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/viv/lab7_2/lab7_2.runs/synth_1'
+HD_PWD='C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log mb_usb_hdmi_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source mb_usb_hdmi_top.tcl
+EAStep vivado -log tracker_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source tracker_top.tcl

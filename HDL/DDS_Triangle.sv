@@ -1,19 +1,19 @@
 // DDS triangle Module
 
 module DDS_Triangle #(
-    parameter int PHASE_WIDTH = 32,
+    parameter int PHASE_WIDTH = 32
 )(
     input  logic                         clk,
     input  logic                         rst_active_high,
     input  logic [PHASE_WIDTH-1:0]       freq_word,
     input  logic [5:0]                   vol,
-    output signed [15:0]                  triangle_out
+    output logic [15:0]                  triangle_out
 );
 
     // Internal signals
     logic [PHASE_WIDTH-1:0]         phase_acc_out;
     logic [8:0]                     lut_addr;
-    logic signed [15:0]             lut_data;        // output of triangleLUT (signed 16-bit)
+    logic [15:0]             lut_data;        // output of triangleLUT (signed 16-bit)
    
 
     

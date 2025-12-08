@@ -12,8 +12,8 @@ module playback_phrase (
     input logic [15:0] current_entry [0:3], //current phrase entrys for each channel containing: {note [15:8], volume [7:2], instument [1:0]}
     
     //outputs 
-    output logic [15:0] output_stream
-    output logic [3:0] line_count; //tracks the current position of the playhead (0 - 15)
+    output logic [15:0] output_stream,
+    output logic [3:0] line_count //tracks the current position of the playhead (0 - 15)
 );
 
     // Precomputed constant: 2^48 / (100e6 * 60) ≈ 46912.496
