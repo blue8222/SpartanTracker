@@ -15,7 +15,11 @@ module PhraseData (
     output logic [15:0] channel_0,
     output logic [15:0] channel_1,
     output logic [15:0] channel_2,
-    output logic [15:0] channel_3
+    output logic [15:0] channel_3,
+
+    output logic [15:0] cursor_selection
+    output logic selection_modifiable;
+    output logic [15:0] selection_type
 );
 
 //-----------------------------------------------------------------
@@ -40,16 +44,19 @@ logic [3:0]  edit_row_idx;   // mapped row index (0..15)
 logic [1:0] user_edit_prev;
 logic       edit_pulse;
 
-//-----------------------------------------------------------------
+
 // combinational: compute initial_val/new_val when entry_modifiable
 logic [15:0] initial_val;
 logic [15:0] computed_new_val;
 logic [1:0]  param_type;
 
+logic [15:0] active_register;
+logic [1:0] selection;
+
 
 integer i, j;
 
-//-----------------------------------------------------------------
+
 // synchronous reset for PhraseRegs (combined reset + keep normal writes later)
 always_ff @(posedge clk or posedge rst_active_high) begin
     if (rst_active_high) begin
@@ -58,6 +65,7 @@ always_ff @(posedge clk or posedge rst_active_high) begin
             PhraseRegs_1[i] <= 16'h0000;
             PhraseRegs_2[i] <= 16'h0000;
             PhraseRegs_3[i] <= 16'h0000;
+            cursor_selection <= 16'h0000;
         end
     end else begin
         if (edit_pulse && entry_modifiable) begin
@@ -69,6 +77,29 @@ always_ff @(posedge clk or posedge rst_active_high) begin
             endcase
         end
     end
+end
+
+always_ff begin
+
+    selection_modifiable <= entry_modifiable;
+    cursor_selection <= active_register;
+    selection_type <= selection;
+
+end
+
+always_comb begin
+
+    selection = get_parameter(active_register, cursor_x);
+
+    unique case (phrase_entry)
+
+        2'b00 : active_register = PhraseRegs_0[edit_row_idx];
+        2'b01 : active_register = PhraseRegs_1[edit_row_idx];
+        2'b10 : active_register = PhraseRegs_2[edit_row_idx];
+        2'b11 : active_register = PhraseRegs_3[edit_row_idx];
+
+    endcase 
+
 end
 
 function automatic get_parameter(

@@ -141,14 +141,45 @@ void hdmiTestWeek2()
  
 void drawTracker()
 {
-	uint8_t background = 0x00;
+	uint8_t background = (rand()%7) + 9;
 	uint8_t foreground = (rand()%7) + 9;
 
-	int num_cols = sizeof(screen_arr[0]) / sizeof(screen_arr[0][0]);
-	xil_printf("Num Cols: %d\n\r", num_cols);
-	xil_printf("Row0: %s\n\r", screen_arr[0]);
+	uint8_t cursor_x = (cursor_ctrl->GPIO_data[6:0] >> 7) & 0x7F;
+	uint8_t cursor_y = cursor_ctrl->GPIO_data[6:0] & 0x7F;
 
-	for (int row = 0; row < ROWS; row++) {
-		textHDMIDrawColorText(screen_arr[row], 0, row, background, foreground); //write screen VRAM
+	uint8_t cursor_enb = cursor_ctrl->GPIO2_data[14];
+	uint8_t pixcode1 = (cursor_ctrl->GPIO2_data[6:0] >> 7) & 0x7F;
+	uint8_t pixcode2 = cursor_ctrl->GPIO2_data[6:0] & 0x7F; 
+
+	for (int j = 0; j < 16; j++)
+	{
+		setColorPalette(j, 	rand() % 16, rand() % 16,rand() % 16); //set color 0 to random color;
+	}
+
+	for (int row = 0; row < ROWS; row++)
+	{
+		for (int col = 0; col < COLUMNS; col++)
+		{
+			hdmi_ctrl->VRAM[(row*COLUMNS + col) * 2] = foreground << 4 | background;
+
+			if (cursor_enb)
+			{
+				if (col % 2 == 0)
+				{
+					hdmi_ctrl->VRAM[(row*COLUMNS + col) * 2 + 1] = pixcode1 & 0x7F;
+				}
+				else
+				{
+					hdmi_ctrl->VRAM[(row*COLUMNS + col) * 2 + 1] = pixcode2 & 0x7F;
+				}
+			}
+			else
+			{
+				hdmi_ctrl->VRAM[(row*COLUMNS + col) * 2 + 1] = screen_arr[row][col];
+			}
+
+			xil_printf("Char: %s\n\r", screen_arr[row][col]);
+		}
 	}
 }
+

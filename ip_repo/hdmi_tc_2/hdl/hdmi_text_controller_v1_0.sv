@@ -17,14 +17,13 @@ module hdmi_text_controller_v1_0 #
 )
 (
     // Users to add ports here 
-    
+   
+    input logic [6:0] cursor_x, cursor_y,
+   
     output logic hdmi_clk_n,
     output logic hdmi_clk_p,
     output logic [2:0] hdmi_tx_n,
     output logic [2:0] hdmi_tx_p,
-    
-    output logic [6:0] cursor_x, cursor_y,
-    output logic vsync_out,
 
     // User ports ends
     // Do not modify the ports beyond this line
@@ -70,8 +69,9 @@ hdmi_text_controller_v1_0_AXI # (
     .C_S_AXI_DATA_WIDTH(C_AXI_DATA_WIDTH),
     .C_S_AXI_ADDR_WIDTH(C_AXI_ADDR_WIDTH)
 ) hdmi_text_controller_v1_0_AXI_inst (
-
-   
+    .cursor_x(cursor_x),
+    .cursor_y(cursor_y),
+    .vsync(vsync),
     .drawX(drawX),
     .drawY(drawY),
     .red(red),

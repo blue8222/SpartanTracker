@@ -56,7 +56,7 @@ module tracker_top(
     logic clk_48khz, clk_1536khz, clk_12_288Mhz;
     
     logic [6:0] cursor_x, cursor_y; //may be a multi driven net issue here
-    logic vsync;
+
     
     logic [1:0] user_edit; //(00: no change | 01: increment | 10: decrement | 11: delete)
     logic [2:0] user_cursor;
@@ -76,6 +76,11 @@ module tracker_top(
     logic [15:0] output_pcm;
     
     logic locked; //synth clock locked output
+
+    logic [15:0] cursor_selection
+    logic entry_modifiable;
+    logic [1:0] selection_type;
+    
     
     
     
@@ -106,7 +111,6 @@ module tracker_top(
         .gpio_usb_keycode_1_tri_o(keycode1_gpio),
         .gpio_usb_rst_tri_o(gpio_usb_rst_tri_o),
         
-        
        
         .usb_spi_miso(usb_spi_miso),
         .usb_spi_mosi(usb_spi_mosi),
@@ -114,16 +118,9 @@ module tracker_top(
         .usb_spi_ss(usb_spi_ss),
         
         //cursor data
-        .cursor_x_tri_i(cursor_x),
-        .cursor_y_tri_i(cursor_y),
-        
-        .cursor_x_0(cursor_x),
-        .cursor_y_0(cursor_y),
-        
-        .vsync_out_0(vsync)
-   
-        
-        
+        .cursor_xy_tri_i({cursor_x, cursor_y}),
+        .enb_pixcodes_tri_i({entry_modifiable, pix_codes}),
+    
     );
 
     //DAC clock generation
@@ -201,8 +198,34 @@ module tracker_top(
         .cursor_x(cursor_x),
         .cursor_y(cursor_y),
         
-        .user_edit(user_edit)
+        .user_edit(user_edit),
+        .selection_type(selection_type),
+        .selection_modifiable(entry_modifiable)
        
+    );
+    
+
+    PixelCode PixelCode_1 (
+
+        .clk(clk);
+
+
+        
+        .phrase_input(cursor_selection),
+
+        
+        //(00: no change | 01: increment | 10: decrement | 11: delete)
+
+        // we could add other inputs later for more complex editing (like direct value entry, copy/paste, etc)
+
+        .selection_type(selection_type), //what is currently selected 
+
+
+        // (00: note | 01: octave | 10: instrument | 11: volume)
+
+
+        .pix_codes(pix_codes)
+
     );
     
     

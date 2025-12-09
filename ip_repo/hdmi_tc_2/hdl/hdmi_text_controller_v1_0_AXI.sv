@@ -39,8 +39,10 @@ module hdmi_text_controller_v1_0_AXI #
 (
     // Users to add ports here
 
-    input logic  [9:0] drawX, drawY,
-    output logic [3:0] red, green, blue,
+    input logic  [6:0]  cursor_x, cursor_y,
+    input logic         vsync,
+    input logic  [9:0]  drawX, drawY,
+    output logic [3:0]  red, green, blue,
 
     // User ports ends
 
@@ -162,6 +164,8 @@ logic [10:0] axi_vram_addr;
 logic [31:0] axi_vram_din;
 logic [31:0] axi_vram_dout;
 
+assign axi_vram_en = (slv_reg_rden || slv_reg_wren || S_AXI_ARESETN);
+
 // color_mapper - vram interface
 logic [10:0] cm_vram_addr;
 logic [31:0] cm_vram_dout;
@@ -170,20 +174,13 @@ logic [9:0] cm_col, cm_row;
 logic [12:0] cm_char_ind;
 logic cm_byte_ind;
 
-assign axi_vram_en = (slv_reg_rden || slv_reg_wren || S_AXI_ARESETN);
-
-logic neg_vsync;
-negedge_detector run_once (
-    .clk(S_AXI_ACLK),
-    .in(vsync),
-    .out(neg_vsync)
-);
+// cursor
+logic is_on_cursor;
 
 // Special Purpose Registers
 logic [31:0] color_regs[8];
 logic [31:0] frame_counter_reg;
-logic [31:0] drawX_reg;
-logic [31:0] drawY_reg;
+// drawX + drawY registers impl. directly via drawX, drawY signals 
 
 // BRAM Read Delay Signals
 logic vram_read_requested;
@@ -339,27 +336,25 @@ begin
     end
 end    
 
-// TODO: check timing diagram later
+// frame_counter update via falling edge of vsync
+logic vsync_d1, vsync_d2;
 always_ff @( posedge S_AXI_ACLK)
 begin
+    vsync_d1 <= vsync;
+    vsync_d2 <= vsync_d1;
+
     if ( S_AXI_ARESETN == 1'b0 )
     begin
         frame_counter_reg <= 0;
     end
     else
     begin
-        if (neg_vsync)
+        if (vsync_d2 && !vsync_d1)
         begin
             frame_counter_reg <= frame_counter_reg + 1;
         end
     end
 end
-
-always_ff @( posedge S_AXI_ACLK)
-begin
-    drawX_reg[9:0] <= drawX;
-    drawY_reg[9:0] <= drawY;
-end    
 
 // Implement write response logic generation
 // The write response and response valid signals are asserted by the slave 
@@ -490,32 +485,6 @@ begin
     begin
         axi_vram_addr = axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS-1:ADDR_LSB];
     end
-
-//     axi_rdata_tmp = 'x;
-//     if (slv_reg_rden)
-//     begin
-//         // CPU reads from VRAM's pixel registers
-//         if (~axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS])
-//         begin
-//             axi_rdata_tmp = axi_vram_dout;     // register read data
-//         end   
-//         // CPU reads from VRAM's special registers
-//         else
-//         begin
-//             if (axi_vram_addr[3])
-//             begin
-//                 unique case (axi_vram_addr[2:0])
-//                     3'b000: axi_rdata_tmp = frame_counter_reg;
-//                     3'b001: axi_rdata_tmp = drawX_reg;
-//                     3'b010: axi_rdata_tmp = drawY_reg;
-//                 endcase
-//             end
-//             else
-//             begin
-//                 axi_rdata_tmp = color_regs[axi_vram_addr[2:0]];
-//             end
-//         end
-//     end
 end
 
 // Output register or memory read data
@@ -542,8 +511,8 @@ begin
             begin
                 unique case (axi_vram_addr[2:0])
                     3'b000: axi_rdata <= frame_counter_reg;
-                    3'b001: axi_rdata <= drawX_reg;
-                    3'b010: axi_rdata <= drawY_reg;
+                    3'b001: axi_rdata <= drawX;
+                    3'b010: axi_rdata <= drawY;
                 endcase
             end
             else
@@ -556,19 +525,17 @@ end
 
 // Add user logic here
 
-assign cursor_x = cm_col;
-assign cursor_y = cm_row;
-
 always_comb
 begin
     cm_col = drawX / 8;
     cm_row = drawY / 16;
+    is_on_cursor = (cm_col == cursor_x) && (cm_row == cursor_y);
 
     cm_char_ind = (cm_row * 80) + cm_col;
     cm_vram_addr = cm_char_ind / 2;
 
     cm_byte_ind = cm_char_ind % 2;
-    invert = cm_vram_dout[(cm_byte_ind*16)+15];
+    invert = cm_vram_dout[(cm_byte_ind*16)+15] ^ is_on_cursor;
     pix_code = cm_vram_dout[(cm_byte_ind*16)+8 +: 7];
     fg_idx = cm_vram_dout[(cm_byte_ind*16)+4 +: 4];
     bg_idx = cm_vram_dout[(cm_byte_ind*16) +: 4];
@@ -610,4 +577,3 @@ VRAMBlockMemory vram (
 // User logic ends
 
 endmodule
-
