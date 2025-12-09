@@ -23,6 +23,9 @@ module  usb
     logic [1:0] edit;
     logic [2:0] cursor;
 
+    logic [6:0] cursor_x, cursor_y;
+    logic movement_edge_trigger;
+
 
     always_comb begin
         
@@ -76,10 +79,74 @@ module  usb
    
     always_ff @(posedge clk)
     begin
+
+        if (reset) begin
+            cursor_x <= 7'd0;
+            cursor_y <= 7'd0;
+            movement_edge_trigger <= 0;
+        end
+
+        
+        case (cursor) 
+
+            default : begin
+                user_cursor <= 3'b000;
+                movement_edge_trigger <= 0;
+
+                cursor_x <= cursor_x;
+                cursor_y <= cursor_y;
+                
+            end
+
+            3'b011 : begin //W
+                if (movement_edge_trigger == 0) begin
+                    user_cursor <= 3'b011;
+                    movement_edge_trigger <= 1;
+                    if(cursor_y == 7'd0) begin
+                        cursor_y <= 7'd29;
+                    end else begin
+                        cursoy_y <= cursor_y - 1;
+                    end
+                end
+                
+            end 
+            3'b001 : begin //A
+                if (movement_edge_trigger == 0) begin
+                    user_cursor <= 3'b001;
+                    movement_edge_trigger <= 1;
+                    if(cursor_x == 7'd0) begin
+                        cursor_x <= 7'd79;
+                    end else begin
+                        cursoy_x <= cursor_x - 1;
+                    end
+                end
+            end
+            3'b100 : begin //S
+                if (movement_edge_trigger == 0) begin
+                    user_cursor <= 3'b100;
+                    movement_edge_trigger <= 1;
+                    if(cursor_y == 7'd29) begin
+                        cursor_y <= 7'd0;
+                    end else begin
+                        cursoy_y <= cursor_y + 1;
+                    end
+                end
+            end
+            3'b010 : begin //D
+                if (movement_edge_trigger == 0) begin
+                    user_cursor <= 3'b010;
+                    movement_edge_trigger <= 1;
+                    if(cursor_x == 7'd79) begin
+                        cursor_x <= 7'd0;
+                    end else begin
+                        cursoy_x <= cursor_x + 1;
+                    end
+                end
+            end
+
+        endcase
         
         user_edit <= edit;
-
-        user_cursor <= cursor;
 
     end
 
