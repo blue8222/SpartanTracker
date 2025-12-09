@@ -1,8 +1,8 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-//Date        : Mon Dec  8 05:50:24 2025
-//Host        : LAPTOP-9093UH2M running 64-bit major release  (build 9200)
+//Date        : Tue Dec  9 10:39:58 2025
+//Host        : hein_yoga running 64-bit major release  (build 9200)
 //Command     : generate_target mb_block.bd
 //Design      : mb_block
 //Purpose     : IP block netlist
@@ -1224,8 +1224,6 @@ module mb_block
     cursor_y_0,
     cursor_y_tri_i,
     gpio_usb_int_tri_i,
-    gpio_usb_keycode_0_tri_o,
-    gpio_usb_keycode_1_tri_o,
     gpio_usb_rst_tri_o,
     locked,
     reset_rtl_0,
@@ -1243,12 +1241,10 @@ module mb_block
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_100MHZ CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_100MHZ, CLK_DOMAIN mb_block_clk_100MHz, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk_100MHz;
   output clk_12_288Mhz;
   output [6:0]cursor_x_0;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 cursor_x " *) input [6:0]cursor_x_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 cursor_x TRI_I" *) input [6:0]cursor_x_tri_i;
   output [6:0]cursor_y_0;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 cursor_y " *) input [6:0]cursor_y_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 cursor_y TRI_I" *) input [6:0]cursor_y_tri_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_usb_int TRI_I" *) input [0:0]gpio_usb_int_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_usb_keycode_0 TRI_O" *) output [31:0]gpio_usb_keycode_0_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_usb_keycode_1 TRI_O" *) output [31:0]gpio_usb_keycode_1_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_usb_rst TRI_O" *) output [0:0]gpio_usb_rst_tri_o;
   output locked;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET_RTL_0 RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET_RTL_0, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input reset_rtl_0;
@@ -1494,8 +1490,6 @@ module mb_block
   wire timer_usb_axi_interrupt;
   wire [0:0]usb_int_GPIO_TRI_I;
   wire usb_int_ip2intc_irpt;
-  wire [31:0]usb_keycode_GPIO2_TRI_O;
-  wire [31:0]usb_keycode_GPIO_TRI_O;
   wire [0:0]usb_rst_GPIO_TRI_O;
   wire usb_spi_miso_1;
   wire [3:0]xlconcat_0_dout;
@@ -1511,8 +1505,6 @@ module mb_block
   assign clk_12_288Mhz = synth_clock_clk_out1;
   assign cursor_x_0[6:0] = hdmi_tc_0_cursor_x;
   assign cursor_y_0[6:0] = hdmi_tc_0_cursor_y;
-  assign gpio_usb_keycode_0_tri_o[31:0] = usb_keycode_GPIO_TRI_O;
-  assign gpio_usb_keycode_1_tri_o[31:0] = usb_keycode_GPIO2_TRI_O;
   assign gpio_usb_rst_tri_o[0] = usb_rst_GPIO_TRI_O;
   assign locked = synth_clock_locked;
   assign reset_rtl_0_1 = reset_rtl_0;
@@ -1597,6 +1589,8 @@ module mb_block
         .axi_wvalid(microblaze_0_axi_periph_M01_AXI_WVALID),
         .cursor_x(hdmi_tc_0_cursor_x),
         .cursor_y(hdmi_tc_0_cursor_y),
+        .gpio_usb_keycode_0({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .gpio_usb_keycode_1({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .hdmi_clk_n(hdmi_text_controller_0_HDMI_TMDS_CLK_N),
         .hdmi_clk_p(hdmi_text_controller_0_HDMI_TMDS_CLK_P),
         .hdmi_tx_n(hdmi_text_controller_0_HDMI_TMDS_DATA_N),
@@ -2003,9 +1997,7 @@ module mb_block
         .s_axi_wstrb(microblaze_0_axi_periph_M06_AXI_WSTRB),
         .s_axi_wvalid(microblaze_0_axi_periph_M06_AXI_WVALID));
   mb_block_axi_gpio_1_0 usb_keycode
-       (.gpio2_io_o(usb_keycode_GPIO2_TRI_O),
-        .gpio_io_o(usb_keycode_GPIO_TRI_O),
-        .s_axi_aclk(microblaze_0_Clk),
+       (.s_axi_aclk(microblaze_0_Clk),
         .s_axi_araddr(microblaze_0_axi_periph_M07_AXI_ARADDR[8:0]),
         .s_axi_aresetn(rst_clk_wiz_1_100M_peripheral_aresetn),
         .s_axi_arready(microblaze_0_axi_periph_M07_AXI_ARREADY),

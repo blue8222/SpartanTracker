@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1765196597" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/mb_intro_top.dcp">
   <File Type="PA-TCL" Name="tracker_top.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="tracker_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="tracker_top_reports.tcl"/>
   <File Type="RDS-RDS" Name="tracker_top.vds"/>
   <File Type="RDS-UTIL" Name="tracker_top_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="tracker_top_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="tracker_top.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="tracker_top_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="tracker_top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/mb_block/mb_block.bd">
@@ -185,11 +182,11 @@
   <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_gpio_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_gpio_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_block_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_timer_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_block_microblaze_0_axi_intc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_timer_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_quad_spi_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_block_clk_wiz_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_clk_wiz_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_gpio_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_block_hdmi_text_controller_0_0"/>
 </GenRun>

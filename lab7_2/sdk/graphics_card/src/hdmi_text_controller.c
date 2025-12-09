@@ -8,7 +8,7 @@
  
  
 /************************** Function Definitions ***************************/
- 
+
 void paletteTest()
 {
 	textHDMIColorClr();
@@ -22,8 +22,7 @@ void paletteTest()
 		textHDMIDrawColorText (color_string, 40, 2*i, 2*i+1, 2*i);
 	}
 	textHDMIDrawColorText ("The above text should cycle through random colors", 0, 25, 0, 1);
- 
- 
+
 	for (int i = 0; i < 10; i++)
 	{
 		sleep_MB (1);
@@ -31,7 +30,7 @@ void paletteTest()
 			setColorPalette(j, 	rand() % 16, rand() % 16,rand() % 16); //set color 0 to random color;
 	}
 }
- 
+
 void textHDMIColorClr()
 {
 	for (int i = 0; i<(ROWS*COLUMNS) * 2; i++)
@@ -39,7 +38,7 @@ void textHDMIColorClr()
 		hdmi_ctrl->VRAM[i] = 0x00;
 	}
 }
- 
+
 void textHDMIDrawColorText(char* str, int x, int y, uint8_t background, uint8_t foreground)
 {
 	int i = 0;
@@ -50,22 +49,21 @@ void textHDMIDrawColorText(char* str, int x, int y, uint8_t background, uint8_t 
 		i++;
 	}
 }
- 
+
 void setColorPalette (uint8_t color, uint8_t red, uint8_t green, uint8_t blue)
 {
 	//fill in this function to set the color palette entry <color> to <red>, <green>, <blue> 12-bit color
-		hdmi_ctrl->COLORS[color/2] &= 0x0000FFFF << ((color+1)%2)*16;
-		hdmi_ctrl->COLORS[color/2] |= (red << 8 | green << 4 | blue) << ((color%2)*16);
+	hdmi_ctrl->COLORS[color/2] &= 0x0000FFFF << ((color+1)%2)*16;
+	hdmi_ctrl->COLORS[color/2] |= (red << 8 | green << 4 | blue) << ((color%2)*16);
 }
- 
+
 void sleepframe(uint32_t frames)
 {
 	uint32_t last_frame_count = hdmi_ctrl->FRAME_COUNT;
 	while (hdmi_ctrl->FRAME_COUNT < last_frame_count + frames)
 	{}
 }
- 
- 
+
 void textHDMIColorScreenSaver()
 {
 	char color_string[80];
@@ -76,16 +74,16 @@ void textHDMIColorScreenSaver()
 	int dvd_y = 0;
 	int dvd_dx = 1;
 	int dvd_dy = 1;
- 
+
 	int8_t dvd_colors[3] = {0x07, 0x07, 0x07};
 	int8_t dvd_d_colors[3] = {-1, +1, -1};
- 
+
 	paletteTest();
 	textHDMIColorClr();
- 
+
 	memset(old_string, 0, sizeof(old_string));
 	sprintf(dvd_string, "%s and %s completed ECE 385!", STUDENT1NETID, STUDENT2NETID);
- 
+
 	//initialize palette
 	for (int i = 0; i < 16; i++)
 	{
@@ -93,6 +91,8 @@ void textHDMIColorScreenSaver()
 	}
 	while (1)
 	{
+		xil_printf("Frame Count: %u\n\r", hdmi_ctrl->FRAME_COUNT);
+
 		if (hdmi_ctrl->FRAME_COUNT % 10 == 0) //every 10 frames update forground
 		{
 			//restore VRAM bytes into background to undo 'DVD' text
@@ -109,7 +109,7 @@ void textHDMIColorScreenSaver()
 			memcpy(old_string, &(hdmi_ctrl->VRAM[(dvd_y*COLUMNS + dvd_x) * 2]), strlen(dvd_string)*2);
 			textHDMIDrawColorText (dvd_string, dvd_x, dvd_y, 0, (rand() % 7) + 9);
 		}
- 
+
 		if (hdmi_ctrl->FRAME_COUNT % 30 == 0) //every 30 frames update background
 			{
 				fg = rand() % 16;
@@ -122,33 +122,40 @@ void textHDMIColorScreenSaver()
 				sprintf(color_string, "Drawing %s text with %s background", colors[fg].name, colors[bg].name);
 				x = rand() % (80-strlen(color_string));
 				y = rand() % 30;
- 
+
 				textHDMIDrawColorText (color_string, x, y, bg, fg);
 		}
- 
+
 		sleepframe(1);//sleep the rest of the frame
 	}
 }
- 
+
 //Call this function for your Week 2 test
 void hdmiTestWeek2()
 {
-	paletteTest();
+	// paletteTest();
 	xil_printf ("Palette test passed, beginning screensaver loop\n\r");
- 
+
     textHDMIColorScreenSaver();
 }
- 
+
 void drawTracker()
 {
-	uint8_t background = 0x00;
+	uint8_t background = (rand()%7) + 9;
 	uint8_t foreground = (rand()%7) + 9;
 
-	int num_cols = sizeof(screen_arr[0]) / sizeof(screen_arr[0][0]);
-	xil_printf("Num Cols: %d\n\r", num_cols);
-	xil_printf("Row0: %s\n\r", screen_arr[0]);
+	for (int j = 0; j < 16; j++)
+	{
+		setColorPalette(j, 	rand() % 16, rand() % 16,rand() % 16); //set color 0 to random color;
+	}
 
-	for (int row = 0; row < ROWS; row++) {
-		textHDMIDrawColorText(screen_arr[row], 0, row, background, foreground); //write screen VRAM
+	for (int row = 0; row < ROWS; row++)
+	{
+		for (int col = 0; col < COLUMNS; col++)
+		{
+			hdmi_ctrl->VRAM[(row*COLUMNS + col) * 2] = foreground << 4 | background;
+			hdmi_ctrl->VRAM[(row*COLUMNS + col) * 2 + 1] = screen_arr[row][col];
+			xil_printf("Char: %s\n\r", screen_arr[row][col]);
+		}
 	}
 }

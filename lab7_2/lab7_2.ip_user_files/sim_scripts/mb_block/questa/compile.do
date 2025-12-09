@@ -211,12 +211,12 @@ vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../lab7_2.gen/sources_
 "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/VRAMBlockMemory/sim/VRAMBlockMemory.v" \
 
 vlog -work xil_defaultlib  -incr -mfcu  -sv "+incdir+../../../../lab7_2.gen/sources_1/bd/mb_block/ipshared/ec67/hdl" "+incdir+../../../../lab7_2.gen/sources_1/bd/mb_block/ipshared/7698" "+incdir+../../../../lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/clk_wiz_ip" \
-"../../../bd/mb_block/ipshared/58e3/hdl/Color_Mapper.sv" \
-"../../../bd/mb_block/ipshared/58e3/hdl/VGA_controller.sv" \
-"../../../bd/mb_block/ipshared/58e3/hdl/font_rom.sv" \
-"../../../bd/mb_block/ipshared/58e3/hdl/hdmi_text_controller_v1_0_AXI.sv" \
-"../../../bd/mb_block/ipshared/58e3/hdl/negedge_detector.sv" \
-"../../../bd/mb_block/ipshared/58e3/hdl/hdmi_text_controller_v1_0.sv" \
+"../../../bd/mb_block/ipshared/b343/hdl/Color_Mapper.sv" \
+"../../../bd/mb_block/ipshared/b343/hdl/VGA_controller.sv" \
+"../../../bd/mb_block/ipshared/b343/hdl/font_rom.sv" \
+"../../../bd/mb_block/ipshared/b343/hdl/hdmi_text_controller_v1_0_AXI.sv" \
+"../../../bd/mb_block/ipshared/b343/hdl/negedge_detector.sv" \
+"../../../bd/mb_block/ipshared/b343/hdl/hdmi_text_controller_v1_0.sv" \
 "../../../bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/sim/mb_block_hdmi_text_controller_0_0.sv" \
 
 vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../lab7_2.gen/sources_1/bd/mb_block/ipshared/ec67/hdl" "+incdir+../../../../lab7_2.gen/sources_1/bd/mb_block/ipshared/7698" "+incdir+../../../../lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/clk_wiz_ip" \

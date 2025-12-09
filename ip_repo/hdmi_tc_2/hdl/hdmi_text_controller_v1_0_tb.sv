@@ -9,7 +9,7 @@
 //Used for simulation of AXI4-Lite bus as well as generating
 //simulation video image for testing
 
-`define SIM_VIDEO //Comment out to simulate AXI bus only
+// `define SIM_VIDEO //Comment out to simulate AXI bus only
                     //Uncomment to simulate entire screen and write BMP (slow)
 
 module hdmi_text_controller_tb();
@@ -125,7 +125,10 @@ module hdmi_text_controller_tb();
     // DrawX and DrawY - these come from your internal VGA module
     assign drawX = hdmi_text_controller_v1_0_inst.drawX;
     assign drawY = hdmi_text_controller_v1_0_inst.drawY;
-   
+    
+    // Frame Counter Testing
+    assign frameCounter = hdmi_text_controller_v1_0_inst.frame_counter;
+
     // BMP writing task, based off work from @BrianHGinc:
     // https://github.com/BrianHGinc/SystemVerilog-TestBench-BPM-picture-generator
     task save_bmp(string bmp_file_name);
@@ -249,19 +252,6 @@ module hdmi_text_controller_tb();
             read_data_ready <= 1'b0;
 
             //end of read transaction
-            
-         /* 
-		.axi_araddr(read_addr),
-		.axi_arprot(read_prot),
-		.axi_arvalid(read_addr_valid),
-		.axi_arready(read_addr_ready),
-
-		.axi_rdata(read_data),
-		.axi_rresp(read_resp),
-		.axi_rvalid(read_data_valid),
-		.axi_rready(read_data_ready)
-		
-		*/
         end
     endtask;
 

@@ -1,7 +1,8 @@
+// TODO: change to take in phrase column and alt for user_edit instead from hdmi_tc ip block
+
 module PhraseData (
     input  logic        clk,               // 100MHz clock
     input  logic        rst_active_high,
-    
 
     // playback / editing I/O
    

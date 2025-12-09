@@ -1,8 +1,8 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-//Date        : Mon Dec  8 05:50:24 2025
-//Host        : LAPTOP-9093UH2M running 64-bit major release  (build 9200)
+//Date        : Tue Dec  9 10:39:58 2025
+//Host        : hein_yoga running 64-bit major release  (build 9200)
 //Command     : generate_target mb_block_wrapper.bd
 //Design      : mb_block_wrapper
 //Purpose     : IP block netlist
@@ -21,8 +21,6 @@ module mb_block_wrapper
     cursor_y_0,
     cursor_y_tri_i,
     gpio_usb_int_tri_i,
-    gpio_usb_keycode_0_tri_o,
-    gpio_usb_keycode_1_tri_o,
     gpio_usb_rst_tri_o,
     locked,
     reset_rtl_0,
@@ -44,8 +42,6 @@ module mb_block_wrapper
   output [6:0]cursor_y_0;
   input [6:0]cursor_y_tri_i;
   input [0:0]gpio_usb_int_tri_i;
-  output [31:0]gpio_usb_keycode_0_tri_o;
-  output [31:0]gpio_usb_keycode_1_tri_o;
   output [0:0]gpio_usb_rst_tri_o;
   output locked;
   input reset_rtl_0;
@@ -68,8 +64,6 @@ module mb_block_wrapper
   wire [6:0]cursor_y_0;
   wire [6:0]cursor_y_tri_i;
   wire [0:0]gpio_usb_int_tri_i;
-  wire [31:0]gpio_usb_keycode_0_tri_o;
-  wire [31:0]gpio_usb_keycode_1_tri_o;
   wire [0:0]gpio_usb_rst_tri_o;
   wire locked;
   wire reset_rtl_0;
@@ -93,8 +87,6 @@ module mb_block_wrapper
         .cursor_y_0(cursor_y_0),
         .cursor_y_tri_i(cursor_y_tri_i),
         .gpio_usb_int_tri_i(gpio_usb_int_tri_i),
-        .gpio_usb_keycode_0_tri_o(gpio_usb_keycode_0_tri_o),
-        .gpio_usb_keycode_1_tri_o(gpio_usb_keycode_1_tri_o),
         .gpio_usb_rst_tri_o(gpio_usb_rst_tri_o),
         .locked(locked),
         .reset_rtl_0(reset_rtl_0),

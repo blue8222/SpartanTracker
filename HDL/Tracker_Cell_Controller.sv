@@ -4,13 +4,7 @@
 
 
 module TrackerCellController (
-
     //inputs 
-
-
-
-    
-
 
     input logic [1:0] user_action //action from the user based on keycode
     
@@ -22,27 +16,16 @@ module TrackerCellController (
 
     // (00: note | 01: octave | 10: instrument | 11: volume)
 
-
-
     input logic [31:0] VRAM_input,
-
-  
-    
 
     //we will need to put a condition in the VRAM write logic to check the position and conditionally read the values in these 
     //internal registers, translate to their character equavalents, then write that to VRAM
 
     //since they are registers the user can update them at any time
 
-
-
     //outputs
 
     output logic [31:0] VRAM_output
-
-    
-
-
 );
 
 //VRAM format:
@@ -54,14 +37,11 @@ module TrackerCellController (
 //+-----------+--------+-------+----------+----------+--------+----------+----------+----------+
 
 
-
 // code x30 -x39 : numbers 0-9 for octave, volume, instrument selection
 
 // code x41 -x5A : letters A-Z for note encoding
 
 // code x23 : # symbol for note encoding (sharp or not)
-
-
 
 //phrase registers for 4 channels
 
@@ -113,7 +93,7 @@ always_comb begin
 
     unique case(user_action)
         2'b00: begin //no change
-            temp_char_block = combined_char_block;
+            temp_char_block = combined_char_block; 
         end
 
         2'b01: begin //increment

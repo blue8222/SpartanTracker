@@ -54,5 +54,4 @@ module color_mapper (
         end
     end
 
-
 endmodule

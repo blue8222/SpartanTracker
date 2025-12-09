@@ -18,13 +18,17 @@ module hdmi_text_controller_v1_0 #
 (
     // Users to add ports here 
     
+    input  logic [31:0] gpio_usb_keycode_0,
+    input  logic [31:0] gpio_usb_keycode_1,
+
     output logic hdmi_clk_n,
     output logic hdmi_clk_p,
     output logic [2:0] hdmi_tx_n,
     output logic [2:0] hdmi_tx_p,
-    
-    output logic [6:0] cursor_x, cursor_y,
-    output logic vsync_out,
+
+    // TODO: replace w/ signals for PhraseData
+    // output logic [6:0] cursor_x, cursor_y,
+    // output logic vsync_out,
 
     // User ports ends
     // Do not modify the ports beyond this line
@@ -56,27 +60,37 @@ module hdmi_text_controller_v1_0 #
 
 //additional logic variables as necessary to support VGA, and HDMI modules.
     
+    // Clocks
     logic clk_25MHz, clk_125MHz;
     logic locked;
+
+    // HDMI
     logic [9:0] drawX;
     logic [9:0] drawY;
-
     logic hsync, vsync, vde;
-
     logic [3:0] red, green, blue;
+    logic [31:0] frame_counter;
+
+    // Cursor
+    logic [3:0] cursor_x, cursor_y;
+    logic [3:0] cursor_vram_row, cursor_vram_col;
+    logic [2:0] user_cursor;
+    logic [1:0] user_edit;
 
 // Instantiation of Axi Bus Interface AXI
 hdmi_text_controller_v1_0_AXI # ( 
     .C_S_AXI_DATA_WIDTH(C_AXI_DATA_WIDTH),
     .C_S_AXI_ADDR_WIDTH(C_AXI_ADDR_WIDTH)
 ) hdmi_text_controller_v1_0_AXI_inst (
-
-   
+    .vsync(vsync),
     .drawX(drawX),
     .drawY(drawY),
     .red(red),
     .green(green),
     .blue(blue),
+    .frame_counter(frame_counter),
+    .cursor_x(cursor_x),
+    .cursor_y(cursor_y),
     .S_AXI_ACLK(axi_aclk),
     .S_AXI_ARESETN(axi_aresetn),
     .S_AXI_AWADDR(axi_awaddr),
@@ -100,7 +114,6 @@ hdmi_text_controller_v1_0_AXI # (
     .S_AXI_RREADY(axi_rready)
 );
 
-
 //Instiante clocking wizard, VGA sync generator modules, and VGA-HDMI IP here. For a hint, refer to the provided
 //top-level from the previous lab. You should get the IP to generate a valid HDMI signal (e.g. blue screen or gradient)
 //prior to working on the text drawing.
@@ -113,7 +126,6 @@ hdmi_text_controller_v1_0_AXI # (
         .clk_in1(axi_aclk)
     );
     
-    assign vsync_out = vsync;
     //VGA Sync signal generator
     vga_controller vga (
         .pixel_clk(clk_25MHz),
@@ -147,7 +159,35 @@ hdmi_text_controller_v1_0_AXI # (
         .TMDS_DATA_P(hdmi_tx_p),         
         .TMDS_DATA_N(hdmi_tx_n)          
     );
+
+    KeycodeMapper keycode_mapper (
+        .Reset(reset_active_high),
+        .clk(clk),
+
+        .keycode(keycode1_gpio),
+
+        .user_cursor(user_cursor), //user cursor movement //(000: no change | 001: left | 010: right | 011: up | 100: down)
+        .user_edit(user_edit) //user edit options      //(00: no change | 01: increment | 10: decrement | 11: delete)
+    ); 
     
+    always_comb
+    begin
+        cursor_x = cursor_x;
+        cursor_y = cursor_y;
+
+        unique case (user_cursor) 
+            3'b001: cursor_x = cursor_x - 1;
+            3'b010: cursor_x = cursor_x + 1;
+            3'b011: cursor_y = cursor_y - 1;
+            3'b100: cursor_y = cursor_y + 1;
+        endcase
+
+        cursor_vram_row, cursor_vram_col;
+
+        unique case (user_edit) 
+        endcase
+    end
+
 // User logic ends
 
 endmodule

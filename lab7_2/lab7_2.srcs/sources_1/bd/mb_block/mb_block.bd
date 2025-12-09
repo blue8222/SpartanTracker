@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xDF1EC74CCBEB549D",
+      "boundary_crc": "0x2D4C27DC9B0FB93F",
       "device": "xc7s50csga324-1",
       "gen_directory": "../../../../lab7_2.gen/sources_1/bd/mb_block",
       "name": "mb_block",
@@ -112,32 +112,6 @@
             "physical_name": "gpio_usb_int_tri_i",
             "direction": "I",
             "left": "0",
-            "right": "0"
-          }
-        }
-      },
-      "gpio_usb_keycode_0": {
-        "mode": "Master",
-        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
-        "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
-        "port_maps": {
-          "TRI_O": {
-            "physical_name": "gpio_usb_keycode_0_tri_o",
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          }
-        }
-      },
-      "gpio_usb_keycode_1": {
-        "mode": "Master",
-        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
-        "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
-        "port_maps": {
-          "TRI_O": {
-            "physical_name": "gpio_usb_keycode_1_tri_o",
-            "direction": "O",
-            "left": "31",
             "right": "0"
           }
         }
@@ -1855,18 +1829,6 @@
         "interface_ports": [
           "gpio_usb_int",
           "usb_int/GPIO"
-        ]
-      },
-      "usb_keycode_GPIO": {
-        "interface_ports": [
-          "gpio_usb_keycode_0",
-          "usb_keycode/GPIO"
-        ]
-      },
-      "usb_keycode_GPIO2": {
-        "interface_ports": [
-          "gpio_usb_keycode_1",
-          "usb_keycode/GPIO2"
         ]
       },
       "usb_rst_GPIO": {
