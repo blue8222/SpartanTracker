@@ -193,8 +193,6 @@ module tracker_top(
         .channel_2(phraseData_2),
         .channel_3(phraseData_3),
         
-    
-        
         .cursor_x(cursor_x),
         .cursor_y(cursor_y),
         

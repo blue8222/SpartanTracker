@@ -54,10 +54,6 @@ module PixelCode (
 
 //{note [15:8], volume [7:2], instument [1:0]}
 
-logic [7:0] code1 = VRAM_input[30:24];
-
-logic [7:0] code2 = VRAM_input[14:8];
-
 logic [27:0] note_octave;
 
 logic [13:0] vol;
@@ -187,7 +183,7 @@ always_comb begin
 end
 
 always_ff begin
-    pix_codes = VRAM_pix_codes;
+    pix_codes <= VRAM_pix_codes;
 end
 
 

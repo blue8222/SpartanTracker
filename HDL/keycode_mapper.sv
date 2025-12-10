@@ -11,12 +11,14 @@ module  usb
 
     //(000: no change | 001: left | 010: right | 011: up | 100: down)
 
-    output logic [1:0]  user_edit
+    output logic [1:0]  user_edit,
     
     //(00: no change | 01: increment | 10: decrement | 11: delete)
     
     
     // we could add other inputs later for more complex editing (like direct value entry, copy/paste, etc)
+
+    output logic [6:0] cursor_x_out, cursor_y_out
     
 );
     
@@ -117,7 +119,7 @@ module  usb
                     if(cursor_x == 7'd0) begin
                         cursor_x <= 7'd79;
                     end else begin
-                        cursoy_x <= cursor_x - 1;
+                        cursor_x <= cursor_x - 1;
                     end
                 end
             end
@@ -128,7 +130,7 @@ module  usb
                     if(cursor_y == 7'd29) begin
                         cursor_y <= 7'd0;
                     end else begin
-                        cursoy_y <= cursor_y + 1;
+                        cursor_y <= cursor_y + 1;
                     end
                 end
             end
@@ -139,7 +141,7 @@ module  usb
                     if(cursor_x == 7'd79) begin
                         cursor_x <= 7'd0;
                     end else begin
-                        cursoy_x <= cursor_x + 1;
+                        cursor_x <= cursor_x + 1;
                     end
                 end
             end
@@ -147,6 +149,12 @@ module  usb
         endcase
         
         user_edit <= edit;
+
+    end
+
+    always_ff @(posedge clk) begin
+        cursor_x_out <= cursor_x;
+        cursor_y_out <= cursor_y;
 
     end
 
