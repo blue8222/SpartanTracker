@@ -65,13 +65,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="141"/>
-    <Option Name="WTModelSimExportSim" Val="141"/>
-    <Option Name="WTQuestaExportSim" Val="141"/>
+    <Option Name="WTXSimExportSim" Val="142"/>
+    <Option Name="WTModelSimExportSim" Val="142"/>
+    <Option Name="WTQuestaExportSim" Val="142"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="141"/>
-    <Option Name="WTRivieraExportSim" Val="141"/>
-    <Option Name="WTActivehdlExportSim" Val="141"/>
+    <Option Name="WTVcsExportSim" Val="142"/>
+    <Option Name="WTRivieraExportSim" Val="142"/>
+    <Option Name="WTActivehdlExportSim" Val="142"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -204,6 +204,13 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../recent/SpartanTracker/HDL/clk_divider.sv"/>
           <Attr Name="ImportTime" Val="1765314822"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../ip_repo/hdmi_tc_2/hdl/hex_driver.sv">
+        <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

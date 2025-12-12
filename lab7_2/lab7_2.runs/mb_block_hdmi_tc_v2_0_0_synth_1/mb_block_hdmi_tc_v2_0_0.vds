@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Dec 11 20:53:20 2025
-# Process ID: 34324
+# Start of session at: Thu Dec 11 22:26:58 2025
+# Process ID: 34228
 # Current directory: D:/SpartanTracker/lab7_2/lab7_2.runs/mb_block_hdmi_tc_v2_0_0_synth_1
 # Command line: vivado.exe -log mb_block_hdmi_tc_v2_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mb_block_hdmi_tc_v2_0_0.tcl
 # Log file: D:/SpartanTracker/lab7_2/lab7_2.runs/mb_block_hdmi_tc_v2_0_0_synth_1/mb_block_hdmi_tc_v2_0_0.vds
@@ -22,25 +22,25 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
 INFO: [Device 21-403] Loading part xc7s50csga324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 34936
+INFO: [Synth 8-7075] Helper process launched with PID 12956
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
-INFO: [Synth 8-11241] undeclared symbol 'vsync_out', assumed default net type 'wire' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hdmi_text_controller_v1_0.sv:130]
-INFO: [Synth 8-11241] undeclared symbol 'cursor_selection', assumed default net type 'wire' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hdmi_text_controller_v1_0.sv:174]
+INFO: [Synth 8-11241] undeclared symbol 'vsync_out', assumed default net type 'wire' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/hdmi_text_controller_v1_0.sv:125]
+INFO: [Synth 8-11241] undeclared symbol 'cursor_selection', assumed default net type 'wire' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/hdmi_text_controller_v1_0.sv:152]
 WARNING: [Synth 8-11065] parameter 'CTRLTOKEN0' becomes localparam in 'encode' with formal parameter declaration list [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/hdmi_tx_ip/hdl/encode.v:145]
 WARNING: [Synth 8-11065] parameter 'CTRLTOKEN1' becomes localparam in 'encode' with formal parameter declaration list [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/hdmi_tx_ip/hdl/encode.v:146]
 WARNING: [Synth 8-11065] parameter 'CTRLTOKEN2' becomes localparam in 'encode' with formal parameter declaration list [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/hdmi_tx_ip/hdl/encode.v:147]
 WARNING: [Synth 8-11065] parameter 'CTRLTOKEN3' becomes localparam in 'encode' with formal parameter declaration list [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/hdmi_tx_ip/hdl/encode.v:148]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1818.895 ; gain = 406.789
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1815.402 ; gain = 405.547
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'mb_block_hdmi_tc_v2_0_0' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/synth/mb_block_hdmi_tc_v2_0_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_text_controller_v1_0' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hdmi_text_controller_v1_0.sv:10]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_text_controller_v1_0_AXI' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hdmi_text_controller_v1_0_AXI.sv:28]
-INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hdmi_text_controller_v1_0_AXI.sv:512]
-INFO: [Synth 8-6157] synthesizing module 'color_mapper' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/Color_Mapper.sv:17]
-INFO: [Synth 8-6157] synthesizing module 'font_rom' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/font_rom.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'font_rom' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/font_rom.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'color_mapper' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/Color_Mapper.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_text_controller_v1_0' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/hdmi_text_controller_v1_0.sv:10]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_text_controller_v1_0_AXI' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/hdmi_text_controller_v1_0_AXI.sv:28]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/hdmi_text_controller_v1_0_AXI.sv:512]
+INFO: [Synth 8-6157] synthesizing module 'color_mapper' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/Color_Mapper.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'font_rom' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/font_rom.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'font_rom' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/font_rom.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'color_mapper' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/Color_Mapper.sv:17]
 INFO: [Synth 8-638] synthesizing module 'VRAMBlockMemory' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/VRAMBlockMemory/synth/VRAMBlockMemory.vhd:76]
 	Parameter C_FAMILY bound to: spartan7 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: spartan7 - type: string 
@@ -119,7 +119,7 @@ INFO: [Synth 8-638] synthesizing module 'VRAMBlockMemory' [d:/SpartanTracker/lab
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     10.7492 mW - type: string 
 INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_5' declared at 'd:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/VRAMBlockMemory/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_5' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/VRAMBlockMemory/synth/VRAMBlockMemory.vhd:249]
 INFO: [Synth 8-256] done synthesizing module 'VRAMBlockMemory' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/VRAMBlockMemory/synth/VRAMBlockMemory.vhd:76]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_text_controller_v1_0_AXI' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hdmi_text_controller_v1_0_AXI.sv:28]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_text_controller_v1_0_AXI' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/hdmi_text_controller_v1_0_AXI.sv:28]
 INFO: [Synth 8-6157] synthesizing module 'clk_wiz_ip' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/clk_wiz_ip/clk_wiz_ip.v:69]
 INFO: [Synth 8-6157] synthesizing module 'clk_wiz_ip_clk_wiz' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/clk_wiz_ip/clk_wiz_ip_clk_wiz.v:69]
 INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:79852]
@@ -128,29 +128,19 @@ INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2022.2/scripts
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
 INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_ip_clk_wiz' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/clk_wiz_ip/clk_wiz_ip_clk_wiz.v:69]
 INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_ip' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/clk_wiz_ip/clk_wiz_ip.v:69]
-INFO: [Synth 8-6157] synthesizing module 'vga_controller' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/VGA_controller.sv:26]
-INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/VGA_controller.sv:26]
-WARNING: [Synth 8-7071] port 'sync' of module 'vga_controller' is unconnected for instance 'vga' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hdmi_text_controller_v1_0.sv:132]
-WARNING: [Synth 8-7023] instance 'vga' of module 'vga_controller' has 8 connections declared, but only 7 given [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hdmi_text_controller_v1_0.sv:132]
-INFO: [Synth 8-6157] synthesizing module 'keycode_mapper' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/keycode_mapper.sv:3]
-INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/keycode_mapper.sv:86]
-INFO: [Synth 8-6155] done synthesizing module 'keycode_mapper' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/keycode_mapper.sv:3]
-WARNING: [Synth 8-689] width (32) of port connection 'keycode' does not match port width (8) of module 'keycode_mapper' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hdmi_text_controller_v1_0.sv:146]
-INFO: [Synth 8-6157] synthesizing module 'hex_driver' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hex_driver.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hex_driver.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hex_driver.sv:11]
-INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hex_driver.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hex_driver.sv:11]
-INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hex_driver.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hex_driver.sv:11]
-INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hex_driver.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hex_driver.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'hex_driver' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hex_driver.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'PixelCode' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/PixelCode.sv:6]
-INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/PixelCode.sv:101]
-INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/PixelCode.sv:113]
-INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/PixelCode.sv:172]
-INFO: [Synth 8-6155] done synthesizing module 'PixelCode' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/PixelCode.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'vga_controller' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/VGA_controller.sv:26]
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/VGA_controller.sv:26]
+WARNING: [Synth 8-7071] port 'sync' of module 'vga_controller' is unconnected for instance 'vga' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/hdmi_text_controller_v1_0.sv:127]
+WARNING: [Synth 8-7023] instance 'vga' of module 'vga_controller' has 8 connections declared, but only 7 given [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/hdmi_text_controller_v1_0.sv:127]
+INFO: [Synth 8-6157] synthesizing module 'keycode_mapper' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/keycode_mapper.sv:3]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/keycode_mapper.sv:86]
+INFO: [Synth 8-6155] done synthesizing module 'keycode_mapper' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/keycode_mapper.sv:3]
+WARNING: [Synth 8-689] width (32) of port connection 'keycode' does not match port width (8) of module 'keycode_mapper' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/hdmi_text_controller_v1_0.sv:141]
+INFO: [Synth 8-6157] synthesizing module 'PixelCode' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/PixelCode.sv:6]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/PixelCode.sv:101]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/PixelCode.sv:113]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/PixelCode.sv:172]
+INFO: [Synth 8-6155] done synthesizing module 'PixelCode' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/PixelCode.sv:6]
 INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_ip' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/hdmi_tx_ip/synth/hdmi_tx_ip.v:53]
 INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_v1_0' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/hdmi_tx_ip/hdl/hdmi_tx_v1_0.v:70]
 INFO: [Synth 8-6157] synthesizing module 'srldelay' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/hdmi_tx_ip/hdl/srldelay.v:70]
@@ -173,15 +163,15 @@ INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [C:/Xilinx/Vivado/2022.2/scrip
 INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:90676]
 INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_v1_0' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/hdmi_tx_ip/hdl/hdmi_tx_v1_0.v:70]
 INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_ip' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/hdmi_tx_ip/synth/hdmi_tx_ip.v:53]
-WARNING: [Synth 8-7071] port 'aux0_din' of module 'hdmi_tx_ip' is unconnected for instance 'vga_to_hdmi' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hdmi_text_controller_v1_0.sv:183]
-WARNING: [Synth 8-7071] port 'aux1_din' of module 'hdmi_tx_ip' is unconnected for instance 'vga_to_hdmi' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hdmi_text_controller_v1_0.sv:183]
-WARNING: [Synth 8-7071] port 'aux2_din' of module 'hdmi_tx_ip' is unconnected for instance 'vga_to_hdmi' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hdmi_text_controller_v1_0.sv:183]
-WARNING: [Synth 8-7071] port 'ade' of module 'hdmi_tx_ip' is unconnected for instance 'vga_to_hdmi' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hdmi_text_controller_v1_0.sv:183]
-WARNING: [Synth 8-7023] instance 'vga_to_hdmi' of module 'hdmi_tx_ip' has 18 connections declared, but only 14 given [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hdmi_text_controller_v1_0.sv:183]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_text_controller_v1_0' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hdmi_text_controller_v1_0.sv:10]
+WARNING: [Synth 8-7071] port 'aux0_din' of module 'hdmi_tx_ip' is unconnected for instance 'vga_to_hdmi' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/hdmi_text_controller_v1_0.sv:161]
+WARNING: [Synth 8-7071] port 'aux1_din' of module 'hdmi_tx_ip' is unconnected for instance 'vga_to_hdmi' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/hdmi_text_controller_v1_0.sv:161]
+WARNING: [Synth 8-7071] port 'aux2_din' of module 'hdmi_tx_ip' is unconnected for instance 'vga_to_hdmi' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/hdmi_text_controller_v1_0.sv:161]
+WARNING: [Synth 8-7071] port 'ade' of module 'hdmi_tx_ip' is unconnected for instance 'vga_to_hdmi' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/hdmi_text_controller_v1_0.sv:161]
+WARNING: [Synth 8-7023] instance 'vga_to_hdmi' of module 'hdmi_tx_ip' has 18 connections declared, but only 14 given [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/hdmi_text_controller_v1_0.sv:161]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_text_controller_v1_0' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/hdmi_text_controller_v1_0.sv:10]
 INFO: [Synth 8-6155] done synthesizing module 'mb_block_hdmi_tc_v2_0_0' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/synth/mb_block_hdmi_tc_v2_0_0.sv:53]
 WARNING: [Synth 8-6014] Unused sequential element hdmi_ctl1_reg was removed.  [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/hdmi_tx_ip/hdl/hdmi_tx_v1_0.v:148]
-WARNING: [Synth 8-3848] Net cursor_selection in module/entity hdmi_text_controller_v1_0 does not have driver. [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/5315/hdl/hdmi_text_controller_v1_0.sv:174]
+WARNING: [Synth 8-3848] Net cursor_selection in module/entity hdmi_text_controller_v1_0 does not have driver. [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/7782/hdl/hdmi_text_controller_v1_0.sv:152]
 WARNING: [Synth 8-7129] Port CLKB in module blk_mem_output_block is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SBITERR_I in module blk_mem_output_block is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DBITERR_I in module blk_mem_output_block is either unconnected or has no load
@@ -284,18 +274,18 @@ WARNING: [Synth 8-7129] Port S_AXI_WDATA[26] in module blk_mem_gen_v8_4_5_synth 
 WARNING: [Synth 8-7129] Port S_AXI_WDATA[25] in module blk_mem_gen_v8_4_5_synth is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2154.965 ; gain = 742.859
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 2150.535 ; gain = 740.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2154.965 ; gain = 742.859
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 2150.535 ; gain = 740.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2154.965 ; gain = 742.859
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 2150.535 ; gain = 740.680
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2154.965 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2150.535 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -312,22 +302,22 @@ Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/m
 Finished Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/clk_wiz_ip/clk_wiz_ip_late.xdc] for cell 'inst/clk_wiz/inst'
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2154.965 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2150.535 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 2154.965 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2150.535 ; gain = 0.000
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 2154.965 ; gain = 742.859
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 2150.535 ; gain = 740.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 2154.965 ; gain = 742.859
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 2150.535 ; gain = 740.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -337,10 +327,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for inst/hdmi_text_controller_v1_0_AX
 Applied set_property KEEP_HIERARCHY = SOFT for inst/clk_wiz. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for inst/vga_to_hdmi. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 2154.965 ; gain = 742.859
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 2150.535 ; gain = 740.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 2154.965 ; gain = 742.859
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 2150.535 ; gain = 740.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -379,15 +369,13 @@ Detailed RTL Component Info :
 	   2 Input   10 Bit        Muxes := 6     
 	  22 Input   10 Bit        Muxes := 1     
 	   4 Input   10 Bit        Muxes := 2     
-	   2 Input    8 Bit        Muxes := 6     
-	   4 Input    8 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 4     
 	   2 Input    7 Bit        Muxes := 1     
 	   5 Input    7 Bit        Muxes := 2     
 	   8 Input    7 Bit        Muxes := 1     
 	   2 Input    6 Bit        Muxes := 2     
 	   2 Input    5 Bit        Muxes := 12    
 	   2 Input    4 Bit        Muxes := 9     
-	   5 Input    4 Bit        Muxes := 2     
 	   2 Input    3 Bit        Muxes := 1     
 	   4 Input    3 Bit        Muxes := 1     
 	   5 Input    3 Bit        Muxes := 1     
@@ -415,19 +403,19 @@ WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 INFO: [Synth 8-6851] RAM (inst/hdmi_text_controller_v1_0_AXI_inst/color_regs_reg) has partial Byte Wide Write Enable pattern, however no output register found in fanout of RAM. Recommended to use supported Byte Wide Write Enable template. 
 INFO: [Synth 8-6851] RAM (inst/hdmi_text_controller_v1_0_AXI_inst/color_regs_reg) has partial Byte Wide Write Enable pattern, however no output register found in fanout of RAM. Recommended to use supported Byte Wide Write Enable template. 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 2154.965 ; gain = 742.859
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 2150.535 ; gain = 740.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 ROM: Preliminary Mapping Report
-+------------------------------+------------------------+---------------+----------------+
-|Module Name                   | RTL Object             | Depth x Width | Implemented As | 
-+------------------------------+------------------------+---------------+----------------+
-|font_rom                      | ROM                    | 2048x8        | LUT            | 
-|hdmi_text_controller_v1_0_AXI | color_instance/rom/ROM | 2048x8        | LUT            | 
-+------------------------------+------------------------+---------------+----------------+
++------------------------+----------------------------------------------------------------+---------------+----------------+
+|Module Name             | RTL Object                                                     | Depth x Width | Implemented As | 
++------------------------+----------------------------------------------------------------+---------------+----------------+
+|font_rom                | ROM                                                            | 2048x8        | LUT            | 
+|mb_block_hdmi_tc_v2_0_0 | inst/hdmi_text_controller_v1_0_AXI_inst/color_instance/rom/ROM | 2048x8        | LUT            | 
++------------------------+----------------------------------------------------------------+---------------+----------------+
 
 
 Distributed RAM: Preliminary Mapping Report (see note below)
@@ -445,13 +433,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 2154.965 ; gain = 742.859
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 2150.535 ; gain = 740.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 2154.965 ; gain = 742.859
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 2150.535 ; gain = 740.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -471,7 +459,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 2154.965 ; gain = 742.859
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 2150.535 ; gain = 740.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -489,37 +477,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:46 . Memory (MB): peak = 2154.965 ; gain = 742.859
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 2150.535 ; gain = 740.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:46 . Memory (MB): peak = 2154.965 ; gain = 742.859
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 2150.535 ; gain = 740.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:46 . Memory (MB): peak = 2154.965 ; gain = 742.859
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 2150.535 ; gain = 740.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:46 . Memory (MB): peak = 2154.965 ; gain = 742.859
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 2150.535 ; gain = 740.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:46 . Memory (MB): peak = 2154.965 ; gain = 742.859
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 2150.535 ; gain = 740.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:46 . Memory (MB): peak = 2154.965 ; gain = 742.859
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 2150.535 ; gain = 740.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -550,13 +538,13 @@ Report Cell Usage:
 |      |Cell       |Count |
 +------+-----------+------+
 |1     |BUFG       |     3|
-|2     |CARRY4     |    22|
-|3     |LUT1       |     7|
-|4     |LUT2       |    37|
-|5     |LUT3       |    71|
-|6     |LUT4       |    74|
-|7     |LUT5       |   292|
-|8     |LUT6       |   470|
+|2     |CARRY4     |    12|
+|3     |LUT1       |     5|
+|4     |LUT2       |    32|
+|5     |LUT3       |    63|
+|6     |LUT4       |    45|
+|7     |LUT5       |   284|
+|8     |LUT6       |   438|
 |9     |MMCME2_ADV |     1|
 |10    |MUXF7      |    17|
 |11    |MUXF8      |     8|
@@ -564,38 +552,38 @@ Report Cell Usage:
 |14    |RAM32M     |    32|
 |15    |RAMB36E1   |     2|
 |16    |SRL16E     |    39|
-|17    |FDCE       |    66|
-|18    |FDRE       |   312|
+|17    |FDCE       |    64|
+|18    |FDRE       |   277|
 |19    |FDSE       |     1|
 |20    |OBUFDS     |     4|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:46 . Memory (MB): peak = 2154.965 ; gain = 742.859
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 2150.535 ; gain = 740.680
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 226 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:45 . Memory (MB): peak = 2154.965 ; gain = 742.859
-Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:46 . Memory (MB): peak = 2154.965 ; gain = 742.859
+Synthesis finished with 0 errors, 0 critical warnings and 234 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:38 . Memory (MB): peak = 2150.535 ; gain = 740.680
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 2150.535 ; gain = 740.680
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2154.965 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 86 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2150.535 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 76 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2154.965 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2150.535 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 32 instances were transformed.
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 32 instances
 
-Synth Design complete, checksum: 7197f6d3
+Synth Design complete, checksum: bb2fcdef
 INFO: [Common 17-83] Releasing license: Synthesis
-93 Infos, 115 Warnings, 0 Critical Warnings and 0 Errors encountered.
+83 Infos, 115 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 2154.965 ; gain = 1119.844
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:44 . Memory (MB): peak = 2150.535 ; gain = 1116.352
 INFO: [Common 17-600] The following parameters have non-default value.
 general.maxThreads
 INFO: [Common 17-1381] The checkpoint 'D:/SpartanTracker/lab7_2/lab7_2.runs/mb_block_hdmi_tc_v2_0_0_synth_1/mb_block_hdmi_tc_v2_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP mb_block_hdmi_tc_v2_0_0, cache-ID = b62840dbede18377
-INFO: [Coretcl 2-1174] Renamed 28 cell refs.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP mb_block_hdmi_tc_v2_0_0, cache-ID = cae4f407c96b56f6
+INFO: [Coretcl 2-1174] Renamed 26 cell refs.
 INFO: [Common 17-1381] The checkpoint 'D:/SpartanTracker/lab7_2/lab7_2.runs/mb_block_hdmi_tc_v2_0_0_synth_1/mb_block_hdmi_tc_v2_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file mb_block_hdmi_tc_v2_0_0_utilization_synth.rpt -pb mb_block_hdmi_tc_v2_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Dec 11 20:54:22 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 11 22:27:51 2025...

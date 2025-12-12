@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:hdmi_tc_v2:1.0
-// IP Revision: 43
+// IP Revision: 44
 
 `timescale 1ns/1ps
 
@@ -66,10 +66,6 @@ module mb_block_hdmi_tc_v2_0_0 (
   hdmi_clk_p,
   hdmi_tx_n,
   hdmi_tx_p,
-  hex_seg_a_0,
-  hex_grid_a_0,
-  hex_seg_b_0,
-  hex_grid_b_0,
   axi_aclk,
   axi_aresetn,
   axi_awaddr,
@@ -111,10 +107,6 @@ output wire hdmi_clk_p;
 output wire [2 : 0] hdmi_tx_n;
 (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI TMDS_DATA_P" *)
 output wire [2 : 0] hdmi_tx_p;
-output wire [7 : 0] hex_seg_a_0;
-output wire [3 : 0] hex_grid_a_0;
-output wire [7 : 0] hex_seg_b_0;
-output wire [3 : 0] hex_grid_b_0;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME AXI_CLK, ASSOCIATED_BUSIF AXI, ASSOCIATED_RESET axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 AXI_CLK CLK" *)
 input wire axi_aclk;
@@ -178,10 +170,6 @@ input wire axi_rready;
     .hdmi_clk_p(hdmi_clk_p),
     .hdmi_tx_n(hdmi_tx_n),
     .hdmi_tx_p(hdmi_tx_p),
-    .hex_seg_a_0(hex_seg_a_0),
-    .hex_grid_a_0(hex_grid_a_0),
-    .hex_seg_b_0(hex_seg_b_0),
-    .hex_grid_b_0(hex_grid_b_0),
     .axi_aclk(axi_aclk),
     .axi_aresetn(axi_aresetn),
     .axi_awaddr(axi_awaddr),

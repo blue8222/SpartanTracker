@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-//Date        : Thu Dec 11 21:06:24 2025
+//Date        : Thu Dec 11 22:28:21 2025
 //Host        : hein_yoga running 64-bit major release  (build 9200)
 //Command     : generate_target mb_block_wrapper.bd
 //Design      : mb_block_wrapper
@@ -22,10 +22,6 @@ module mb_block_wrapper
     enb_pixcodes_tri_i,
     gpio_usb_int_tri_i,
     gpio_usb_rst_tri_o,
-    hex_grid_a_0,
-    hex_grid_b_0,
-    hex_seg_a_0,
-    hex_seg_b_0,
     locked,
     phrase_input_0,
     pix_codes_0,
@@ -50,10 +46,6 @@ module mb_block_wrapper
   input [14:0]enb_pixcodes_tri_i;
   input [0:0]gpio_usb_int_tri_i;
   output [0:0]gpio_usb_rst_tri_o;
-  output [3:0]hex_grid_a_0;
-  output [3:0]hex_grid_b_0;
-  output [7:0]hex_seg_a_0;
-  output [7:0]hex_seg_b_0;
   output locked;
   input [15:0]phrase_input_0;
   output [13:0]pix_codes_0;
@@ -79,10 +71,6 @@ module mb_block_wrapper
   wire [14:0]enb_pixcodes_tri_i;
   wire [0:0]gpio_usb_int_tri_i;
   wire [0:0]gpio_usb_rst_tri_o;
-  wire [3:0]hex_grid_a_0;
-  wire [3:0]hex_grid_b_0;
-  wire [7:0]hex_seg_a_0;
-  wire [7:0]hex_seg_b_0;
   wire locked;
   wire [15:0]phrase_input_0;
   wire [13:0]pix_codes_0;
@@ -109,10 +97,6 @@ module mb_block_wrapper
         .enb_pixcodes_tri_i(enb_pixcodes_tri_i),
         .gpio_usb_int_tri_i(gpio_usb_int_tri_i),
         .gpio_usb_rst_tri_o(gpio_usb_rst_tri_o),
-        .hex_grid_a_0(hex_grid_a_0),
-        .hex_grid_b_0(hex_grid_b_0),
-        .hex_seg_a_0(hex_seg_a_0),
-        .hex_seg_b_0(hex_seg_b_0),
         .locked(locked),
         .phrase_input_0(phrase_input_0),
         .pix_codes_0(pix_codes_0),

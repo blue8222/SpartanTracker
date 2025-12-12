@@ -1,6 +1,7 @@
 module clk_divider (
     input logic clk_12Mhz, // 12.288 MHz input
     input logic reset, // Active-high reset
+
     output logic clk_48khz, // 48 kHz output (sample clock / LRCK)
     output logic clk_1536khz // 1.536 MHz output (bit clock / BCLK)
 );

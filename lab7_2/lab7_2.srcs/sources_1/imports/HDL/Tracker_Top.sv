@@ -51,7 +51,7 @@ module tracker_top(
 );
    
     logic reset_active_high;
-    logic clk_25MHz, clk_125MHz, clk;
+    logic clk_25MHz, clk_125MHz;
     logic clk_48khz, clk_1536khz, clk_12_288Mhz;
     
     logic [6:0] cursor_x, cursor_y;
@@ -119,25 +119,21 @@ module tracker_top(
         .cursor_y_1(cursor_y),
         .cursor_x_1(cursor_x),
         .user_edit_0(user_edit),
-        .pix_codes_0(pix_codes),
-
-        .hex_seg_a_0(hex_seg_a_0),
-        .hex_grid_a_0(hex_grid_a_0),
-        .hex_seg_b_0(hex_seg_b_0),
-        .hex_grid_b_0(hex_grid_b_0)
+        .pix_codes_0(pix_codes)
     );
 
     //dac clock generation
     clk_divider clk_divider_1 (
+        .clk_12Mhz(clk_12_288mhz),
         .reset(reset_active_high),
+
         .clk_48khz(clk_48khz),
-        .clk_1536khz(clk_1536khz),
-        .clk_12mhz(clk_12_228mhz)
+        .clk_1536khz(clk_1536khz)
     );
     //phrase playback module
     
     playback_phrase playback_phrase_i (
-        .clk(clk),
+        .clk(clk_100MHz),
         .reset_active_high(reset_active_high),
         .line_count(line_count),
         .tempo(tempo),
@@ -163,12 +159,14 @@ module tracker_top(
     
 
     PhraseData PhraseData_1 (
-        .clk(clk), //100Mhz clock
-
+        .clk(clk_100MHz), //100Mhz clock
         .rst_active_high(reset_active_high),
         
         .play_pause(play_switch),
-        
+        .cursor_x(cursor_x),
+        .cursor_y(cursor_y),
+
+        .user_edit(user_edit),
         .row(row),
         
         .channel_0(phraseData_0),
@@ -176,13 +174,27 @@ module tracker_top(
         .channel_2(phraseData_2),
         .channel_3(phraseData_3),
         
-        .cursor_x(cursor_x),
-        .cursor_y(cursor_y),
-        
-        .user_edit(user_edit),
-        .selection_type(selection_type),
-        .selection_modifiable(entry_modifiable),
-        .cursor_selection(phrase_input)
+        .active_register(phrase_input),
+        .entry_modifiable(entry_modifiable),
+        .selection(selection_type)
     );
+
+    // Hex units that display contents of sw and sum register in hex
+    hex_driver hex_a (
+        .clk            (clk_100MHz),
+        .reset          (reset_active_high),
+        .in             ({phrase_input[15:12], phrase_input[11:8], phrase_input[7:4], phrase_input[3:0]}),
+        .hex_seg        (hex_seg_a_0),
+        .hex_grid       (hex_grid_a_0)
+    );
+
+    hex_driver hex_b (
+        .clk            (clk_100MHz),
+        .reset          (reset_active_high),
+        .in             ({{entry_modifiable, 3'b000}, 4'b0000, 4'b0000, {2'b00, selection_type}}),
+        .hex_seg        (hex_seg_b_0),
+        .hex_grid       (hex_grid_b_0)
+    );
+
     
 endmodule

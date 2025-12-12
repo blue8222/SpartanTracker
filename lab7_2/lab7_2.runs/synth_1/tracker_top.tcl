@@ -72,7 +72,6 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param general.maxThreads 8
 set_param chipscope.maxJobs 2
-set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {Synth 8-87}  -new_severity {ERROR} 
 set_msg_config  -id {Synth 8-327}  -new_severity {ERROR} 
 OPTRACE "Creating in-memory project" START { }
@@ -106,6 +105,7 @@ read_verilog -library xil_defaultlib -sv {
   D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Square_LUT.sv
   D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Triangle_LUT.sv
   D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/clk_divider.sv
+  D:/SpartanTracker/ip_repo/hdmi_tc_2/hdl/hex_driver.sv
   D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/mixer.sv
   D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/playback.sv
   D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Tracker_Top.sv

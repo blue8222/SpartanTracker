@@ -368,3 +368,100 @@ con
 ----------------End of Script----------------
 
 21:24:20 INFO  : Disconnected from the channel tcfchan#14.
+22:40:17 DEBUG : Logs will be stored at 'D:/SpartanTracker/lab7_2/sdk/IDE.log'.
+22:40:17 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\SpartanTracker\lab7_2\sdk\temp_xsdb_launch_script.tcl
+22:40:24 INFO  : XSCT server has started successfully.
+22:40:24 INFO  : plnx-install-location is set to ''
+22:40:24 INFO  : Successfully done setting XSCT server connection channel  
+22:40:24 INFO  : Successfully done setting workspace for the tool. 
+22:40:24 INFO  : Registering command handlers for Vitis TCF services
+22:40:25 INFO  : Platform repository initialization has completed.
+22:40:31 INFO  : Successfully done query RDI_DATADIR 
+22:40:37 INFO  : Hardware specification for platform project 'tracker_top' is updated.
+22:40:45 INFO  : Result from executing command 'removePlatformRepo': 
+22:41:04 INFO  : Result from executing command 'getProjects': tracker_top
+22:41:04 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+22:41:04 INFO  : Checking for BSP changes to sync application flags for project 'tracker'...
+22:41:11 INFO  : The hardware specification used by project 'tracker' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+22:41:11 INFO  : The file 'D:\SpartanTracker\lab7_2\sdk\tracker\_ide\bitstream\tracker_top.bit' stored in project is removed.
+22:41:11 INFO  : The file 'D:\SpartanTracker\lab7_2\sdk\tracker\_ide\bitstream\tracker_top.mmi' stored in project is removed.
+22:41:11 INFO  : The updated bitstream files are copied from platform to folder 'D:\SpartanTracker\lab7_2\sdk\tracker\_ide\bitstream' in project 'tracker'.
+22:41:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:41:19 INFO  : Jtag cable 'RealDigital Boo 88710000000FA' is selected.
+22:41:19 INFO  : 'jtag frequency' command is executed.
+22:41:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000FA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:41:21 INFO  : Device configured successfully with "D:/SpartanTracker/lab7_2/sdk/tracker/_ide/bitstream/tracker_top.bit"
+22:41:21 INFO  : Context for processor 'microblaze_0' is selected.
+22:41:21 INFO  : Hardware design and registers information is loaded from 'D:/SpartanTracker/lab7_2/sdk/tracker_top/export/tracker_top/hw/tracker_top.xsa'.
+22:41:21 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:41:21 INFO  : Context for processor 'microblaze_0' is selected.
+22:41:21 INFO  : System reset is completed.
+22:41:24 INFO  : 'after 3000' command is executed.
+22:41:24 INFO  : Context for processor 'microblaze_0' is selected.
+22:41:24 INFO  : The application 'D:/SpartanTracker/lab7_2/sdk/tracker/Debug/tracker.elf' is downloaded to processor 'microblaze_0'.
+22:41:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000FA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file D:/SpartanTracker/lab7_2/sdk/tracker/_ide/bitstream/tracker_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw D:/SpartanTracker/lab7_2/sdk/tracker_top/export/tracker_top/hw/tracker_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow D:/SpartanTracker/lab7_2/sdk/tracker/Debug/tracker.elf
+----------------End of Script----------------
+
+22:41:24 INFO  : Context for processor 'microblaze_0' is selected.
+22:41:24 INFO  : 'con' command is executed.
+22:41:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:41:24 INFO  : Disconnected from the channel tcfchan#3.
+23:03:27 INFO  : Hardware specification for platform project 'tracker_top' is updated.
+23:04:12 INFO  : Result from executing command 'removePlatformRepo': 
+23:04:30 INFO  : Result from executing command 'getProjects': tracker_top
+23:04:30 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+23:04:31 INFO  : Checking for BSP changes to sync application flags for project 'tracker'...
+23:04:34 INFO  : The hardware specification used by project 'tracker' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+23:04:34 INFO  : The file 'D:\SpartanTracker\lab7_2\sdk\tracker\_ide\bitstream\tracker_top.bit' stored in project is removed.
+23:04:34 INFO  : The file 'D:\SpartanTracker\lab7_2\sdk\tracker\_ide\bitstream\tracker_top.mmi' stored in project is removed.
+23:04:34 INFO  : The updated bitstream files are copied from platform to folder 'D:\SpartanTracker\lab7_2\sdk\tracker\_ide\bitstream' in project 'tracker'.
+23:04:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:04:39 INFO  : Jtag cable 'RealDigital Boo 88710000000FA' is selected.
+23:04:39 INFO  : 'jtag frequency' command is executed.
+23:04:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000FA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:04:41 INFO  : Device configured successfully with "D:/SpartanTracker/lab7_2/sdk/tracker/_ide/bitstream/tracker_top.bit"
+23:04:41 INFO  : Context for processor 'microblaze_0' is selected.
+23:04:41 INFO  : Hardware design and registers information is loaded from 'D:/SpartanTracker/lab7_2/sdk/tracker_top/export/tracker_top/hw/tracker_top.xsa'.
+23:04:41 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:04:41 INFO  : Context for processor 'microblaze_0' is selected.
+23:04:41 INFO  : System reset is completed.
+23:04:44 INFO  : 'after 3000' command is executed.
+23:04:44 INFO  : Context for processor 'microblaze_0' is selected.
+23:04:44 INFO  : The application 'D:/SpartanTracker/lab7_2/sdk/tracker/Debug/tracker.elf' is downloaded to processor 'microblaze_0'.
+23:04:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000FA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file D:/SpartanTracker/lab7_2/sdk/tracker/_ide/bitstream/tracker_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw D:/SpartanTracker/lab7_2/sdk/tracker_top/export/tracker_top/hw/tracker_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow D:/SpartanTracker/lab7_2/sdk/tracker/Debug/tracker.elf
+----------------End of Script----------------
+
+23:04:44 INFO  : Context for processor 'microblaze_0' is selected.
+23:04:44 INFO  : 'con' command is executed.
+23:04:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:04:44 INFO  : Disconnected from the channel tcfchan#6.

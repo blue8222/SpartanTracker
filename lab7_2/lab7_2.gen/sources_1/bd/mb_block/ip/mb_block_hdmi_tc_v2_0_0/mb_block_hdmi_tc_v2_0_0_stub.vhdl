@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
--- Date        : Thu Dec 11 20:54:22 2025
+-- Date        : Thu Dec 11 22:27:51 2025
 -- Host        : hein_yoga running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0_stub.vhdl
@@ -26,10 +26,6 @@ entity mb_block_hdmi_tc_v2_0_0 is
     hdmi_clk_p : out STD_LOGIC;
     hdmi_tx_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
     hdmi_tx_p : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    hex_seg_a_0 : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    hex_grid_a_0 : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    hex_seg_b_0 : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    hex_grid_b_0 : out STD_LOGIC_VECTOR ( 3 downto 0 );
     axi_aclk : in STD_LOGIC;
     axi_aresetn : in STD_LOGIC;
     axi_awaddr : in STD_LOGIC_VECTOR ( 15 downto 0 );
@@ -59,7 +55,7 @@ architecture stub of mb_block_hdmi_tc_v2_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "keycode_0[31:0],keycode_1[31:0],phrase_input[15:0],selection_type[1:0],cursor_x[6:0],cursor_y[6:0],pix_codes[13:0],user_edit[1:0],hdmi_clk_n,hdmi_clk_p,hdmi_tx_n[2:0],hdmi_tx_p[2:0],hex_seg_a_0[7:0],hex_grid_a_0[3:0],hex_seg_b_0[7:0],hex_grid_b_0[3:0],axi_aclk,axi_aresetn,axi_awaddr[15:0],axi_awprot[2:0],axi_awvalid,axi_awready,axi_wdata[31:0],axi_wstrb[3:0],axi_wvalid,axi_wready,axi_bresp[1:0],axi_bvalid,axi_bready,axi_araddr[15:0],axi_arprot[2:0],axi_arvalid,axi_arready,axi_rdata[31:0],axi_rresp[1:0],axi_rvalid,axi_rready";
+attribute black_box_pad_pin of stub : architecture is "keycode_0[31:0],keycode_1[31:0],phrase_input[15:0],selection_type[1:0],cursor_x[6:0],cursor_y[6:0],pix_codes[13:0],user_edit[1:0],hdmi_clk_n,hdmi_clk_p,hdmi_tx_n[2:0],hdmi_tx_p[2:0],axi_aclk,axi_aresetn,axi_awaddr[15:0],axi_awprot[2:0],axi_awvalid,axi_awready,axi_wdata[31:0],axi_wstrb[3:0],axi_wvalid,axi_wready,axi_bresp[1:0],axi_bvalid,axi_bready,axi_araddr[15:0],axi_arprot[2:0],axi_arvalid,axi_arready,axi_rdata[31:0],axi_rresp[1:0],axi_rvalid,axi_rready";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "hdmi_text_controller_v1_0,Vivado 2022.2";
 begin

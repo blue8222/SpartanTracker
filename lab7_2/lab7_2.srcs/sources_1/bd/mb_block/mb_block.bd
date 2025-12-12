@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xBE0447A8AFD39BDB",
+      "boundary_crc": "0xA75AF7897F7FEA82",
       "device": "xc7s50csga324-1",
       "gen_directory": "../../../../lab7_2.gen/sources_1/bd/mb_block",
       "name": "mb_block",
@@ -240,26 +240,6 @@
       "pix_codes_0": {
         "direction": "O",
         "left": "13",
-        "right": "0"
-      },
-      "hex_seg_a_0": {
-        "direction": "O",
-        "left": "7",
-        "right": "0"
-      },
-      "hex_grid_a_0": {
-        "direction": "O",
-        "left": "3",
-        "right": "0"
-      },
-      "hex_seg_b_0": {
-        "direction": "O",
-        "left": "7",
-        "right": "0"
-      },
-      "hex_grid_b_0": {
-        "direction": "O",
-        "left": "3",
         "right": "0"
       },
       "user_edit_0": {
@@ -1910,30 +1890,6 @@
         "ports": [
           "hdmi_tc_v2_0/cursor_y",
           "cursor_y_1"
-        ]
-      },
-      "hdmi_tc_v2_0_hex_grid_a": {
-        "ports": [
-          "hdmi_tc_v2_0/hex_grid_a_0",
-          "hex_grid_a_0"
-        ]
-      },
-      "hdmi_tc_v2_0_hex_grid_b": {
-        "ports": [
-          "hdmi_tc_v2_0/hex_grid_b_0",
-          "hex_grid_b_0"
-        ]
-      },
-      "hdmi_tc_v2_0_hex_seg_a": {
-        "ports": [
-          "hdmi_tc_v2_0/hex_seg_a_0",
-          "hex_seg_a_0"
-        ]
-      },
-      "hdmi_tc_v2_0_hex_seg_b": {
-        "ports": [
-          "hdmi_tc_v2_0/hex_seg_b_0",
-          "hex_seg_b_0"
         ]
       },
       "hdmi_tc_v2_0_user_edit": {

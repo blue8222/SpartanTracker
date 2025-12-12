@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-//Date        : Thu Dec 11 20:53:10 2025
+//Date        : Thu Dec 11 22:26:47 2025
 //Host        : hein_yoga running 64-bit major release  (build 9200)
 //Command     : generate_target mb_block.bd
 //Design      : mb_block
@@ -1239,7 +1239,8 @@ module mb_block
     usb_spi_miso,
     usb_spi_mosi,
     usb_spi_sclk,
-    usb_spi_ss);
+    usb_spi_ss,
+    user_edit_0);
   (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI_0 TMDS_CLK_N" *) output HDMI_0_tmds_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI_0 TMDS_CLK_P" *) output HDMI_0_tmds_clk_p;
   (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI_0 TMDS_DATA_N" *) output [2:0]HDMI_0_tmds_data_n;
@@ -1267,6 +1268,7 @@ module mb_block
   output usb_spi_mosi;
   output usb_spi_sclk;
   output [0:0]usb_spi_ss;
+  output [1:0]user_edit_0;
 
   wire [14:0]axi_cursor_GPIO2_TRI_I;
   wire [13:0]axi_cursor_GPIO_TRI_I;
@@ -1282,10 +1284,7 @@ module mb_block
   wire [2:0]hdmi_tc_v2_0_HDMI_TMDS_DATA_P;
   wire [6:0]hdmi_tc_v2_0_cursor_x;
   wire [6:0]hdmi_tc_v2_0_cursor_y;
-  wire [3:0]hdmi_tc_v2_0_hex_grid_a;
-  wire [3:0]hdmi_tc_v2_0_hex_grid_b;
-  wire [7:0]hdmi_tc_v2_0_hex_seg_a;
-  wire [7:0]hdmi_tc_v2_0_hex_seg_b;
+  wire [1:0]hdmi_tc_v2_0_user_edit;
   wire mdm_1_debug_sys_rst;
   wire microblaze_0_Clk;
   wire [31:0]microblaze_0_axi_dp_ARADDR;
@@ -1526,10 +1525,6 @@ module mb_block
   assign cursor_x_1[6:0] = hdmi_tc_v2_0_cursor_x;
   assign cursor_y_1[6:0] = hdmi_tc_v2_0_cursor_y;
   assign gpio_usb_rst_tri_o[0] = usb_rst_GPIO_TRI_O;
-  assign hex_grid_a_0[3:0] = hdmi_tc_v2_0_hex_grid_a;
-  assign hex_grid_b_0[3:0] = hdmi_tc_v2_0_hex_grid_b;
-  assign hex_seg_a_0[7:0] = hdmi_tc_v2_0_hex_seg_a;
-  assign hex_seg_b_0[7:0] = hdmi_tc_v2_0_hex_seg_b;
   assign locked = synth_clock_locked;
   assign phrase_input_0_1 = phrase_input_0[15:0];
   assign pix_codes_0[13:0] = hdmi_tc_0_pix_codes;
@@ -1541,6 +1536,7 @@ module mb_block
   assign usb_spi_mosi = spi_usb_io0_o;
   assign usb_spi_sclk = spi_usb_sck_o;
   assign usb_spi_ss[0] = spi_usb_ss_o;
+  assign user_edit_0[1:0] = hdmi_tc_v2_0_user_edit;
   mb_block_axi_gpio_0_2 axi_cursor
        (.gpio2_io_i(axi_cursor_GPIO2_TRI_I),
         .gpio_io_i(axi_cursor_GPIO_TRI_I),
@@ -1619,15 +1615,12 @@ module mb_block
         .hdmi_clk_p(hdmi_tc_v2_0_HDMI_TMDS_CLK_P),
         .hdmi_tx_n(hdmi_tc_v2_0_HDMI_TMDS_DATA_N),
         .hdmi_tx_p(hdmi_tc_v2_0_HDMI_TMDS_DATA_P),
-        .hex_grid_a_0(hdmi_tc_v2_0_hex_grid_a),
-        .hex_grid_b_0(hdmi_tc_v2_0_hex_grid_b),
-        .hex_seg_a_0(hdmi_tc_v2_0_hex_seg_a),
-        .hex_seg_b_0(hdmi_tc_v2_0_hex_seg_b),
         .keycode_0(usb_keycode_gpio_io_o),
         .keycode_1(usb_keycode_gpio2_io_o),
         .phrase_input(phrase_input_0_1),
         .pix_codes(hdmi_tc_0_pix_codes),
-        .selection_type(selection_type_0_1));
+        .selection_type(selection_type_0_1),
+        .user_edit(hdmi_tc_v2_0_user_edit));
   mb_block_mdm_1_0 mdm_1
        (.Dbg_Capture_0(microblaze_0_debug_CAPTURE),
         .Dbg_Clk_0(microblaze_0_debug_CLK),

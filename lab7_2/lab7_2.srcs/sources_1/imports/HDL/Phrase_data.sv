@@ -17,10 +17,9 @@ module PhraseData (
     output logic [15:0] channel_2,
     output logic [15:0] channel_3,
 
-    output logic [15:0] cursor_selection,
-    
-    output logic selection_modifiable,
-    output logic [15:0] selection_type
+    output logic [15:0] active_register,        // currently selected phrase register contents
+    output logic entry_modifiable,              // if on __
+    output logic [1:0] selection                // index to indicated note/oct/vol/in within one phrase col
 );
 
 //-----------------------------------------------------------------
@@ -38,7 +37,6 @@ logic [15:0] PhraseRegs_2 [0:15];
 logic [15:0] PhraseRegs_3 [0:15];
 
 // state signals
-logic        entry_modifiable;
 logic [1:0]  phrase_entry;   // which channel is selected (0..3)
 logic [3:0]  edit_row_idx;   // mapped row index (0..15)
 
@@ -51,15 +49,7 @@ logic [15:0] initial_val;
 logic [15:0] computed_new_val;
 logic [1:0]  param_type;
 
-logic [15:0] active_register;
-logic [1:0] selection;
-
 integer i, j;
-
-
-assign selection_modifiable = entry_modifiable;
-assign cursor_selection = active_register;
-assign selection_type = selection;
 
 // synchronous reset for PhraseRegs (combined reset + keep normal writes later)
 always_ff @(posedge clk) begin
@@ -69,7 +59,6 @@ always_ff @(posedge clk) begin
             PhraseRegs_1[i] <= '1;
             PhraseRegs_2[i] <= '1;
             PhraseRegs_3[i] <= '1;
-            cursor_selection <= 16'h0000;
         end
     end else begin
         
@@ -89,12 +78,11 @@ always_comb begin
     selection = get_parameter(phrase_entry, cursor_x);
 
     unique case (phrase_entry)
-
         2'b00 : active_register = PhraseRegs_0[edit_row_idx];
         2'b01 : active_register = PhraseRegs_1[edit_row_idx];
         2'b10 : active_register = PhraseRegs_2[edit_row_idx];
         2'b11 : active_register = PhraseRegs_3[edit_row_idx];
-
+        default : active_register = '1;
     endcase 
 
 end

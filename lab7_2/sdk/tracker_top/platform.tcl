@@ -24,3 +24,10 @@ platform generate
 platform config -updatehw {D:/SpartanTracker/lab7_2/tracker_top.xsa}
 platform clean
 platform generate
+platform active {tracker_top}
+platform config -updatehw {D:/SpartanTracker/lab7_2/tracker_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/SpartanTracker/lab7_2/tracker_top.xsa}
+platform clean
+platform generate

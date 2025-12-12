@@ -115,7 +115,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {Synth 8-87}  -new_severity {ERROR} 
 set_msg_config  -id {Synth 8-327}  -new_severity {ERROR} 
 

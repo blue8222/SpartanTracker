@@ -211,14 +211,13 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../lab7_2.gen/sources_1/bd/mb
 "../../../bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/VRAMBlockMemory/sim/VRAMBlockMemory.v" \
 
 vlog -work xil_defaultlib  -sv2k12 "+incdir+../../../../lab7_2.gen/sources_1/bd/mb_block/ipshared/ec67/hdl" "+incdir+../../../../lab7_2.gen/sources_1/bd/mb_block/ipshared/7698" "+incdir+../../../../lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/clk_wiz_ip" \
-"../../../bd/mb_block/ipshared/5315/hdl/Color_Mapper.sv" \
-"../../../bd/mb_block/ipshared/5315/hdl/PixelCode.sv" \
-"../../../bd/mb_block/ipshared/5315/hdl/VGA_controller.sv" \
-"../../../bd/mb_block/ipshared/5315/hdl/font_rom.sv" \
-"../../../bd/mb_block/ipshared/5315/hdl/hdmi_text_controller_v1_0_AXI.sv" \
-"../../../bd/mb_block/ipshared/5315/hdl/hex_driver.sv" \
-"../../../bd/mb_block/ipshared/5315/hdl/keycode_mapper.sv" \
-"../../../bd/mb_block/ipshared/5315/hdl/hdmi_text_controller_v1_0.sv" \
+"../../../bd/mb_block/ipshared/7782/hdl/Color_Mapper.sv" \
+"../../../bd/mb_block/ipshared/7782/hdl/PixelCode.sv" \
+"../../../bd/mb_block/ipshared/7782/hdl/VGA_controller.sv" \
+"../../../bd/mb_block/ipshared/7782/hdl/font_rom.sv" \
+"../../../bd/mb_block/ipshared/7782/hdl/hdmi_text_controller_v1_0_AXI.sv" \
+"../../../bd/mb_block/ipshared/7782/hdl/keycode_mapper.sv" \
+"../../../bd/mb_block/ipshared/7782/hdl/hdmi_text_controller_v1_0.sv" \
 "../../../bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/sim/mb_block_hdmi_tc_v2_0_0.sv" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../lab7_2.gen/sources_1/bd/mb_block/ipshared/ec67/hdl" "+incdir+../../../../lab7_2.gen/sources_1/bd/mb_block/ipshared/7698" "+incdir+../../../../lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/clk_wiz_ip" \

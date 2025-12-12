@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Dec 11 20:53:20 2025
-# Process ID: 34324
+# Start of session at: Thu Dec 11 22:26:58 2025
+# Process ID: 34228
 # Current directory: D:/SpartanTracker/lab7_2/lab7_2.runs/mb_block_hdmi_tc_v2_0_0_synth_1
 # Command line: vivado.exe -log mb_block_hdmi_tc_v2_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mb_block_hdmi_tc_v2_0_0.tcl
 # Log file: D:/SpartanTracker/lab7_2/lab7_2.runs/mb_block_hdmi_tc_v2_0_0_synth_1/mb_block_hdmi_tc_v2_0_0.vds

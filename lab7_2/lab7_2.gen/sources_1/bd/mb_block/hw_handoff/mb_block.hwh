@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Dec 11 21:06:25 2025" VIVADOVERSION="2022.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Dec 11 22:28:22 2025" VIVADOVERSION="2022.2">
 
   <SYSTEMINFO ARCH="spartan7" DEVICE="7s50" NAME="mb_block" PACKAGE="csga324" SPEEDGRADE="-1"/>
 
@@ -118,26 +118,6 @@
     <PORT DIR="O" LEFT="13" NAME="pix_codes_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_pix_codes">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="pix_codes"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="7" NAME="hex_seg_a_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hex_seg_a_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="hex_seg_a_0"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="3" NAME="hex_grid_a_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hex_grid_a_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="hex_grid_a_0"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="7" NAME="hex_seg_b_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hex_seg_b_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="hex_seg_b_0"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="3" NAME="hex_grid_b_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hex_grid_b_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="hex_grid_b_0"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="1" NAME="user_edit_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_user_edit">
@@ -1553,7 +1533,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="43" FULLNAME="/hdmi_tc_v2_0" HWVERSION="1.0" INSTANCE="hdmi_tc_v2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="hdmi_tc_v2" VLNV="xilinx.com:user:hdmi_tc_v2:1.0">
+    <MODULE COREREVISION="44" FULLNAME="/hdmi_tc_v2_0" HWVERSION="1.0" INSTANCE="hdmi_tc_v2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="hdmi_tc_v2" VLNV="xilinx.com:user:hdmi_tc_v2:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="AXI" NAME="AXI_reg" RANGE="4096" USAGE="register"/>
@@ -1625,26 +1605,6 @@
         <PORT DIR="O" LEFT="2" NAME="hdmi_tx_p" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hdmi_tx_p">
           <CONNECTIONS>
             <CONNECTION INSTANCE="mb_block_imp" PORT="HDMI_0_tmds_data_p"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="7" NAME="hex_seg_a_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hex_seg_a_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="hex_seg_a_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="hex_grid_a_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hex_grid_a_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="hex_grid_a_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="7" NAME="hex_seg_b_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hex_seg_b_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="hex_seg_b_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="hex_grid_b_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hex_grid_b_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="hex_grid_b_0"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="axi_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">

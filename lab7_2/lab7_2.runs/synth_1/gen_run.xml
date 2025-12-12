@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1765510814" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/mb_intro_top.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1765515782" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/mb_intro_top.dcp">
   <File Type="PA-TCL" Name="tracker_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="tracker_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="tracker_top_reports.tcl"/>
@@ -123,6 +123,13 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../recent/SpartanTracker/HDL/clk_divider.sv"/>
         <Attr Name="ImportTime" Val="1765314822"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../ip_repo/hdmi_tc_2/hdl/hex_driver.sv">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
