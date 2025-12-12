@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1765196597">
+<GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1765510814">
   <File Type="ROUTE-PWR" Name="tracker_top_power_routed.rpt"/>
   <File Type="PA-TCL" Name="tracker_top.tcl"/>
   <File Type="BITSTR-MMI" Name="tracker_top.mmi"/>
@@ -83,122 +83,143 @@
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/mb_block/mb_block.bd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../lab6/lab6.srcs/sources_1/bd/mb_block/mb_block.bd"/>
-        <Attr Name="ImportTime" Val="1760386591"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd"/>
+        <Attr Name="ImportTime" Val="1765431654"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../HDL/DDS_Saw.sv">
+    <File Path="$PSRCDIR/sources_1/imports/HDL/DDS_Saw.sv">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../recent/SpartanTracker/HDL/DDS_Saw.sv"/>
+        <Attr Name="ImportTime" Val="1765314822"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../HDL/DDS_Sine.sv">
+    <File Path="$PSRCDIR/sources_1/imports/HDL/DDS_Sine.sv">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../recent/SpartanTracker/HDL/DDS_Sine.sv"/>
+        <Attr Name="ImportTime" Val="1765314822"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../HDL/DDS_Square.sv">
+    <File Path="$PSRCDIR/sources_1/imports/HDL/DDS_Square.sv">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../recent/SpartanTracker/HDL/DDS_Square.sv"/>
+        <Attr Name="ImportTime" Val="1765314822"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../HDL/DDS_Triangle.sv">
+    <File Path="$PSRCDIR/sources_1/imports/HDL/DDS_Triangle.sv">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../recent/SpartanTracker/HDL/DDS_Triangle.sv"/>
+        <Attr Name="ImportTime" Val="1765314822"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../HDL/PCMSerializer.sv">
+    <File Path="$PSRCDIR/sources_1/imports/HDL/PCMSerializer.sv">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../recent/SpartanTracker/HDL/PCMSerializer.sv"/>
+        <Attr Name="ImportTime" Val="1765314822"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../HDL/PhaseAccumulator.sv">
+    <File Path="$PSRCDIR/sources_1/imports/HDL/PhaseAccumulator.sv">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../recent/SpartanTracker/HDL/PhaseAccumulator.sv"/>
+        <Attr Name="ImportTime" Val="1765314822"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../HDL/Phrase_data.sv">
+    <File Path="$PSRCDIR/sources_1/imports/HDL/Phrase_data.sv">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../recent/SpartanTracker/HDL/Phrase_data.sv"/>
+        <Attr Name="ImportTime" Val="1765316991"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../HDL/Saw_LUT.sv">
+    <File Path="$PSRCDIR/sources_1/imports/HDL/Saw_LUT.sv">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../recent/SpartanTracker/HDL/Saw_LUT.sv"/>
+        <Attr Name="ImportTime" Val="1765314822"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../HDL/Sine_LUT.sv">
+    <File Path="$PSRCDIR/sources_1/imports/HDL/Sine_LUT.sv">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../recent/SpartanTracker/HDL/Sine_LUT.sv"/>
+        <Attr Name="ImportTime" Val="1765314822"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../HDL/Square_LUT.sv">
+    <File Path="$PSRCDIR/sources_1/imports/HDL/Square_LUT.sv">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../recent/SpartanTracker/HDL/Square_LUT.sv"/>
+        <Attr Name="ImportTime" Val="1765314822"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../HDL/Triangle_LUT.sv">
+    <File Path="$PSRCDIR/sources_1/imports/HDL/Triangle_LUT.sv">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../recent/SpartanTracker/HDL/Triangle_LUT.sv"/>
+        <Attr Name="ImportTime" Val="1765314822"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../HDL/clk_divider.sv">
+    <File Path="$PSRCDIR/sources_1/imports/HDL/clk_divider.sv">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../recent/SpartanTracker/HDL/clk_divider.sv"/>
+        <Attr Name="ImportTime" Val="1765314822"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../HDL/keycode_mapper.sv">
+    <File Path="$PSRCDIR/sources_1/imports/HDL/mixer.sv">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../recent/SpartanTracker/HDL/mixer.sv"/>
+        <Attr Name="ImportTime" Val="1765314822"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../HDL/mixer.sv">
+    <File Path="$PSRCDIR/sources_1/imports/HDL/playback.sv">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../recent/SpartanTracker/HDL/playback.sv"/>
+        <Attr Name="ImportTime" Val="1765314822"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../HDL/playback.sv">
+    <File Path="$PSRCDIR/sources_1/imports/HDL/Tracker_Top.sv">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/design_source/tracker_top.sv">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../HDL/tracker_top.sv"/>
-        <Attr Name="ImportTime" Val="1765194103"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../recent/SpartanTracker/HDL/Tracker_Top.sv"/>
+        <Attr Name="ImportTime" Val="1765320464"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -215,6 +236,7 @@
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="tracker_top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -259,15 +281,5 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="mb_block_dlmb_bram_if_cntlr_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_gpio_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_gpio_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_block_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_timer_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_block_microblaze_0_axi_intc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_quad_spi_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_block_clk_wiz_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_gpio_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_gpio_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_block_hdmi_text_controller_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_hdmi_tc_v2_0_0"/>
 </GenRun>

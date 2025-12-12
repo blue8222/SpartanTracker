@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xDF1EC74CCBEB549D",
+      "boundary_crc": "0xBE0447A8AFD39BDB",
       "device": "xc7s50csga324-1",
       "gen_directory": "../../../../lab7_2.gen/sources_1/bd/mb_block",
       "name": "mb_block",
@@ -45,7 +45,7 @@
       "usb_keycode": "",
       "synth_clock": "",
       "axi_cursor": "",
-      "hdmi_tc_0": ""
+      "hdmi_tc_v2_0": ""
     },
     "interface_ports": {
       "uart_rtl_0": {
@@ -116,54 +116,28 @@
           }
         }
       },
-      "gpio_usb_keycode_0": {
-        "mode": "Master",
-        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
-        "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
-        "port_maps": {
-          "TRI_O": {
-            "physical_name": "gpio_usb_keycode_0_tri_o",
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          }
-        }
-      },
-      "gpio_usb_keycode_1": {
-        "mode": "Master",
-        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
-        "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
-        "port_maps": {
-          "TRI_O": {
-            "physical_name": "gpio_usb_keycode_1_tri_o",
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          }
-        }
-      },
-      "cursor_x": {
+      "cursor_xy": {
         "mode": "Master",
         "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
         "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
         "port_maps": {
           "TRI_I": {
-            "physical_name": "cursor_x_tri_i",
+            "physical_name": "cursor_xy_tri_i",
             "direction": "I",
-            "left": "6",
+            "left": "13",
             "right": "0"
           }
         }
       },
-      "cursor_y": {
+      "enb_pixcodes": {
         "mode": "Master",
         "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
         "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
         "port_maps": {
           "TRI_I": {
-            "physical_name": "cursor_y_tri_i",
+            "physical_name": "enb_pixcodes_tri_i",
             "direction": "I",
-            "left": "6",
+            "left": "14",
             "right": "0"
           }
         }
@@ -243,18 +217,55 @@
       "locked": {
         "direction": "O"
       },
-      "cursor_y_0": {
+      "phrase_input_0": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "selection_type_0": {
+        "direction": "I",
+        "left": "1",
+        "right": "0"
+      },
+      "cursor_x_1": {
         "direction": "O",
         "left": "6",
         "right": "0"
       },
-      "cursor_x_0": {
+      "cursor_y_1": {
         "direction": "O",
         "left": "6",
         "right": "0"
       },
-      "vsync_out_0": {
-        "direction": "O"
+      "pix_codes_0": {
+        "direction": "O",
+        "left": "13",
+        "right": "0"
+      },
+      "hex_seg_a_0": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "hex_grid_a_0": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "hex_seg_b_0": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "hex_grid_b_0": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "user_edit_0": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
       }
     },
     "components": {
@@ -1725,33 +1736,33 @@
             "value": "1"
           },
           "C_GPIO2_WIDTH": {
-            "value": "7"
+            "value": "15"
           },
           "C_GPIO_WIDTH": {
-            "value": "7"
+            "value": "14"
           },
           "C_IS_DUAL": {
             "value": "1"
           }
         }
       },
-      "hdmi_tc_0": {
+      "hdmi_tc_v2_0": {
         "vlnv": "xilinx.com:user:hdmi_tc_v2:1.0",
-        "xci_name": "mb_block_hdmi_text_controller_0_0",
-        "xci_path": "ip\\mb_block_hdmi_text_controller_0_0\\mb_block_hdmi_text_controller_0_0.xci",
-        "inst_hier_path": "hdmi_tc_0"
+        "xci_name": "mb_block_hdmi_tc_v2_0_0",
+        "xci_path": "ip\\mb_block_hdmi_tc_v2_0_0\\mb_block_hdmi_tc_v2_0_0.xci",
+        "inst_hier_path": "hdmi_tc_v2_0"
       }
     },
     "interface_nets": {
       "axi_cursor_GPIO": {
         "interface_ports": [
-          "cursor_x",
+          "cursor_xy",
           "axi_cursor/GPIO"
         ]
       },
       "axi_cursor_GPIO2": {
         "interface_ports": [
-          "cursor_y",
+          "enb_pixcodes",
           "axi_cursor/GPIO2"
         ]
       },
@@ -1761,10 +1772,10 @@
           "axi_uartlite_0/UART"
         ]
       },
-      "hdmi_text_controller_0_HDMI": {
+      "hdmi_tc_v2_0_HDMI": {
         "interface_ports": [
           "HDMI_0",
-          "hdmi_tc_0/HDMI"
+          "hdmi_tc_v2_0/HDMI"
         ]
       },
       "microblaze_0_axi_dp": {
@@ -1775,8 +1786,8 @@
       },
       "microblaze_0_axi_periph_M01_AXI": {
         "interface_ports": [
-          "hdmi_tc_0/AXI",
-          "microblaze_0_axi_periph/M01_AXI"
+          "microblaze_0_axi_periph/M01_AXI",
+          "hdmi_tc_v2_0/AXI"
         ]
       },
       "microblaze_0_axi_periph_M02_AXI": {
@@ -1857,18 +1868,6 @@
           "usb_int/GPIO"
         ]
       },
-      "usb_keycode_GPIO": {
-        "interface_ports": [
-          "gpio_usb_keycode_0",
-          "usb_keycode/GPIO"
-        ]
-      },
-      "usb_keycode_GPIO2": {
-        "interface_ports": [
-          "gpio_usb_keycode_1",
-          "usb_keycode/GPIO2"
-        ]
-      },
       "usb_rst_GPIO": {
         "interface_ports": [
           "gpio_usb_rst",
@@ -1886,8 +1885,7 @@
       "clk_100MHz_1": {
         "ports": [
           "clk_100MHz",
-          "clk_wiz_0/clk_in1",
-          "synth_clock/clk_in1"
+          "clk_wiz_0/clk_in1"
         ]
       },
       "clk_wiz_0_locked": {
@@ -1896,22 +1894,52 @@
           "rst_clk_wiz_1_100M/dcm_locked"
         ]
       },
-      "hdmi_tc_0_cursor_x": {
+      "hdmi_tc_0_pix_codes": {
         "ports": [
-          "hdmi_tc_0/cursor_x",
-          "cursor_x_0"
+          "hdmi_tc_v2_0/pix_codes",
+          "pix_codes_0"
         ]
       },
-      "hdmi_tc_0_cursor_y": {
+      "hdmi_tc_v2_0_cursor_x": {
         "ports": [
-          "hdmi_tc_0/cursor_y",
-          "cursor_y_0"
+          "hdmi_tc_v2_0/cursor_x",
+          "cursor_x_1"
         ]
       },
-      "hdmi_tc_0_vsync_out": {
+      "hdmi_tc_v2_0_cursor_y": {
         "ports": [
-          "hdmi_tc_0/vsync_out",
-          "vsync_out_0"
+          "hdmi_tc_v2_0/cursor_y",
+          "cursor_y_1"
+        ]
+      },
+      "hdmi_tc_v2_0_hex_grid_a": {
+        "ports": [
+          "hdmi_tc_v2_0/hex_grid_a_0",
+          "hex_grid_a_0"
+        ]
+      },
+      "hdmi_tc_v2_0_hex_grid_b": {
+        "ports": [
+          "hdmi_tc_v2_0/hex_grid_b_0",
+          "hex_grid_b_0"
+        ]
+      },
+      "hdmi_tc_v2_0_hex_seg_a": {
+        "ports": [
+          "hdmi_tc_v2_0/hex_seg_a_0",
+          "hex_seg_a_0"
+        ]
+      },
+      "hdmi_tc_v2_0_hex_seg_b": {
+        "ports": [
+          "hdmi_tc_v2_0/hex_seg_b_0",
+          "hex_seg_b_0"
+        ]
+      },
+      "hdmi_tc_v2_0_user_edit": {
+        "ports": [
+          "hdmi_tc_v2_0/user_edit",
+          "user_edit_0"
         ]
       },
       "mdm_1_debug_sys_rst": {
@@ -1948,7 +1976,14 @@
           "microblaze_0_axi_periph/M07_ACLK",
           "axi_cursor/s_axi_aclk",
           "microblaze_0_axi_periph/M08_ACLK",
-          "hdmi_tc_0/axi_aclk"
+          "synth_clock/clk_in1",
+          "hdmi_tc_v2_0/axi_aclk"
+        ]
+      },
+      "phrase_input_0_1": {
+        "ports": [
+          "phrase_input_0",
+          "hdmi_tc_v2_0/phrase_input"
         ]
       },
       "reset_rtl_0_1": {
@@ -1993,7 +2028,13 @@
           "microblaze_0_axi_periph/M07_ARESETN",
           "axi_cursor/s_axi_aresetn",
           "microblaze_0_axi_periph/M08_ARESETN",
-          "hdmi_tc_0/axi_aresetn"
+          "hdmi_tc_v2_0/axi_aresetn"
+        ]
+      },
+      "selection_type_0_1": {
+        "ports": [
+          "selection_type_0",
+          "hdmi_tc_v2_0/selection_type"
         ]
       },
       "spi_usb_io0_o": {
@@ -2044,6 +2085,18 @@
           "xlconcat_0/In3"
         ]
       },
+      "usb_keycode_gpio2_io_o": {
+        "ports": [
+          "usb_keycode/gpio2_io_o",
+          "hdmi_tc_v2_0/keycode_1"
+        ]
+      },
+      "usb_keycode_gpio_io_o": {
+        "ports": [
+          "usb_keycode/gpio_io_o",
+          "hdmi_tc_v2_0/keycode_0"
+        ]
+      },
       "usb_spi_miso_1": {
         "ports": [
           "usb_spi_miso",
@@ -2078,8 +2131,8 @@
                 "range": "128K",
                 "offset_high_param": "C_HIGHADDR"
               },
-              "SEG_hdmi_text_controller_0_AXI_reg": {
-                "address_block": "/hdmi_tc_0/AXI/AXI_reg",
+              "SEG_hdmi_tc_v2_0_AXI_reg": {
+                "address_block": "/hdmi_tc_v2_0/AXI/AXI_reg",
                 "offset": "0x44A00000",
                 "range": "64K",
                 "offset_base_param": "C_AXI_BASEADDR",

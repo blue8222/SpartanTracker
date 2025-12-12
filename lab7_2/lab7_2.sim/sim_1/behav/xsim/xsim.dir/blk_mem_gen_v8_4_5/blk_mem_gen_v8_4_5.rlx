@@ -1,0 +1,5 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/25a8/simulation/blk_mem_gen_v8_4.v,1765315621,verilog,,,,STATE_LOGIC_v8_4;beh_vlog_ff_ce_clr_v8_4;beh_vlog_ff_clr_v8_4;beh_vlog_ff_pre_v8_4;beh_vlog_muxf7_v8_4;blk_mem_axi_read_wrapper_beh_v8_4;blk_mem_axi_regs_fwd_v8_4;blk_mem_axi_write_wrapper_beh_v8_4;blk_mem_gen_v8_4_5;blk_mem_gen_v8_4_5_mem_module;blk_mem_gen_v8_4_5_output_stage;blk_mem_gen_v8_4_5_softecc_output_reg_stage;read_netlist_v8_4;write_netlist_v8_4,,uvm,../../../../lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/clk_wiz_ip;../../../../lab7_2.gen/sources_1/bd/mb_block/ipshared/7698;../../../../lab7_2.gen/sources_1/bd/mb_block/ipshared/ec67/hdl,,,,,

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Dec  8 05:50:26 2025" VIVADOVERSION="2022.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Dec 11 21:06:25 2025" VIVADOVERSION="2022.2">
 
   <SYSTEMINFO ARCH="spartan7" DEVICE="7s50" NAME="mb_block" PACKAGE="csga324" SPEEDGRADE="-1"/>
 
@@ -14,24 +14,24 @@
         <CONNECTION INSTANCE="axi_uartlite_0" PORT="tx"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="HDMI_0_tmds_clk_n" SIGIS="undef" SIGNAME="hdmi_tc_0_hdmi_clk_n">
+    <PORT DIR="O" NAME="HDMI_0_tmds_clk_n" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hdmi_clk_n">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="hdmi_tc_0" PORT="hdmi_clk_n"/>
+        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="hdmi_clk_n"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="2" NAME="HDMI_0_tmds_data_n" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_hdmi_tx_n">
+    <PORT DIR="O" LEFT="2" NAME="HDMI_0_tmds_data_n" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hdmi_tx_n">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="hdmi_tc_0" PORT="hdmi_tx_n"/>
+        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="hdmi_tx_n"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="2" NAME="HDMI_0_tmds_data_p" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_hdmi_tx_p">
+    <PORT DIR="O" LEFT="2" NAME="HDMI_0_tmds_data_p" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hdmi_tx_p">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="hdmi_tc_0" PORT="hdmi_tx_p"/>
+        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="hdmi_tx_p"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="HDMI_0_tmds_clk_p" SIGIS="undef" SIGNAME="hdmi_tc_0_hdmi_clk_p">
+    <PORT DIR="O" NAME="HDMI_0_tmds_clk_p" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hdmi_clk_p">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="hdmi_tc_0" PORT="hdmi_clk_p"/>
+        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="hdmi_clk_p"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="0" NAME="gpio_usb_rst_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="usb_rst_gpio_io_o">
@@ -44,16 +44,19 @@
         <CONNECTION INSTANCE="usb_int" PORT="gpio_io_i"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="31" NAME="gpio_usb_keycode_0_tri_i" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="O" LEFT="31" NAME="gpio_usb_keycode_1_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="usb_keycode_gpio2_io_o">
+    <PORT DIR="I" LEFT="13" NAME="cursor_xy_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_cursor_gpio_io_i">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="usb_keycode" PORT="gpio2_io_o"/>
+        <CONNECTION INSTANCE="axi_cursor" PORT="gpio_io_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="14" NAME="enb_pixcodes_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_cursor_gpio2_io_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_cursor" PORT="gpio2_io_i"/>
       </CONNECTIONS>
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_100MHz" SIGIS="clk" SIGNAME="External_Ports_clk_100MHz">
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
-        <CONNECTION INSTANCE="synth_clock" PORT="clk_in1"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="reset_rtl_0" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset_rtl_0">
@@ -92,34 +95,54 @@
         <CONNECTION INSTANCE="synth_clock" PORT="locked"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="6" NAME="cursor_x_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_cursor_gpio_io_i">
+    <PORT DIR="I" LEFT="15" NAME="phrase_input_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_phrase_input_0">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_cursor" PORT="gpio_io_i"/>
+        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="phrase_input"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="6" NAME="cursor_y_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_cursor_gpio2_io_i">
+    <PORT DIR="I" LEFT="1" NAME="selection_type_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_selection_type_0">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_cursor" PORT="gpio2_io_i"/>
+        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="selection_type"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="6" NAME="cursor_y_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_cursor_y">
+    <PORT DIR="O" LEFT="6" NAME="cursor_x_1" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_cursor_x">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="hdmi_tc_0" PORT="cursor_y"/>
+        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="cursor_x"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="6" NAME="cursor_x_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_cursor_x">
+    <PORT DIR="O" LEFT="6" NAME="cursor_y_1" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_cursor_y">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="hdmi_tc_0" PORT="cursor_x"/>
+        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="cursor_y"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="vsync_out_0" SIGIS="undef" SIGNAME="hdmi_tc_0_vsync_out">
+    <PORT DIR="O" LEFT="13" NAME="pix_codes_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_pix_codes">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="hdmi_tc_0" PORT="vsync_out"/>
+        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="pix_codes"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="31" NAME="gpio_usb_keycode_0_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="usb_keycode_gpio_io_o">
+    <PORT DIR="O" LEFT="7" NAME="hex_seg_a_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hex_seg_a_0">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="usb_keycode" PORT="gpio_io_o"/>
+        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="hex_seg_a_0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="hex_grid_a_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hex_grid_a_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="hex_grid_a_0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="hex_seg_b_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hex_seg_b_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="hex_seg_b_0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="hex_grid_b_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hex_grid_b_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="hex_grid_b_0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="1" NAME="user_edit_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_user_edit">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="user_edit"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -131,7 +154,7 @@
         <PORTMAP LOGICAL="TxD" PHYSICAL="uart_rtl_0_txd"/>
       </PORTMAPS>
     </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="hdmi_tc_0_HDMI" NAME="HDMI_0" TYPE="INITIATOR">
+    <BUSINTERFACE BUSNAME="hdmi_tc_v2_0_HDMI" NAME="HDMI_0" TYPE="INITIATOR">
       <PORTMAPS>
         <PORTMAP LOGICAL="TMDS_CLK_N" PHYSICAL="HDMI_0_tmds_clk_n"/>
         <PORTMAP LOGICAL="TMDS_DATA_N" PHYSICAL="HDMI_0_tmds_data_n"/>
@@ -149,25 +172,14 @@
         <PORTMAP LOGICAL="TRI_I" PHYSICAL="gpio_usb_int_tri_i"/>
       </PORTMAPS>
     </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="usb_keycode_GPIO" NAME="gpio_usb_keycode_0" TYPE="INITIATOR">
+    <BUSINTERFACE BUSNAME="axi_cursor_GPIO" NAME="cursor_xy" TYPE="INITIATOR">
       <PORTMAPS>
-        <PORTMAP LOGICAL="TRI_I" PHYSICAL="gpio_usb_keycode_0_tri_i"/>
-        <PORTMAP LOGICAL="TRI_O" PHYSICAL="gpio_usb_keycode_0_tri_o"/>
+        <PORTMAP LOGICAL="TRI_I" PHYSICAL="cursor_xy_tri_i"/>
       </PORTMAPS>
     </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="usb_keycode_GPIO2" NAME="gpio_usb_keycode_1" TYPE="INITIATOR">
+    <BUSINTERFACE BUSNAME="axi_cursor_GPIO2" NAME="enb_pixcodes" TYPE="INITIATOR">
       <PORTMAPS>
-        <PORTMAP LOGICAL="TRI_O" PHYSICAL="gpio_usb_keycode_1_tri_o"/>
-      </PORTMAPS>
-    </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="axi_cursor_GPIO" NAME="cursor_x" TYPE="INITIATOR">
-      <PORTMAPS>
-        <PORTMAP LOGICAL="TRI_I" PHYSICAL="cursor_x_tri_i"/>
-      </PORTMAPS>
-    </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="axi_cursor_GPIO2" NAME="cursor_y" TYPE="INITIATOR">
-      <PORTMAPS>
-        <PORTMAP LOGICAL="TRI_I" PHYSICAL="cursor_y_tri_i"/>
+        <PORTMAP LOGICAL="TRI_I" PHYSICAL="enb_pixcodes_tri_i"/>
       </PORTMAPS>
     </BUSINTERFACE>
   </EXTERNALINTERFACES>
@@ -183,7 +195,7 @@
             <REGISTER NAME="GPIO_DATA">
               <PROPERTY NAME="DESCRIPTION" VALUE="Channel-1 AXI GPIO Data register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x0"/>
-              <PROPERTY NAME="SIZE" VALUE="7"/>
+              <PROPERTY NAME="SIZE" VALUE="14"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -196,14 +208,14 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="7"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="14"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
             <REGISTER NAME="GPIO_TRI">
               <PROPERTY NAME="DESCRIPTION" VALUE="Channel-1 AXI GPIO 3-State Control register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x4"/>
-              <PROPERTY NAME="SIZE" VALUE="7"/>
+              <PROPERTY NAME="SIZE" VALUE="14"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -216,14 +228,14 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="7"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="14"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
             <REGISTER NAME="GPIO2_DATA">
               <PROPERTY NAME="DESCRIPTION" VALUE="Channel-2 AXI GPIO Data register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x8"/>
-              <PROPERTY NAME="SIZE" VALUE="7"/>
+              <PROPERTY NAME="SIZE" VALUE="15"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -236,14 +248,14 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="7"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="15"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
             <REGISTER NAME="GPIO2_TRI">
               <PROPERTY NAME="DESCRIPTION" VALUE="Channel-2 AXI GPIO 3-State Control register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0xC"/>
-              <PROPERTY NAME="SIZE" VALUE="7"/>
+              <PROPERTY NAME="SIZE" VALUE="15"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -256,7 +268,7 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="7"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="15"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
@@ -347,8 +359,8 @@
         <PARAMETER NAME="C_FAMILY" VALUE="spartan7"/>
         <PARAMETER NAME="C_S_AXI_ADDR_WIDTH" VALUE="9"/>
         <PARAMETER NAME="C_S_AXI_DATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_GPIO_WIDTH" VALUE="7"/>
-        <PARAMETER NAME="C_GPIO2_WIDTH" VALUE="7"/>
+        <PARAMETER NAME="C_GPIO_WIDTH" VALUE="14"/>
+        <PARAMETER NAME="C_GPIO2_WIDTH" VALUE="15"/>
         <PARAMETER NAME="C_ALL_INPUTS" VALUE="1"/>
         <PARAMETER NAME="C_ALL_INPUTS_2" VALUE="1"/>
         <PARAMETER NAME="C_ALL_OUTPUTS" VALUE="0"/>
@@ -463,14 +475,14 @@
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M08_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="6" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_cursor_gpio_io_i">
+        <PORT DIR="I" LEFT="13" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_cursor_gpio_io_i">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="mb_block_imp" PORT="cursor_x_tri_i"/>
+            <CONNECTION INSTANCE="mb_block_imp" PORT="cursor_xy_tri_i"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="6" NAME="gpio2_io_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_cursor_gpio2_io_i">
+        <PORT DIR="I" LEFT="14" NAME="gpio2_io_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_cursor_gpio2_io_i">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="mb_block_imp" PORT="cursor_y_tri_i"/>
+            <CONNECTION INSTANCE="mb_block_imp" PORT="enb_pixcodes_tri_i"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1529,7 +1541,8 @@
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M07_ACLK"/>
             <CONNECTION INSTANCE="axi_cursor" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M08_ACLK"/>
-            <CONNECTION INSTANCE="hdmi_tc_0" PORT="axi_aclk"/>
+            <CONNECTION INSTANCE="synth_clock" PORT="clk_in1"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="axi_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
@@ -1540,7 +1553,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="32" FULLNAME="/hdmi_tc_0" HWVERSION="1.0" INSTANCE="hdmi_tc_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="hdmi_tc_v2" VLNV="xilinx.com:user:hdmi_tc_v2:1.0">
+    <MODULE COREREVISION="43" FULLNAME="/hdmi_tc_v2_0" HWVERSION="1.0" INSTANCE="hdmi_tc_v2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="hdmi_tc_v2" VLNV="xilinx.com:user:hdmi_tc_v2:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="AXI" NAME="AXI_reg" RANGE="4096" USAGE="register"/>
@@ -1548,45 +1561,90 @@
       <PARAMETERS>
         <PARAMETER NAME="C_AXI_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_AXI_ADDR_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="Component_Name" VALUE="mb_block_hdmi_text_controller_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="mb_block_hdmi_tc_v2_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
         <PARAMETER NAME="C_AXI_BASEADDR" VALUE="0x44A00000"/>
         <PARAMETER NAME="C_AXI_HIGHADDR" VALUE="0x44A0FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="hdmi_clk_n" SIGIS="clk" SIGNAME="hdmi_tc_0_hdmi_clk_n">
+        <PORT DIR="I" LEFT="31" NAME="keycode_0" RIGHT="0" SIGIS="undef" SIGNAME="usb_keycode_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usb_keycode" PORT="gpio_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="keycode_1" RIGHT="0" SIGIS="undef" SIGNAME="usb_keycode_gpio2_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usb_keycode" PORT="gpio2_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="phrase_input" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_phrase_input_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="phrase_input_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="selection_type" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_selection_type_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="selection_type_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="6" NAME="cursor_x" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_cursor_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="cursor_x_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="6" NAME="cursor_y" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_cursor_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="cursor_y_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="13" NAME="pix_codes" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_pix_codes">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pix_codes_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="user_edit" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_user_edit">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="user_edit_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="hdmi_clk_n" SIGIS="clk" SIGNAME="hdmi_tc_v2_0_hdmi_clk_n">
           <CONNECTIONS>
             <CONNECTION INSTANCE="mb_block_imp" PORT="HDMI_0_tmds_clk_n"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="hdmi_clk_p" SIGIS="clk" SIGNAME="hdmi_tc_0_hdmi_clk_p">
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="hdmi_clk_p" SIGIS="clk" SIGNAME="hdmi_tc_v2_0_hdmi_clk_p">
           <CONNECTIONS>
             <CONNECTION INSTANCE="mb_block_imp" PORT="HDMI_0_tmds_clk_p"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="2" NAME="hdmi_tx_n" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_hdmi_tx_n">
+        <PORT DIR="O" LEFT="2" NAME="hdmi_tx_n" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hdmi_tx_n">
           <CONNECTIONS>
             <CONNECTION INSTANCE="mb_block_imp" PORT="HDMI_0_tmds_data_n"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="2" NAME="hdmi_tx_p" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_hdmi_tx_p">
+        <PORT DIR="O" LEFT="2" NAME="hdmi_tx_p" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hdmi_tx_p">
           <CONNECTIONS>
             <CONNECTION INSTANCE="mb_block_imp" PORT="HDMI_0_tmds_data_p"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="6" NAME="cursor_x" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_cursor_x">
+        <PORT DIR="O" LEFT="7" NAME="hex_seg_a_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hex_seg_a_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="cursor_x_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="hex_seg_a_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="6" NAME="cursor_y" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_cursor_y">
+        <PORT DIR="O" LEFT="3" NAME="hex_grid_a_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hex_grid_a_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="cursor_y_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="hex_grid_a_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="vsync_out" SIGIS="undef" SIGNAME="hdmi_tc_0_vsync_out">
+        <PORT DIR="O" LEFT="7" NAME="hex_seg_b_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hex_seg_b_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="vsync_out_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="hex_seg_b_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="hex_grid_b_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_hex_grid_b_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="hex_grid_b_0"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="axi_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
@@ -1599,97 +1657,97 @@
             <CONNECTION INSTANCE="rst_clk_wiz_1_100M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_awaddr">
+        <PORT DIR="I" LEFT="15" NAME="axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M01_AXI_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="axi_awprot" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_awprot">
+        <PORT DIR="I" LEFT="2" NAME="axi_awprot" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_awprot">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M01_AXI_awprot"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="axi_awvalid" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_awvalid">
+        <PORT DIR="I" NAME="axi_awvalid" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_awvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M01_AXI_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="axi_awready" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_awready">
+        <PORT DIR="O" NAME="axi_awready" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_awready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M01_AXI_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="axi_wdata" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_wdata">
+        <PORT DIR="I" LEFT="31" NAME="axi_wdata" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_wdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M01_AXI_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="axi_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_wstrb">
+        <PORT DIR="I" LEFT="3" NAME="axi_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_wstrb">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M01_AXI_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="axi_wvalid" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_wvalid">
+        <PORT DIR="I" NAME="axi_wvalid" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_wvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M01_AXI_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="axi_wready" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_wready">
+        <PORT DIR="O" NAME="axi_wready" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_wready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M01_AXI_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="axi_bresp" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_bresp">
+        <PORT DIR="O" LEFT="1" NAME="axi_bresp" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_bresp">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M01_AXI_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="axi_bvalid" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_bvalid">
+        <PORT DIR="O" NAME="axi_bvalid" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_bvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M01_AXI_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="axi_bready" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_bready">
+        <PORT DIR="I" NAME="axi_bready" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_bready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M01_AXI_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_araddr">
+        <PORT DIR="I" LEFT="15" NAME="axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_araddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M01_AXI_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="axi_arprot" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_arprot">
+        <PORT DIR="I" LEFT="2" NAME="axi_arprot" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_arprot">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M01_AXI_arprot"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="axi_arvalid" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_arvalid">
+        <PORT DIR="I" NAME="axi_arvalid" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_arvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M01_AXI_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="axi_arready" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_arready">
+        <PORT DIR="O" NAME="axi_arready" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_arready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M01_AXI_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="axi_rdata" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_rdata">
+        <PORT DIR="O" LEFT="31" NAME="axi_rdata" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_rdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M01_AXI_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="axi_rresp" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_rresp">
+        <PORT DIR="O" LEFT="1" NAME="axi_rresp" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_rresp">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M01_AXI_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="axi_rvalid" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_rvalid">
+        <PORT DIR="O" NAME="axi_rvalid" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_rvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M01_AXI_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="axi_rready" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_rready">
+        <PORT DIR="I" NAME="axi_rready" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M01_AXI_rready"/>
           </CONNECTIONS>
@@ -1752,7 +1810,7 @@
             <PORTMAP LOGICAL="RREADY" PHYSICAL="axi_rready"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="hdmi_tc_0_HDMI" NAME="HDMI" TYPE="INITIATOR" VLNV="xilinx.com:interface:hdmi:2.0">
+        <BUSINTERFACE BUSNAME="hdmi_tc_v2_0_HDMI" NAME="HDMI" TYPE="INITIATOR" VLNV="xilinx.com:interface:hdmi:2.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="TMDS_CLK_N" PHYSICAL="hdmi_clk_n"/>
             <PORTMAP LOGICAL="TMDS_DATA_N" PHYSICAL="hdmi_tx_n"/>
@@ -2496,7 +2554,7 @@
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x40600000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x4060FFFF" INSTANCE="axi_uartlite_0" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MASTERBUSINTERFACE="M_AXI_DP" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x41200000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x4120FFFF" INSTANCE="microblaze_0_axi_intc" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MASTERBUSINTERFACE="M_AXI_DP" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="s_axi"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x41C00000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x41C0FFFF" INSTANCE="timer_usb_axi" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MASTERBUSINTERFACE="M_AXI_DP" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
-        <MEMRANGE ADDRESSBLOCK="AXI_reg" BASENAME="C_AXI_BASEADDR" BASEVALUE="0x44A00000" HIGHNAME="C_AXI_HIGHADDR" HIGHVALUE="0x44A0FFFF" INSTANCE="hdmi_tc_0" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MASTERBUSINTERFACE="M_AXI_DP" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="AXI"/>
+        <MEMRANGE ADDRESSBLOCK="AXI_reg" BASENAME="C_AXI_BASEADDR" BASEVALUE="0x44A00000" HIGHNAME="C_AXI_HIGHADDR" HIGHVALUE="0x44A0FFFF" INSTANCE="hdmi_tc_v2_0" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MASTERBUSINTERFACE="M_AXI_DP" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="AXI"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x44A10000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x44A1FFFF" INSTANCE="spi_usb" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MASTERBUSINTERFACE="M_AXI_DP" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="AXI_LITE"/>
       </MEMORYMAP>
       <PERIPHERALS>
@@ -2509,7 +2567,7 @@
         <PERIPHERAL INSTANCE="axi_uartlite_0"/>
         <PERIPHERAL INSTANCE="microblaze_0_axi_intc"/>
         <PERIPHERAL INSTANCE="timer_usb_axi"/>
-        <PERIPHERAL INSTANCE="hdmi_tc_0"/>
+        <PERIPHERAL INSTANCE="hdmi_tc_v2_0"/>
         <PERIPHERAL INSTANCE="spi_usb"/>
       </PERIPHERALS>
     </MODULE>
@@ -4857,99 +4915,99 @@
             <CONNECTION INSTANCE="microblaze_0_axi_intc" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_awaddr">
+        <PORT DIR="O" LEFT="31" NAME="M01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_awaddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_tc_0" PORT="axi_awaddr"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="axi_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M01_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_awprot">
+        <PORT DIR="O" LEFT="2" NAME="M01_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_awprot">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_tc_0" PORT="axi_awprot"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="axi_awprot"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M01_AXI_awvalid" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_awvalid">
+        <PORT DIR="O" NAME="M01_AXI_awvalid" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_awvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_tc_0" PORT="axi_awvalid"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="axi_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M01_AXI_awready" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_awready">
+        <PORT DIR="I" NAME="M01_AXI_awready" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_awready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_tc_0" PORT="axi_awready"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="axi_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M01_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_wdata">
+        <PORT DIR="O" LEFT="31" NAME="M01_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_wdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_tc_0" PORT="axi_wdata"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="axi_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M01_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_wstrb">
+        <PORT DIR="O" LEFT="3" NAME="M01_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_wstrb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_tc_0" PORT="axi_wstrb"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="axi_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M01_AXI_wvalid" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_wvalid">
+        <PORT DIR="O" NAME="M01_AXI_wvalid" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_wvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_tc_0" PORT="axi_wvalid"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="axi_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M01_AXI_wready" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_wready">
+        <PORT DIR="I" NAME="M01_AXI_wready" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_wready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_tc_0" PORT="axi_wready"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="axi_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M01_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_bresp">
+        <PORT DIR="I" LEFT="1" NAME="M01_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_bresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_tc_0" PORT="axi_bresp"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="axi_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M01_AXI_bvalid" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_bvalid">
+        <PORT DIR="I" NAME="M01_AXI_bvalid" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_bvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_tc_0" PORT="axi_bvalid"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="axi_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M01_AXI_bready" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_bready">
+        <PORT DIR="O" NAME="M01_AXI_bready" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_bready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_tc_0" PORT="axi_bready"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="axi_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M01_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_araddr">
+        <PORT DIR="O" LEFT="31" NAME="M01_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_araddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_tc_0" PORT="axi_araddr"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="axi_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M01_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_arprot">
+        <PORT DIR="O" LEFT="2" NAME="M01_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_arprot">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_tc_0" PORT="axi_arprot"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="axi_arprot"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M01_AXI_arvalid" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_arvalid">
+        <PORT DIR="O" NAME="M01_AXI_arvalid" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_arvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_tc_0" PORT="axi_arvalid"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="axi_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M01_AXI_arready" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_arready">
+        <PORT DIR="I" NAME="M01_AXI_arready" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_arready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_tc_0" PORT="axi_arready"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="axi_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M01_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_rdata">
+        <PORT DIR="I" LEFT="31" NAME="M01_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_rdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_tc_0" PORT="axi_rdata"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="axi_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M01_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_rresp">
+        <PORT DIR="I" LEFT="1" NAME="M01_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_rresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_tc_0" PORT="axi_rresp"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="axi_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M01_AXI_rvalid" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_rvalid">
+        <PORT DIR="I" NAME="M01_AXI_rvalid" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_rvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_tc_0" PORT="axi_rvalid"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="axi_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M01_AXI_rready" SIGIS="undef" SIGNAME="hdmi_tc_0_axi_rready">
+        <PORT DIR="O" NAME="M01_AXI_rready" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_axi_rready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_tc_0" PORT="axi_rready"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="axi_rready"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="M02_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_awaddr">
@@ -6839,7 +6897,7 @@
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M07_ARESETN"/>
             <CONNECTION INSTANCE="axi_cursor" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M08_ARESETN"/>
-            <CONNECTION INSTANCE="hdmi_tc_0" PORT="axi_aresetn"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="axi_aresetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -8448,9 +8506,9 @@
             <CONNECTION INSTANCE="External_Ports" PORT="reset_rtl_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_in1" SIGIS="clk" SIGNAME="External_Ports_clk_100MHz">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_in1" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="clk_100MHz"/>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="12288000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="synth_clock_clk_out1">
@@ -9644,12 +9702,12 @@
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="usb_keycode_gpio_io_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="mb_block_imp" PORT="gpio_usb_keycode_0_tri_o"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="keycode_0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="gpio2_io_o" RIGHT="0" SIGIS="undef" SIGNAME="usb_keycode_gpio2_io_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="mb_block_imp" PORT="gpio_usb_keycode_1_tri_o"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="keycode_1"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -9706,12 +9764,12 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="usb_keycode_GPIO" NAME="GPIO" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="GPIO" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="TRI_O" PHYSICAL="gpio_io_o"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="usb_keycode_GPIO2" NAME="GPIO2" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="GPIO2" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="TRI_O" PHYSICAL="gpio2_io_o"/>
           </PORTMAPS>

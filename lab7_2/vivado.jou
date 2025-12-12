@@ -1,0 +1,530 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Dec 10 23:24:16 2025
+# Process ID: 35320
+# Current directory: C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23444 C:\Users\Administrator\ECE385\git_repo\SpartanTracker\lab7_2\lab7_2\lab7_2.xpr
+# Log file: C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/vivado.log
+# Journal file: C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2\vivado.jou
+# Running On: LAPTOP-9093UH2M, OS: Windows, CPU Frequency: 1797 MHz, CPU Physical cores: 16, Host memory: 7931 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.xpr
+update_compile_order -fileset sources_1
+add_files -norecurse -scan_for_includes {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Phrase_data.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/PixelCode.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Square_LUT.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/mixer.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Color_Mapper.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/DDS_Saw.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/DDS_Sine.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/font_rom.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/clk_divider.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Synth_Top_test.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/PCMSerializer.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/DDS_Square.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/VGA_controler.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/keycode_mapper.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/playback.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/DDS_Triangle.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Tracker_Top.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Saw_LUT.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/PhaseAccumulator.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Triangle_LUT.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Sine_LUT.sv}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/DDS_Saw.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/DDS_Sine.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/DDS_Square.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/DDS_Triangle.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/PCMSerializer.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/PhaseAccumulator.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/Phrase_data.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/Saw_LUT.sv] -no_script -reset -force -quiet
+remove_files  {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/DDS_Saw.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/DDS_Sine.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/DDS_Square.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/DDS_Triangle.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/PCMSerializer.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/PhaseAccumulator.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/Phrase_data.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/Saw_LUT.sv}
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/Sine_LUT.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/Square_LUT.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/Triangle_LUT.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/clk_divider.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/keycode_mapper.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/mixer.sv] -no_script -reset -force -quiet
+remove_files  {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/Sine_LUT.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/Square_LUT.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/Triangle_LUT.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/clk_divider.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/keycode_mapper.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/mixer.sv}
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/playback.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/HDL/playback.sv
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Synth_Top_test.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Synth_Top_test.sv
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/VGA_controler.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/VGA_controler.sv
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/font_rom.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/font_rom.sv
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/DDS_Saw.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/DDS_Sine.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/DDS_Square.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/DDS_Triangle.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/PCMSerializer.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/PhaseAccumulator.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Phrase_data.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Saw_LUT.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Sine_LUT.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Square_LUT.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Triangle_LUT.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/clk_divider.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/keycode_mapper.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/mixer.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/playback.sv] -no_script -reset -force -quiet
+remove_files  {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/DDS_Saw.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/DDS_Sine.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/DDS_Square.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/DDS_Triangle.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/PCMSerializer.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/PhaseAccumulator.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Phrase_data.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Saw_LUT.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Sine_LUT.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Square_LUT.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Triangle_LUT.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/clk_divider.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/keycode_mapper.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/mixer.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/playback.sv}
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/PixelCode.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/design_source/tracker_top.sv] -no_script -reset -force -quiet
+remove_files  {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/PixelCode.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/design_source/tracker_top.sv}
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/PixelCode.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Color_Mapper.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Tracker_Top.sv] -no_script -reset -force -quiet
+remove_files  {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/PixelCode.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Color_Mapper.sv C:/Users/Administrator/ECE385/git_repo/SpartanTracker/HDL/Tracker_Top.sv}
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+add_files -norecurse -scan_for_includes {C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/PCMSerializer.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/VGA_controler.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/PixelCode.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/PhaseAccumulator.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/DDS_Sine.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/DDS_Square.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/Phrase_data.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/clk_divider.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/Triangle_LUT.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/Saw_LUT.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/keycode_mapper.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/DDS_Saw.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/Sine_LUT.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/font_rom.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/mixer.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/Color_Mapper.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/Synth_Top_test.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/Tracker_Top.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/playback.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/Square_LUT.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/DDS_Triangle.sv}
+import_files -force -norecurse {C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/PCMSerializer.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/VGA_controler.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/PixelCode.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/PhaseAccumulator.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/DDS_Sine.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/DDS_Square.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/Phrase_data.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/clk_divider.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/Triangle_LUT.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/Saw_LUT.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/keycode_mapper.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/DDS_Saw.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/Sine_LUT.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/font_rom.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/mixer.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/Color_Mapper.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/Synth_Top_test.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/Tracker_Top.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/playback.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/Square_LUT.sv C:/Users/Administrator/ECE385/recent/SpartanTracker/HDL/DDS_Triangle.sv}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+validate_bd_design -force
+update_ip_catalog -add_ip C:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo/hdmi_tc_2/component.xml -repo_path c:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/ip_repo/hdmi_tc_2
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  C:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo [current_project]
+update_ip_catalog
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:hdmi_tc_v2:1.0 [get_ips  mb_block_hdmi_text_controller_0_0] -log ip_upgrade.log
+report_ip_status -name ip_status 
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -no_script -reset -force -quiet
+remove_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd
+add_files -norecurse -scan_for_includes C:/Users/Administrator/ECE385/recent/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd
+export_ip_user_files -of_objects  [get_files  C:/Users/Administrator/ECE385/recent/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -lib_map_path [list {modelsim=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/modelsim} {questa=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/questa} {riviera=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/riviera} {activehdl=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/activehdl}] -force -quiet
+open_bd_design {C:/Users/Administrator/ECE385/recent/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/recent/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -no_script -reset -force -quiet
+remove_files  C:/Users/Administrator/ECE385/recent/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd
+add_files -norecurse -scan_for_includes C:/Users/Administrator/ECE385/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd
+export_ip_user_files -of_objects  [get_files  C:/Users/Administrator/ECE385/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -lib_map_path [list {modelsim=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/modelsim} {questa=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/questa} {riviera=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/riviera} {activehdl=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/activehdl}] -force -quiet
+import_files -force -norecurse C:/Users/Administrator/ECE385/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd
+export_ip_user_files -of_objects  [get_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -lib_map_path [list {modelsim=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/modelsim} {questa=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/questa} {riviera=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/riviera} {activehdl=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/activehdl}] -force -quiet
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+report_ip_status -name ip_status 
+ipx::edit_ip_in_project -upgrade true -name hdmi_tc_v2_v1_0_project -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.tmp/hdmi_tc_v2_v1_0_project c:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo/hdmi_tc_2/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 33 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:hdmi_tc_v2:1.0 [get_ips  mb_block_hdmi_text_controller_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips mb_block_hdmi_text_controller_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+catch { config_ip_cache -export [get_ips -all mb_block_hdmi_text_controller_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+launch_runs mb_block_hdmi_text_controller_0_0_synth_1 -jobs 8
+wait_on_run mb_block_hdmi_text_controller_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files -ipstatic_source_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/modelsim} {questa=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/questa} {riviera=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/riviera} {activehdl=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+set_param general.maxThreads 8
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+generate_target all [get_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+export_ip_user_files -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+export_simulation -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files -ipstatic_source_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/modelsim} {questa=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/questa} {riviera=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/riviera} {activehdl=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+generate_target all [get_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+export_ip_user_files -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+export_simulation -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files -ipstatic_source_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/modelsim} {questa=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/questa} {riviera=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/riviera} {activehdl=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -top
+write_hw_platform -fixed -include_bit -force -file C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/tracker_top.xsa
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+set_property location {5 1980 760} [get_bd_cells microblaze_0_axi_intc]
+set_property location {5 1955 963} [get_bd_cells microblaze_0_axi_intc]
+open_hw_manager
+connect_hw_server -allow_non_jtag
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.runs/impl_1/tracker_top.bit} [get_hw_devices xc7s50_0]
+current_hw_device [get_hw_devices xc7s50_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s50_0] 0]
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Synth_Top_test.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Synth_Top_test.sv
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Color_Mapper.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Color_Mapper.sv
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/font_rom.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/font_rom.sv
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/VGA_controler.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/VGA_controler.sv
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+write_hw_platform -fixed -include_bit -force -file C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/tracker_top.xsa
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+ipx::edit_ip_in_project -upgrade true -name hdmi_tc_v2_v1_0_project -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.tmp/hdmi_tc_v2_v1_0_project c:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo/hdmi_tc_2/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 34 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:hdmi_tc_v2:1.0 [get_ips  mb_block_hdmi_text_controller_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips mb_block_hdmi_text_controller_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+catch { config_ip_cache -export [get_ips -all mb_block_hdmi_text_controller_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+launch_runs mb_block_hdmi_text_controller_0_0_synth_1 -jobs 8
+wait_on_run mb_block_hdmi_text_controller_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files -ipstatic_source_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/modelsim} {questa=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/questa} {riviera=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/riviera} {activehdl=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:user:hdmi_tc_v2:1.0 [get_ips  mb_block_hdmi_text_controller_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips mb_block_hdmi_text_controller_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+catch { config_ip_cache -export [get_ips -all mb_block_hdmi_text_controller_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+launch_runs mb_block_hdmi_text_controller_0_0_synth_1 -jobs 8
+wait_on_run mb_block_hdmi_text_controller_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files -ipstatic_source_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/modelsim} {questa=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/questa} {riviera=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/riviera} {activehdl=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+write_hw_platform -fixed -include_bit -force -file C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/tracker_top.xsa
+ipx::edit_ip_in_project -upgrade true -name hdmi_tc_v2_v1_0_project -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.tmp/hdmi_tc_v2_v1_0_project c:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo/hdmi_tc_2/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 35 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:hdmi_tc_v2:1.0 [get_ips  mb_block_hdmi_text_controller_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips mb_block_hdmi_text_controller_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+catch { config_ip_cache -export [get_ips -all mb_block_hdmi_text_controller_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+launch_runs mb_block_hdmi_text_controller_0_0_synth_1 -jobs 8
+wait_on_run mb_block_hdmi_text_controller_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files -ipstatic_source_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/modelsim} {questa=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/questa} {riviera=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/riviera} {activehdl=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+make_wrapper -files [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -top
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+ipx::edit_ip_in_project -upgrade true -name hdmi_tc_v2_v1_0_project -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.tmp/hdmi_tc_v2_v1_0_project c:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo/hdmi_tc_2/component.xml
+update_compile_order -fileset sources_1
+current_project lab7_2
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+delete_bd_objs [get_bd_nets cursor_y_0_1]
+delete_bd_objs [get_bd_nets cursor_x_0_1]
+current_project hdmi_tc_v2_v1_0_project
+current_project lab7_2
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/keycode_mapper.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/keycode_mapper.sv
+current_project hdmi_tc_v2_v1_0_project
+add_files -norecurse -scan_for_includes -copy_to c:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo/hdmi_tc_2/src C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/keycode_mapper.sv
+add_files -norecurse -copy_to c:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo/hdmi_tc_2/src C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/keycode_mapper.sv
+update_compile_order -fileset sources_1
+current_project lab7_2
+current_project hdmi_tc_v2_v1_0_project
+update_compile_order -fileset sources_1
+current_project lab7_2
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+current_project hdmi_tc_v2_v1_0_project
+current_project lab7_2
+current_project hdmi_tc_v2_v1_0_project
+add_files -norecurse -copy_to c:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo/hdmi_tc_2/src C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/PixelCode.sv
+update_compile_order -fileset sources_1
+current_project lab7_2
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+current_project hdmi_tc_v2_v1_0_project
+current_project lab7_2
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+current_project hdmi_tc_v2_v1_0_project
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 36 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:hdmi_tc_v2:1.0 [get_ips  mb_block_hdmi_text_controller_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips mb_block_hdmi_text_controller_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+catch { config_ip_cache -export [get_ips -all mb_block_hdmi_text_controller_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+launch_runs mb_block_hdmi_text_controller_0_0_synth_1 -jobs 8
+wait_on_run mb_block_hdmi_text_controller_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files -ipstatic_source_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/modelsim} {questa=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/questa} {riviera=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/riviera} {activehdl=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+startgroup
+make_bd_pins_external  [get_bd_pins hdmi_tc_0/keycode_0]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins hdmi_tc_0/keycode_1] [get_bd_pins hdmi_tc_0/phrase_input] [get_bd_pins hdmi_tc_0/selection_type]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins hdmi_tc_0/cursor_x] [get_bd_pins hdmi_tc_0/cursor_y] [get_bd_pins hdmi_tc_0/pix_codes]
+endgroup
+generate_target all [get_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+export_ip_user_files -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+export_simulation -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files -ipstatic_source_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/modelsim} {questa=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/questa} {riviera=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/riviera} {activehdl=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -top
+delete_bd_objs [get_bd_ports cursor_x_0]
+delete_bd_objs [get_bd_ports cursor_y_0]
+generate_target all [get_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+export_ip_user_files -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+export_simulation -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files -ipstatic_source_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/modelsim} {questa=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/questa} {riviera=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/riviera} {activehdl=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+generate_target all [get_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+export_ip_user_files -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+export_simulation -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files -ipstatic_source_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/modelsim} {questa=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/questa} {riviera=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/riviera} {activehdl=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+update_files -from_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Phrase_data.sv -to_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Phrase_data.sv -filesets [get_filesets *]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_param general.maxThreads 8
+write_hw_platform -fixed -include_bit -force -file C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/tracker_top.xsa
+report_ip_status -name ip_status 
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+file mkdir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sim_1/new/testBench.sv w ]
+add_files -fileset sim_1 C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sim_1/new/testBench.sv
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/PixelCode.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/PixelCode.sv
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_tracker_top [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source tb_tracker_top.tcl
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+ipx::edit_ip_in_project -upgrade true -name hdmi_tc_v2_v1_0_project -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.tmp/hdmi_tc_v2_v1_0_project c:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo/hdmi_tc_2/component.xml
+update_compile_order -fileset sources_1
+current_project lab7_2
+delete_bd_objs [get_bd_intf_nets usb_keycode_GPIO] [get_bd_intf_ports gpio_usb_keycode_0]
+undo
+set_property location {2228 400} [get_bd_intf_ports gpio_usb_keycode_0]
+delete_bd_objs [get_bd_nets keycode_0_0_1]
+delete_bd_objs [get_bd_nets keycode_1_0_1]
+delete_bd_objs [get_bd_intf_nets usb_keycode_GPIO2] [get_bd_intf_ports gpio_usb_keycode_1]
+delete_bd_objs [get_bd_intf_nets usb_keycode_GPIO] [get_bd_intf_ports gpio_usb_keycode_0]
+connect_bd_net [get_bd_pins hdmi_tc_0/keycode_0] [get_bd_pins usb_keycode/gpio_io_o]
+connect_bd_net [get_bd_pins usb_keycode/gpio2_io_o] [get_bd_pins hdmi_tc_0/keycode_1]
+current_project hdmi_tc_v2_v1_0_project
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/keycode_tb.sv w ]
+add_files -fileset sim_1 C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/keycode_tb.sv
+update_compile_order -fileset sim_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 37 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:hdmi_tc_v2:1.0 [get_ips  mb_block_hdmi_text_controller_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips mb_block_hdmi_text_controller_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+catch { config_ip_cache -export [get_ips -all mb_block_hdmi_text_controller_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+launch_runs mb_block_hdmi_text_controller_0_0_synth_1 -jobs 8
+wait_on_run mb_block_hdmi_text_controller_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files -ipstatic_source_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/modelsim} {questa=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/questa} {riviera=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/riviera} {activehdl=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:user:hdmi_tc_v2:1.0 [get_ips  mb_block_hdmi_text_controller_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips mb_block_hdmi_text_controller_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+catch { config_ip_cache -export [get_ips -all mb_block_hdmi_text_controller_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+launch_runs mb_block_hdmi_text_controller_0_0_synth_1 -jobs 8
+wait_on_run mb_block_hdmi_text_controller_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files -ipstatic_source_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/modelsim} {questa=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/questa} {riviera=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/riviera} {activehdl=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+ipx::edit_ip_in_project -upgrade true -name hdmi_tc_v2_v1_0_project -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.tmp/hdmi_tc_v2_v1_0_project c:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo/hdmi_tc_2/component.xml
+update_compile_order -fileset sources_1
+current_project lab7_2
+current_project hdmi_tc_v2_v1_0_project
+current_project lab7_2
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_run impl_1
+write_hw_platform -fixed -include_bit -force -file C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/tracker_top.xsa
+current_project hdmi_tc_v2_v1_0_project
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 38 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo
+report_ip_status -name ip_status 
+write_hw_platform -fixed -include_bit -force -file C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/tracker_top.xsa
+ipx::edit_ip_in_project -upgrade true -name hdmi_tc_v2_v1_0_project -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.tmp/hdmi_tc_v2_v1_0_project c:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo/hdmi_tc_2/component.xml
+update_compile_order -fileset sources_1
+current_project lab7_2
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+set_property  ip_repo_paths  {} [current_project]
+current_project hdmi_tc_v2_v1_0_project
+current_project lab7_2
+update_ip_catalog
+current_project hdmi_tc_v2_v1_0_project
+current_project lab7_2
+set_property  ip_repo_paths  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/ip_repo [current_project]
+update_ip_catalog
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:hdmi_tc_v2:1.0 [get_ips  mb_block_hdmi_text_controller_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips mb_block_hdmi_text_controller_0_0] -no_script -sync -force -quiet
+ipx::edit_ip_in_project -upgrade true -name hdmi_tc_v2_v1_0_project -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.tmp/hdmi_tc_v2_v1_0_project c:/Users/Administrator/ECE385/git_repo/SpartanTracker/ip_repo/hdmi_tc_2/component.xml
+current_project hdmi_tc_v2_v1_0_project
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 39 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+set_property  ip_repo_paths  {c:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo/hdmi_tc_2 c:/Users/Administrator/ECE385/git_repo/SpartanTracker/ip_repo} [current_project]
+update_ip_catalog
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:hdmi_tc_v2:1.0 [get_ips  mb_block_hdmi_text_controller_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips mb_block_hdmi_text_controller_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+update_ip_catalog -disable_ip c:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo/hdmi_tc_2/component.xml -repo_path c:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo/hdmi_tc_2
+update_ip_catalog -enable_ip c:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo/hdmi_tc_2/component.xml -repo_path c:/Users/Administrator/ECE385/recent/SpartanTracker/ip_repo/hdmi_tc_2
+update_ip_catalog -rebuild
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+generate_target all [get_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+catch { config_ip_cache -export [get_ips -all mb_block_hdmi_text_controller_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+launch_runs mb_block_hdmi_text_controller_0_0_synth_1 -jobs 8
+wait_on_run mb_block_hdmi_text_controller_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files -ipstatic_source_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/modelsim} {questa=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/questa} {riviera=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/riviera} {activehdl=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+delete_bd_objs [get_bd_intf_nets microblaze_0_axi_periph_M01_AXI] [get_bd_intf_nets hdmi_text_controller_0_HDMI] [get_bd_nets hdmi_tc_0_cursor_x] [get_bd_nets hdmi_tc_0_cursor_y] [get_bd_cells hdmi_tc_0]
+open_bd_design {C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd}
+set_property  ip_repo_paths  c:/Users/Administrator/ECE385/git_repo/SpartanTracker/ip_repo [current_project]
+update_ip_catalog
+set_property dataflow_viewer_settings "min_width=16"   [current_fileset]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:hdmi_tc_v2:1.0 hdmi_tc_v2_0
+endgroup
+set_property location {5 2009 4} [get_bd_cells hdmi_tc_v2_0]
+connect_bd_net [get_bd_ports pix_codes_0] [get_bd_pins hdmi_tc_v2_0/pix_codes]
+connect_bd_net [get_bd_ports cursor_y_1] [get_bd_pins hdmi_tc_v2_0/cursor_y]
+connect_bd_net [get_bd_ports cursor_x_1] [get_bd_pins hdmi_tc_v2_0/cursor_x]
+connect_bd_intf_net [get_bd_intf_ports HDMI_0] [get_bd_intf_pins hdmi_tc_v2_0/HDMI]
+set_property location {0.5 -4 80} [get_bd_cells hdmi_tc_v2_0]
+connect_bd_net [get_bd_ports keycode_0_0] [get_bd_pins hdmi_tc_v2_0/keycode_0]
+connect_bd_net [get_bd_ports keycode_1_0] [get_bd_pins hdmi_tc_v2_0/keycode_1]
+connect_bd_net [get_bd_ports selection_type_0] [get_bd_pins hdmi_tc_v2_0/selection_type]
+connect_bd_net [get_bd_ports phrase_input_0] [get_bd_pins hdmi_tc_v2_0/phrase_input]
+set_property location {6 2030 467} [get_bd_cells hdmi_tc_v2_0]
+connect_bd_net [get_bd_pins hdmi_tc_v2_0/axi_aclk] [get_bd_pins clk_wiz_0/clk_out1]
+connect_bd_net [get_bd_pins hdmi_tc_v2_0/axi_aresetn] [get_bd_pins rst_clk_wiz_1_100M/peripheral_aresetn]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins microblaze_0_axi_periph/M01_AXI] [get_bd_intf_pins hdmi_tc_v2_0/AXI]
+validate_bd_design
+generate_target all [get_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+catch { config_ip_cache -export [get_ips -all mb_block_xbar_0] }
+catch { config_ip_cache -export [get_ips -all mb_block_s00_mmu_0] }
+catch { config_ip_cache -export [get_ips -all mb_block_hdmi_tc_v2_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+launch_runs mb_block_xbar_0_synth_1 mb_block_s00_mmu_0_synth_1 mb_block_hdmi_tc_v2_0_0_synth_1 -jobs 8
+wait_on_run mb_block_xbar_0_synth_1
+wait_on_run mb_block_s00_mmu_0_synth_1
+wait_on_run mb_block_hdmi_tc_v2_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files -ipstatic_source_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/modelsim} {questa=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/questa} {riviera=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/riviera} {activehdl=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+ipx::edit_ip_in_project -upgrade true -name hdmi_tc_v2_v1_0_project -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.tmp/hdmi_tc_v2_v1_0_project c:/Users/Administrator/ECE385/git_repo/SpartanTracker/ip_repo/hdmi_tc_2/component.xml
+update_compile_order -fileset sources_1
+current_project lab7_2
+generate_target all [get_files  C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+catch { config_ip_cache -export [get_ips -all mb_block_s00_mmu_0] }
+catch { config_ip_cache -export [get_ips -all mb_block_hdmi_tc_v2_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd]
+launch_runs mb_block_s00_mmu_0_synth_1 mb_block_hdmi_tc_v2_0_0_synth_1 -jobs 8
+wait_on_run mb_block_s00_mmu_0_synth_1
+wait_on_run mb_block_hdmi_tc_v2_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/bd/mb_block/mb_block.bd] -directory C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files -ipstatic_source_dir C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/modelsim} {questa=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/questa} {riviera=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/riviera} {activehdl=C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_project hdmi_tc_v2_v1_0_project
+current_project lab7_2
+current_project hdmi_tc_v2_v1_0_project
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/Administrator/ECE385/git_repo/SpartanTracker/ip_repo/hdmi_tc_2/hdl/keycode_tb.sv w ]
+add_files -fileset sim_1 C:/Users/Administrator/ECE385/git_repo/SpartanTracker/ip_repo/hdmi_tc_2/hdl/keycode_tb.sv
+update_compile_order -fileset sim_1

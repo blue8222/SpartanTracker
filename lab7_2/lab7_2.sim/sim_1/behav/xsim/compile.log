@@ -1,68 +1,32 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_lmb_bram_0/sim/mb_block_lmb_bram_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mb_block_lmb_bram_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_xbar_0/sim/mb_block_xbar_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mb_block_xbar_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_clk_wiz_0_0/mb_block_clk_wiz_0_0_clk_wiz.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mb_block_clk_wiz_0_0_clk_wiz
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_clk_wiz_0_0/mb_block_clk_wiz_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mb_block_clk_wiz_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/VRAMBlockMemory/sim/VRAMBlockMemory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module VRAMBlockMemory
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_ip/hdl/encode.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module encode
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_ip/hdl/serdes_10_to_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module serdes_10_to_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_ip/hdl/srldelay.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module srldelay
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_ip/hdl/hdmi_tx_v1_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hdmi_tx_v1_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/hdmi_tx_ip/sim/hdmi_tx_ip.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hdmi_tx_ip
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/clk_wiz_ip/clk_wiz_ip_clk_wiz.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module clk_wiz_ip_clk_wiz
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/src/clk_wiz_ip/clk_wiz_ip.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module clk_wiz_ip
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ipshared/9759/hdl/Color_Mapper.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module color_mapper
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ipshared/9759/hdl/VGA_controller.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module vga_controller
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ipshared/9759/hdl/font_rom.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module font_rom
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ipshared/9759/hdl/hdmi_text_controller_v1_0_AXI.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hdmi_text_controller_v1_0_AXI
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ipshared/9759/hdl/negedge_detector.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module negedge_detector
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ipshared/9759/hdl/hdmi_text_controller_v1_0.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hdmi_text_controller_v1_0
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/sim/mb_block_hdmi_text_controller_0_0.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mb_block_hdmi_text_controller_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/sim/mb_block.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module m00_couplers_imp_1TK4492
-INFO: [VRFC 10-311] analyzing module m01_couplers_imp_UT2LJ
-INFO: [VRFC 10-311] analyzing module m02_couplers_imp_1ST4AV9
-INFO: [VRFC 10-311] analyzing module mb_block
-INFO: [VRFC 10-311] analyzing module mb_block_microblaze_0_axi_periph_0
-INFO: [VRFC 10-311] analyzing module microblaze_0_local_memory_imp_G5BFEQ
-INFO: [VRFC 10-311] analyzing module s00_couplers_imp_5YIJ0K
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/viv/lab7_2/lab7_2.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mb_usb_hdmi_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/viv/lab7_2/lab7_2.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_microblaze_0_0/sim/mb_block_microblaze_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'mb_block_microblaze_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_dlmb_v10_0/sim/mb_block_dlmb_v10_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'mb_block_dlmb_v10_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_ilmb_v10_0/sim/mb_block_ilmb_v10_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'mb_block_ilmb_v10_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/sim/mb_block_dlmb_bram_if_cntlr_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'mb_block_dlmb_bram_if_cntlr_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_ilmb_bram_if_cntlr_0/sim/mb_block_ilmb_bram_if_cntlr_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'mb_block_ilmb_bram_if_cntlr_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_microblaze_0_axi_intc_0/sim/mb_block_microblaze_0_axi_intc_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'mb_block_microblaze_0_axi_intc_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_mdm_1_0/sim/mb_block_mdm_1_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'mb_block_mdm_1_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_rst_clk_wiz_1_100M_0/sim/mb_block_rst_clk_wiz_1_100M_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'mb_block_rst_clk_wiz_1_100M_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/viv/lab7_2/lab7_2.ip_user_files/bd/mb_block/ip/mb_block_axi_uartlite_0_0/sim/mb_block_axi_uartlite_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'mb_block_axi_uartlite_0_0'
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/DDS_Saw.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DDS_Saw
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/DDS_Sine.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DDS_Sine
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/DDS_Square.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DDS_Square
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/DDS_Triangle.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DDS_Triangle
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/PCMSerializer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCMSerializer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/PhaseAccumulator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PhaseAccumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Phrase_data.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PhraseData
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Saw_LUT.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SawLUT
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Sine_LUT.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SineLUT
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Square_LUT.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SquareLUT
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Tracker_Top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tracker_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Triangle_LUT.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TriangleLUT
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/clk_divider.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_divider
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/mixer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mixer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sources_1/imports/HDL/playback.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module playback_phrase
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Administrator/ECE385/git_repo/SpartanTracker/lab7_2/lab7_2/lab7_2.srcs/sim_1/new/testBench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_tracker_top

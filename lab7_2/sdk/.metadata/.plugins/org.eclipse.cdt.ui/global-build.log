@@ -1,8 +1,51 @@
-Nothing to build in platform 'mb_usb_hdmi_top'
+Nothing to build in platform 'tracker_top'
 
-15:47:35 **** Incremental Build of configuration Debug for project graphics_card ****
+21:23:46 **** Incremental Build of configuration Debug for project tracker ****
 make all 
-make: Nothing to be done for 'all'.
-15:47:35 **** Incremental Build of configuration Debug for project graphics_card_system ****
+'Building file: ../src/hdmi_text_controller.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/hdmi_text_controller.o" -ID:/SpartanTracker/lab7_2/sdk/tracker_top/export/tracker_top/sw/tracker_top/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/hdmi_text_controller.d" -MT"src/hdmi_text_controller.o" -o "src/hdmi_text_controller.o" "../src/hdmi_text_controller.c"
+In file included from ../src/hdmi_text_controller.c:2:
+../src/hdmi_text_controller.h:43:54: warning: initialization of 'volatile struct TEXT_HDMI_STRUCT *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   43 | static volatile struct TEXT_HDMI_STRUCT* hdmi_ctrl = 0x44a00000;
+      |                                                      ^~~~~~~~~~
+../src/hdmi_text_controller.h:44:53: warning: initialization of 'volatile struct CURSOR_STRUCT *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   44 | static volatile struct CURSOR_STRUCT* cursor_ctrl = 0x40030000;
+      |                                                     ^~~~~~~~~~
+../src/hdmi_text_controller.c: In function 'textHDMIColorScreenSaver':
+../src/hdmi_text_controller.c:100:32: warning: passing argument 1 of 'memcpy' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  100 |                         memcpy(&(hdmi_ctrl->VRAM[(dvd_y*COLUMNS + dvd_x) * 2]), old_string, strlen(dvd_string)*2);
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/hdmi_text_controller.c:5:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:31:18: note: expected 'void * restrict' but argument is of type 'volatile uint8_t *' {aka 'volatile unsigned char *'}
+   31 | void *   memcpy (void *__restrict, const void *__restrict, size_t);
+      |                  ^
+../src/hdmi_text_controller.c:110:44: warning: passing argument 2 of 'memcpy' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  110 |                         memcpy(old_string, &(hdmi_ctrl->VRAM[(dvd_y*COLUMNS + dvd_x) * 2]), strlen(dvd_string)*2);
+      |                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/hdmi_text_controller.c:5:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:31:36: note: expected 'const void * restrict' but argument is of type 'volatile uint8_t *' {aka 'volatile unsigned char *'}
+   31 | void *   memcpy (void *__restrict, const void *__restrict, size_t);
+      |                                    ^
+../src/hdmi_text_controller.c:79:16: warning: unused variable 'dvd_d_colors' [-Wunused-variable]
+   79 |         int8_t dvd_d_colors[3] = {-1, +1, -1};
+      |                ^~~~~~~~~~~~
+../src/hdmi_text_controller.c:78:16: warning: unused variable 'dvd_colors' [-Wunused-variable]
+   78 |         int8_t dvd_colors[3] = {0x07, 0x07, 0x07};
+      |                ^~~~~~~~~~
+'Finished building: ../src/hdmi_text_controller.c'
+' '
+'Building target: tracker.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LD:/SpartanTracker/lab7_2/sdk/tracker_top/export/tracker_top/sw/tracker_top/standalone_microblaze_0/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "tracker.elf"  ./src/lw_usb/HID.o ./src/lw_usb/MAX3421E.o ./src/lw_usb/transfer.o  ./src/hdmi_text_controller.o ./src/lw_usb_main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: tracker.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size tracker.elf  |tee "tracker.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30276	   4324	   3760	  38360	   95d8	tracker.elf
+'Finished building: tracker.elf.size'
+' '
+21:23:48 **** Incremental Build of configuration Debug for project tracker_system ****
 make all 
 Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."

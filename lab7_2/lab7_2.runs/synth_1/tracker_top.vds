@@ -2,22 +2,20 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Mon Dec  8 06:23:23 2025
-# Process ID: 28564
-# Current directory: C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1
+# Start of session at: Thu Dec 11 21:40:17 2025
+# Process ID: 33664
+# Current directory: D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1
 # Command line: vivado.exe -log tracker_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source tracker_top.tcl
-# Log file: C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/tracker_top.vds
-# Journal file: C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1\vivado.jou
-# Running On: LAPTOP-9093UH2M, OS: Windows, CPU Frequency: 1797 MHz, CPU Physical cores: 16, Host memory: 7931 MB
+# Log file: D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/tracker_top.vds
+# Journal file: D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1\vivado.jou
+# Running On: hein_yoga, OS: Windows, CPU Frequency: 3302 MHz, CPU Physical cores: 8, Host memory: 33873 MB
 #-----------------------------------------------------------
 source tracker_top.tcl -notrace
-create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 373.234 ; gain = 59.938
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Administrator/ECE385/vivado/SpartanTracker/ip_repo/hdmi_tc_2'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/SpartanTracker/ip_repo/hdmi_tc_2'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
-add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 413.488 ; gain = 15.387
-Command: read_checkpoint -auto_incremental -incremental C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.srcs/utils_1/imports/synth_1/mb_intro_top.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.srcs/utils_1/imports/synth_1/mb_intro_top.dcp for incremental synthesis
+Command: read_checkpoint -auto_incremental -incremental D:/SpartanTracker/lab7_2/lab7_2.srcs/utils_1/imports/synth_1/mb_intro_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/SpartanTracker/lab7_2/lab7_2.srcs/utils_1/imports/synth_1/mb_intro_top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top tracker_top -part xc7s50csga324-1
 Starting synth_design
@@ -26,164 +24,164 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
 INFO: [Device 21-403] Loading part xc7s50csga324-1
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 32016
+INFO: [Synth 8-7075] Helper process launched with PID 33420
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
-INFO: [Synth 8-11241] undeclared symbol 'reset_active_high', assumed default net type 'wire' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/DDS_Square.sv:38]
-INFO: [Synth 8-11241] undeclared symbol 'reset_active_high', assumed default net type 'wire' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/DDS_Triangle.sv:38]
-INFO: [Synth 8-11241] undeclared symbol 'clk_12_228Mhz', assumed default net type 'wire' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/design_source/tracker_top.sv:135]
-INFO: [Synth 8-11241] undeclared symbol 'tempo', assumed default net type 'wire' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/design_source/tracker_top.sv:145]
-INFO: [Synth 8-11241] undeclared symbol 'bit_clock_out', assumed default net type 'wire' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/design_source/tracker_top.sv:167]
-INFO: [Synth 8-11241] undeclared symbol 'row', assumed default net type 'wire' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/design_source/tracker_top.sv:192]
+INFO: [Synth 8-11241] undeclared symbol 'reset_active_high', assumed default net type 'wire' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/DDS_Square.sv:38]
+INFO: [Synth 8-11241] undeclared symbol 'reset_active_high', assumed default net type 'wire' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/DDS_Triangle.sv:38]
+INFO: [Synth 8-11241] undeclared symbol 'phrase_input', assumed default net type 'wire' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Tracker_Top.sv:116]
+INFO: [Synth 8-11241] undeclared symbol 'clk_12_228Mhz', assumed default net type 'wire' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Tracker_Top.sv:136]
+INFO: [Synth 8-11241] undeclared symbol 'tempo', assumed default net type 'wire' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Tracker_Top.sv:144]
+INFO: [Synth 8-11241] undeclared symbol 'bit_clock_out', assumed default net type 'wire' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Tracker_Top.sv:161]
+INFO: [Synth 8-11241] undeclared symbol 'row', assumed default net type 'wire' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Tracker_Top.sv:173]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1218.988 ; gain = 408.371
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1850.480 ; gain = 408.887
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'tracker_top' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/design_source/tracker_top.sv:14]
-INFO: [Synth 8-6157] synthesizing module 'mb_block' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1214]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_2' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_axi_gpio_0_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_2' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_axi_gpio_0_2_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_uartlite_0_0' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_uartlite_0_0' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_clk_wiz_0_0' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_clk_wiz_0_0' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_hdmi_text_controller_0_0' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_hdmi_text_controller_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_hdmi_text_controller_0_0' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_hdmi_text_controller_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_mdm_1_0' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_mdm_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_mdm_1_0' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_mdm_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_0' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_microblaze_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_0' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_microblaze_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_axi_intc_0' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_axi_intc_0' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_axi_periph_0' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:2056]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1TK4492' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1TK4492' (0#1) [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:12]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_UT2LJ' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:144]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_UT2LJ' (0#1) [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:144]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1ST4AV9' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:290]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1ST4AV9' (0#1) [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:290]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1VI1NO' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:422]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1VI1NO' (0#1) [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:422]
-INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1SCR8U8' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:554]
-INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1SCR8U8' (0#1) [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:554]
-INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_2FAMHT' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:686]
-INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_2FAMHT' (0#1) [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:686]
-INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1QRRYF7' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:818]
-INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1QRRYF7' (0#1) [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:818]
-INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_3PYGGY' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:950]
-INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_3PYGGY' (0#1) [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:950]
-INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_1XO1QIY' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1082]
-INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_1XO1QIY' (0#1) [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1082]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_5YIJ0K' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3654]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_5YIJ0K' (0#1) [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3654]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_xbar_0' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_xbar_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_xbar_0' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_xbar_0_stub.v:5]
-WARNING: [Synth 8-689] width (6) of port connection 'm_axi_arprot' does not match port width (27) of module 'mb_block_xbar_0' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3381]
-WARNING: [Synth 8-689] width (6) of port connection 'm_axi_awprot' does not match port width (27) of module 'mb_block_xbar_0' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3385]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_axi_periph_0' (0#1) [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:2056]
-INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_G5BFEQ' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3420]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_v10_0' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_dlmb_v10_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_v10_0' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_dlmb_v10_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_block_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3566]
-WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'mb_block_dlmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3566]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_v10_0' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_ilmb_v10_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_v10_0' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_ilmb_v10_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_block_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3612]
-WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'mb_block_ilmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3612]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_lmb_bram_0' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_lmb_bram_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_lmb_bram_0' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_lmb_bram_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'rsta_busy' of module 'mb_block_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3637]
-WARNING: [Synth 8-7071] port 'rstb_busy' of module 'mb_block_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3637]
-WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'mb_block_lmb_bram_0' has 16 connections declared, but only 14 given [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3637]
-INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_G5BFEQ' (0#1) [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3420]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'mb_block_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1916]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'mb_block_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1916]
-WARNING: [Synth 8-7023] instance 'rst_clk_wiz_1_100M' of module 'mb_block_rst_clk_wiz_1_100M_0' has 10 connections declared, but only 8 given [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1916]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_quad_spi_0_0' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_quad_spi_0_0' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'io0_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1925]
-WARNING: [Synth 8-7071] port 'io1_o' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1925]
-WARNING: [Synth 8-7071] port 'io1_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1925]
-WARNING: [Synth 8-7071] port 'sck_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1925]
-WARNING: [Synth 8-7071] port 'ss_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1925]
-WARNING: [Synth 8-7023] instance 'spi_usb' of module 'mb_block_axi_quad_spi_0_0' has 33 connections declared, but only 28 given [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1925]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_clk_wiz_1_0' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_clk_wiz_1_0' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_timer_0_0' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_axi_timer_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_timer_0_0' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_axi_timer_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'generateout0' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1959]
-WARNING: [Synth 8-7071] port 'generateout1' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1959]
-WARNING: [Synth 8-7071] port 'pwm0' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1959]
-WARNING: [Synth 8-7023] instance 'timer_usb_axi' of module 'mb_block_axi_timer_0_0' has 26 connections declared, but only 23 given [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1959]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_1' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_axi_gpio_0_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_1' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_axi_gpio_0_1_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_1_0' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_axi_gpio_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_1_0' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_axi_gpio_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_0' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_axi_gpio_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_0' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-28564-LAPTOP-9093UH2M/realtime/mb_block_axi_gpio_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_xlconcat_0_0' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_xlconcat_0_0/synth/mb_block_xlconcat_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_xlconcat_0_0' (0#1) [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_xlconcat_0_0/synth/mb_block_xlconcat_0_0.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block' (0#1) [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1214]
-INFO: [Synth 8-6157] synthesizing module 'clk_divider' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/clk_divider.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'clk_divider' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/clk_divider.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'playback_phrase' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/playback.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'DDS_Sine' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/DDS_Sine.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'PhaseAccumulator' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/PhaseAccumulator.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'tracker_top' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Tracker_Top.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'mb_block' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1214]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_2' [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_axi_gpio_0_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_2' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_axi_gpio_0_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_uartlite_0_0' [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_uartlite_0_0' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_clk_wiz_0_0' [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_clk_wiz_0_0' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_hdmi_tc_v2_0_0' [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_hdmi_tc_v2_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_hdmi_tc_v2_0_0' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_hdmi_tc_v2_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_mdm_1_0' [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_mdm_1_0' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_0' [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_0' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_axi_intc_0' [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_axi_intc_0' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_axi_periph_0' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:2087]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1TK4492' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1TK4492' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:12]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_UT2LJ' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:144]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_UT2LJ' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:144]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1ST4AV9' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:290]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1ST4AV9' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:290]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1VI1NO' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:422]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1VI1NO' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:422]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1SCR8U8' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:554]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1SCR8U8' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:554]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_2FAMHT' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:686]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_2FAMHT' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:686]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1QRRYF7' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:818]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1QRRYF7' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:818]
+INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_3PYGGY' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:950]
+INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_3PYGGY' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:950]
+INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_1XO1QIY' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1082]
+INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_1XO1QIY' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1082]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_5YIJ0K' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3685]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_5YIJ0K' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3685]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_xbar_0' [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_xbar_0' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_xbar_0_stub.v:5]
+WARNING: [Synth 8-689] width (6) of port connection 'm_axi_arprot' does not match port width (27) of module 'mb_block_xbar_0' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3412]
+WARNING: [Synth 8-689] width (6) of port connection 'm_axi_awprot' does not match port width (27) of module 'mb_block_xbar_0' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3416]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_axi_periph_0' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:2087]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_G5BFEQ' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3451]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_v10_0' [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_dlmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_v10_0' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_dlmb_v10_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_block_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3597]
+WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'mb_block_dlmb_v10_0' has 25 connections declared, but only 24 given [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3597]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_v10_0' [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_ilmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_v10_0' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_ilmb_v10_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_block_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3643]
+WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'mb_block_ilmb_v10_0' has 25 connections declared, but only 24 given [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3643]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_lmb_bram_0' [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_lmb_bram_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_lmb_bram_0' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_lmb_bram_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'mb_block_lmb_bram_0' is unconnected for instance 'lmb_bram' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3668]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'mb_block_lmb_bram_0' is unconnected for instance 'lmb_bram' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3668]
+WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'mb_block_lmb_bram_0' has 16 connections declared, but only 14 given [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3668]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_G5BFEQ' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:3451]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'mb_block_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1947]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'mb_block_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1947]
+WARNING: [Synth 8-7023] instance 'rst_clk_wiz_1_100M' of module 'mb_block_rst_clk_wiz_1_100M_0' has 10 connections declared, but only 8 given [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1947]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_quad_spi_0_0' [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_quad_spi_0_0' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'io0_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1956]
+WARNING: [Synth 8-7071] port 'io1_o' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1956]
+WARNING: [Synth 8-7071] port 'io1_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1956]
+WARNING: [Synth 8-7071] port 'sck_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1956]
+WARNING: [Synth 8-7071] port 'ss_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1956]
+WARNING: [Synth 8-7023] instance 'spi_usb' of module 'mb_block_axi_quad_spi_0_0' has 33 connections declared, but only 28 given [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1956]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_clk_wiz_1_0' [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_clk_wiz_1_0' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_timer_0_0' [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_axi_timer_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_timer_0_0' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_axi_timer_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'generateout0' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1990]
+WARNING: [Synth 8-7071] port 'generateout1' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1990]
+WARNING: [Synth 8-7071] port 'pwm0' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1990]
+WARNING: [Synth 8-7023] instance 'timer_usb_axi' of module 'mb_block_axi_timer_0_0' has 26 connections declared, but only 23 given [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1990]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_1' [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_axi_gpio_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_1' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_axi_gpio_0_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_1_0' [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_axi_gpio_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_1_0' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_axi_gpio_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_0' [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_0' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/.Xil/Vivado-33664-hein_yoga/realtime/mb_block_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_xlconcat_0_0' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_xlconcat_0_0/synth/mb_block_xlconcat_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_xlconcat_0_0' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_xlconcat_0_0/synth/mb_block_xlconcat_0_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block' (0#1) [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/synth/mb_block.v:1214]
+INFO: [Synth 8-6157] synthesizing module 'clk_divider' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/clk_divider.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'clk_divider' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/clk_divider.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'playback_phrase' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/playback.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'DDS_Sine' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/DDS_Sine.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'PhaseAccumulator' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/PhaseAccumulator.sv:6]
 	Parameter PHASE_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'PhaseAccumulator' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/PhaseAccumulator.sv:6]
-INFO: [Synth 8-6157] synthesizing module 'SineLUT' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/Sine_LUT.sv:5]
-INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/Sine_LUT.sv:41]
-INFO: [Synth 8-6155] done synthesizing module 'SineLUT' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/Sine_LUT.sv:5]
-INFO: [Synth 8-6155] done synthesizing module 'DDS_Sine' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/DDS_Sine.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'DDS_Square' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/DDS_Square.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'SquareLUT' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/Square_LUT.sv:4]
-INFO: [Synth 8-6155] done synthesizing module 'SquareLUT' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/Square_LUT.sv:4]
-INFO: [Synth 8-6155] done synthesizing module 'DDS_Square' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/DDS_Square.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'DDS_Saw' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/DDS_Saw.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'SawLUT' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/Saw_LUT.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'SawLUT' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/Saw_LUT.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'DDS_Saw' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/DDS_Saw.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'DDS_Triangle' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/DDS_Triangle.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'TriangleLUT' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/Triangle_LUT.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'TriangleLUT' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/Triangle_LUT.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'DDS_Triangle' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/DDS_Triangle.sv:3]
-INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/playback.sv:120]
-INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/playback.sv:243]
-INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/playback.sv:243]
-INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/playback.sv:243]
-INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/playback.sv:243]
-INFO: [Synth 8-6157] synthesizing module 'mixer' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/mixer.sv:5]
-INFO: [Synth 8-6155] done synthesizing module 'mixer' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/mixer.sv:5]
-INFO: [Synth 8-6155] done synthesizing module 'playback_phrase' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/playback.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'PCMSerializer' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/PCMSerializer.sv:6]
-INFO: [Synth 8-6155] done synthesizing module 'PCMSerializer' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/PCMSerializer.sv:6]
-INFO: [Synth 8-6157] synthesizing module 'usb' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/keycode_mapper.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'usb' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/keycode_mapper.sv:3]
-WARNING: [Synth 8-689] width (32) of port connection 'keycode' does not match port width (8) of module 'usb' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/design_source/tracker_top.sv:177]
-INFO: [Synth 8-6157] synthesizing module 'PhraseData' [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/Phrase_data.sv:1]
-INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/Phrase_data.sv:64]
-INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/Phrase_data.sv:236]
-INFO: [Synth 8-226] default block is never used [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/Phrase_data.sv:236]
-INFO: [Synth 8-226] default block is never used [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/Phrase_data.sv:181]
-INFO: [Synth 8-6155] done synthesizing module 'PhraseData' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/Phrase_data.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'tracker_top' (0#1) [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/design_source/tracker_top.sv:14]
-WARNING: [Synth 8-3848] Net reset_active_high in module/entity DDS_Square does not have driver. [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/DDS_Square.sv:38]
-WARNING: [Synth 8-3848] Net reset_active_high in module/entity DDS_Triangle does not have driver. [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/DDS_Triangle.sv:38]
-WARNING: [Synth 8-3936] Found unconnected internal register 'numerator_reg' and it is trimmed from '57' to '48' bits. [C:/Users/Administrator/ECE385/vivado/SpartanTracker/HDL/playback.sv:66]
-WARNING: [Synth 8-3848] Net bit_clk_out in module/entity tracker_top does not have driver. [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/design_source/tracker_top.sv:47]
-WARNING: [Synth 8-3848] Net clk_12_228Mhz in module/entity tracker_top does not have driver. [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/design_source/tracker_top.sv:135]
-WARNING: [Synth 8-3848] Net clk in module/entity tracker_top does not have driver. [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/design_source/tracker_top.sv:55]
-WARNING: [Synth 8-3848] Net tempo in module/entity tracker_top does not have driver. [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/design_source/tracker_top.sv:145]
-WARNING: [Synth 8-3848] Net row in module/entity tracker_top does not have driver. [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/design_source/tracker_top.sv:192]
-WARNING: [Synth 8-7129] Port Reset in module usb is either unconnected or has no load
+INFO: [Synth 8-6155] done synthesizing module 'PhaseAccumulator' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/PhaseAccumulator.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'SineLUT' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Sine_LUT.sv:5]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Sine_LUT.sv:41]
+INFO: [Synth 8-6155] done synthesizing module 'SineLUT' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Sine_LUT.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'DDS_Sine' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/DDS_Sine.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'DDS_Square' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/DDS_Square.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'SquareLUT' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Square_LUT.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'SquareLUT' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Square_LUT.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'DDS_Square' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/DDS_Square.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'DDS_Saw' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/DDS_Saw.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'SawLUT' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Saw_LUT.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'SawLUT' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Saw_LUT.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'DDS_Saw' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/DDS_Saw.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'DDS_Triangle' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/DDS_Triangle.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'TriangleLUT' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Triangle_LUT.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'TriangleLUT' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Triangle_LUT.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'DDS_Triangle' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/DDS_Triangle.sv:3]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/playback.sv:120]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/playback.sv:243]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/playback.sv:243]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/playback.sv:243]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/playback.sv:243]
+INFO: [Synth 8-6157] synthesizing module 'mixer' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/mixer.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'mixer' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/mixer.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'playback_phrase' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/playback.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'PCMSerializer' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/PCMSerializer.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'PCMSerializer' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/PCMSerializer.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'PhraseData' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Phrase_data.sv:1]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Phrase_data.sv:77]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Phrase_data.sv:91]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Phrase_data.sv:271]
+INFO: [Synth 8-226] default block is never used [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Phrase_data.sv:271]
+INFO: [Synth 8-226] default block is never used [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Phrase_data.sv:216]
+INFO: [Synth 8-6155] done synthesizing module 'PhraseData' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Phrase_data.sv:1]
+WARNING: [Synth 8-689] width (2) of port connection 'selection_type' does not match port width (16) of module 'PhraseData' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Tracker_Top.sv:184]
+WARNING: [Synth 8-689] width (1) of port connection 'cursor_selection' does not match port width (16) of module 'PhraseData' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Tracker_Top.sv:186]
+INFO: [Synth 8-6155] done synthesizing module 'tracker_top' (0#1) [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Tracker_Top.sv:14]
+WARNING: [Synth 8-3848] Net reset_active_high in module/entity DDS_Square does not have driver. [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/DDS_Square.sv:38]
+WARNING: [Synth 8-3848] Net reset_active_high in module/entity DDS_Triangle does not have driver. [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/DDS_Triangle.sv:38]
+WARNING: [Synth 8-3936] Found unconnected internal register 'numerator_reg' and it is trimmed from '57' to '48' bits. [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/playback.sv:66]
+WARNING: [Synth 8-3848] Net bit_clk_out in module/entity tracker_top does not have driver. [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Tracker_Top.sv:44]
+WARNING: [Synth 8-3848] Net clk in module/entity tracker_top does not have driver. [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Tracker_Top.sv:54]
+WARNING: [Synth 8-3848] Net row in module/entity tracker_top does not have driver. [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Tracker_Top.sv:173]
+WARNING: [Synth 8-3848] Net clk_12_228Mhz in module/entity tracker_top does not have driver. [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Tracker_Top.sv:136]
+WARNING: [Synth 8-3848] Net tempo in module/entity tracker_top does not have driver. [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Tracker_Top.sv:144]
 WARNING: [Synth 8-7129] Port loop_enable in module playback_phrase is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
@@ -283,121 +281,118 @@ WARNING: [Synth 8-7129] Port In98[0] in module xlconcat_v2_1_4_xlconcat is eithe
 WARNING: [Synth 8-7129] Port In99[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In102[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1353.301 ; gain = 542.684
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1983.785 ; gain = 542.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1353.301 ; gain = 542.684
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1983.785 ; gain = 542.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1353.301 ; gain = 542.684
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1983.785 ; gain = 542.191
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.129 . Memory (MB): peak = 1353.301 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1983.785 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_0/mb_block_microblaze_0_0/mb_block_microblaze_0_0_in_context.xdc] for cell 'mb_block_i/microblaze_0'
-Finished Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_0/mb_block_microblaze_0_0/mb_block_microblaze_0_0_in_context.xdc] for cell 'mb_block_i/microblaze_0'
-Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_v10'
-Finished Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_v10'
-Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_v10_0/mb_block_ilmb_v10_0/mb_block_dlmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_v10'
-Finished Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_v10_0/mb_block_ilmb_v10_0/mb_block_dlmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_v10'
-Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Finished Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Finished Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_lmb_bram_0/mb_block_lmb_bram_0/mb_block_lmb_bram_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/lmb_bram'
-Finished Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_lmb_bram_0/mb_block_lmb_bram_0/mb_block_lmb_bram_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/lmb_bram'
-Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_xbar_0/mb_block_xbar_0/mb_block_xbar_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_periph/xbar'
-Finished Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_xbar_0/mb_block_xbar_0/mb_block_xbar_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_periph/xbar'
-Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_intc'
-Finished Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_intc'
-Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_mdm_1_0/mb_block_mdm_1_0/mb_block_mdm_1_0_in_context.xdc] for cell 'mb_block_i/mdm_1'
-Finished Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_mdm_1_0/mb_block_mdm_1_0/mb_block_mdm_1_0_in_context.xdc] for cell 'mb_block_i/mdm_1'
-Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'mb_block_i/rst_clk_wiz_1_100M'
-Finished Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'mb_block_i/rst_clk_wiz_1_100M'
-Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0_in_context.xdc] for cell 'mb_block_i/axi_uartlite_0'
-Finished Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0_in_context.xdc] for cell 'mb_block_i/axi_uartlite_0'
-Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_0_0/mb_block_clk_wiz_0_0/mb_block_clk_wiz_0_0_in_context.xdc] for cell 'mb_block_i/clk_wiz_0'
-Finished Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_0_0/mb_block_clk_wiz_0_0/mb_block_clk_wiz_0_0_in_context.xdc] for cell 'mb_block_i/clk_wiz_0'
-Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0_in_context.xdc] for cell 'mb_block_i/timer_usb_axi'
-Finished Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0_in_context.xdc] for cell 'mb_block_i/timer_usb_axi'
-Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0_in_context.xdc] for cell 'mb_block_i/spi_usb'
-Finished Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0_in_context.xdc] for cell 'mb_block_i/spi_usb'
-Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_0/mb_block_axi_gpio_0_0/mb_block_axi_gpio_0_0_in_context.xdc] for cell 'mb_block_i/usb_rst'
-Finished Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_0/mb_block_axi_gpio_0_0/mb_block_axi_gpio_0_0_in_context.xdc] for cell 'mb_block_i/usb_rst'
-Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1_in_context.xdc] for cell 'mb_block_i/usb_int'
-Finished Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1_in_context.xdc] for cell 'mb_block_i/usb_int'
-Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_1_0/mb_block_axi_gpio_1_0/mb_block_axi_gpio_1_0_in_context.xdc] for cell 'mb_block_i/usb_keycode'
-Finished Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_1_0/mb_block_axi_gpio_1_0/mb_block_axi_gpio_1_0_in_context.xdc] for cell 'mb_block_i/usb_keycode'
-Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_in_context.xdc] for cell 'mb_block_i/synth_clock'
-WARNING: [Constraints 18-619] A clock with name 'clk_100MHz' already exists, overwriting the previous clock with the same name. [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_in_context.xdc:1]
-Finished Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_in_context.xdc] for cell 'mb_block_i/synth_clock'
-Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2_in_context.xdc] for cell 'mb_block_i/axi_cursor'
-Finished Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2_in_context.xdc] for cell 'mb_block_i/axi_cursor'
-Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0_in_context.xdc] for cell 'mb_block_i/hdmi_tc_0'
-Finished Parsing XDC File [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0_in_context.xdc] for cell 'mb_block_i/hdmi_tc_0'
-Parsing XDC File [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]
+Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_0/mb_block_microblaze_0_0/mb_block_microblaze_0_0_in_context.xdc] for cell 'mb_block_i/microblaze_0'
+Finished Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_0/mb_block_microblaze_0_0/mb_block_microblaze_0_0_in_context.xdc] for cell 'mb_block_i/microblaze_0'
+Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_v10_0/mb_block_ilmb_v10_0/mb_block_dlmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_v10_0/mb_block_ilmb_v10_0/mb_block_dlmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_lmb_bram_0/mb_block_lmb_bram_0/mb_block_lmb_bram_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_lmb_bram_0/mb_block_lmb_bram_0/mb_block_lmb_bram_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_xbar_0/mb_block_xbar_0/mb_block_xbar_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_periph/xbar'
+Finished Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_xbar_0/mb_block_xbar_0/mb_block_xbar_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_periph/xbar'
+Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_intc'
+Finished Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_intc'
+Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_mdm_1_0/mb_block_mdm_1_0/mb_block_mdm_1_0_in_context.xdc] for cell 'mb_block_i/mdm_1'
+Finished Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_mdm_1_0/mb_block_mdm_1_0/mb_block_mdm_1_0_in_context.xdc] for cell 'mb_block_i/mdm_1'
+Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'mb_block_i/rst_clk_wiz_1_100M'
+Finished Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'mb_block_i/rst_clk_wiz_1_100M'
+Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0_in_context.xdc] for cell 'mb_block_i/axi_uartlite_0'
+Finished Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0_in_context.xdc] for cell 'mb_block_i/axi_uartlite_0'
+Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_0_0/mb_block_clk_wiz_0_0/mb_block_clk_wiz_0_0_in_context.xdc] for cell 'mb_block_i/clk_wiz_0'
+Finished Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_0_0/mb_block_clk_wiz_0_0/mb_block_clk_wiz_0_0_in_context.xdc] for cell 'mb_block_i/clk_wiz_0'
+Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0_in_context.xdc] for cell 'mb_block_i/timer_usb_axi'
+Finished Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0_in_context.xdc] for cell 'mb_block_i/timer_usb_axi'
+Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0_in_context.xdc] for cell 'mb_block_i/spi_usb'
+Finished Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0_in_context.xdc] for cell 'mb_block_i/spi_usb'
+Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_0/mb_block_axi_gpio_0_0/mb_block_axi_gpio_0_0_in_context.xdc] for cell 'mb_block_i/usb_rst'
+Finished Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_0/mb_block_axi_gpio_0_0/mb_block_axi_gpio_0_0_in_context.xdc] for cell 'mb_block_i/usb_rst'
+Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1_in_context.xdc] for cell 'mb_block_i/usb_int'
+Finished Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1_in_context.xdc] for cell 'mb_block_i/usb_int'
+Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_1_0/mb_block_axi_gpio_1_0/mb_block_axi_gpio_1_0_in_context.xdc] for cell 'mb_block_i/usb_keycode'
+Finished Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_1_0/mb_block_axi_gpio_1_0/mb_block_axi_gpio_1_0_in_context.xdc] for cell 'mb_block_i/usb_keycode'
+Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_in_context.xdc] for cell 'mb_block_i/synth_clock'
+Finished Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_in_context.xdc] for cell 'mb_block_i/synth_clock'
+Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2_in_context.xdc] for cell 'mb_block_i/axi_cursor'
+Finished Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2_in_context.xdc] for cell 'mb_block_i/axi_cursor'
+Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0_in_context.xdc] for cell 'mb_block_i/hdmi_tc_v2_0'
+Finished Parsing XDC File [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0_in_context.xdc] for cell 'mb_block_i/hdmi_tc_v2_0'
+Parsing XDC File [D:/SpartanTracker/lab7_2/lab7_2.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]
 CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_100' completely overrides clock 'clk_100MHz'.
-New: create_clock -period 10.000 -name clk_100 -waveform {0.000 5.000} [get_ports clk_100MHz], [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:1]
-Previous: create_clock -period 10.000 [get_ports clk_100MHz], [c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_in_context.xdc:1]
+New: create_clock -period 10.000 -name clk_100 -waveform {0.000 5.000} [get_ports clk_100MHz], [D:/SpartanTracker/lab7_2/lab7_2.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:1]
+Previous: create_clock -period 10.000 [get_ports clk_100MHz], [d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_0_0/mb_block_clk_wiz_0_0/mb_block_clk_wiz_0_0_in_context.xdc:1]
 Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
-WARNING: [Vivado 12-584] No ports matched 'gpio_usb_int_tri_i[0]'. [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:23]
-WARNING: [Vivado 12-584] No ports matched 'gpio_usb_int_tri_i[0]'. [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:27]
-Finished Parsing XDC File [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/tracker_top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/tracker_top_propImpl.xdc].
+Finished Parsing XDC File [D:/SpartanTracker/lab7_2/lab7_2.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/SpartanTracker/lab7_2/lab7_2.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/tracker_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/tracker_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1464.176 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2057.383 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1464.176 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2057.383 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mb_block_i/spi_usb' at clock pin 'ext_spi_clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mb_block_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1464.934 ; gain = 654.316
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2057.547 ; gain = 615.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1464.934 ; gain = 654.316
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2057.547 ; gain = 615.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_in_context.xdc, line 4).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_clk_n. (constraint file  c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0_in_context.xdc, line 1).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_clk_n. (constraint file  c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0_in_context.xdc, line 2).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_clk_p. (constraint file  c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_clk_p. (constraint file  c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0_in_context.xdc, line 4).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_n[0]. (constraint file  c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0_in_context.xdc, line 5).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_n[0]. (constraint file  c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0_in_context.xdc, line 6).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_n[1]. (constraint file  c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0_in_context.xdc, line 7).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_n[1]. (constraint file  c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0_in_context.xdc, line 8).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_n[2]. (constraint file  c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0_in_context.xdc, line 9).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_n[2]. (constraint file  c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0_in_context.xdc, line 10).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_p[0]. (constraint file  c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0_in_context.xdc, line 11).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_p[0]. (constraint file  c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0_in_context.xdc, line 12).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_p[1]. (constraint file  c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0_in_context.xdc, line 13).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_p[1]. (constraint file  c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0_in_context.xdc, line 14).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_p[2]. (constraint file  c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0_in_context.xdc, line 15).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_p[2]. (constraint file  c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_0_0/mb_block_clk_wiz_0_0/mb_block_clk_wiz_0_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_0_0/mb_block_clk_wiz_0_0/mb_block_clk_wiz_0_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_clk_n. (constraint file  d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_clk_n. (constraint file  d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_clk_p. (constraint file  d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_clk_p. (constraint file  d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_n[0]. (constraint file  d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_n[0]. (constraint file  d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_n[1]. (constraint file  d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_n[1]. (constraint file  d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_n[2]. (constraint file  d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_n[2]. (constraint file  d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_p[0]. (constraint file  d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_p[0]. (constraint file  d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_p[1]. (constraint file  d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_p[1]. (constraint file  d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_p[2]. (constraint file  d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_p[2]. (constraint file  d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0_in_context.xdc, line 16).
 Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/microblaze_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/microblaze_0_local_memory/dlmb_v10. (constraint file  auto generated constraint).
@@ -420,12 +415,12 @@ Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/usb_int. (constraint f
 Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/usb_keycode. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/synth_clock. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/axi_cursor. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/hdmi_tc_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/hdmi_tc_v2_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1464.934 ; gain = 654.316
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2057.547 ; gain = 615.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1464.934 ; gain = 654.316
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2057.547 ; gain = 615.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -443,11 +438,10 @@ Detailed RTL Component Info :
 	   2 Input    1 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 41    
+	               16 Bit    Registers := 42    
 	                8 Bit    Registers := 1     
 	                5 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 6     
 +---Muxes : 
 	   2 Input   32 Bit        Muxes := 2     
@@ -459,15 +453,14 @@ Detailed RTL Component Info :
 	   4 Input    7 Bit        Muxes := 4     
 	   2 Input    6 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 1     
-	   4 Input    3 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 2     
 	   2 Input    2 Bit        Muxes := 10    
-	   3 Input    2 Bit        Muxes := 1     
-	   5 Input    2 Bit        Muxes := 3     
-	   2 Input    1 Bit        Muxes := 16    
+	   5 Input    2 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 15    
 	   3 Input    1 Bit        Muxes := 2     
+	   5 Input    1 Bit        Muxes := 8     
+	   6 Input    1 Bit        Muxes := 2     
 	   4 Input    1 Bit        Muxes := 8     
-	   5 Input    1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -537,7 +530,7 @@ DSP Report: register acc_reg is absorbed into DSP acc_reg.
 DSP Report: operator acc0 is absorbed into DSP acc_reg.
 DSP Report: operator acc1 is absorbed into DSP acc_reg.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1464.934 ; gain = 654.316
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2057.547 ; gain = 615.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -593,21 +586,23 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-565] redefining clock 'clk_100MHz'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1464.934 ; gain = 654.316
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2057.547 ; gain = 615.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1464.934 ; gain = 654.316
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2057.547 ; gain = 615.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'PhraseData_1/cursor_selection_reg[0]/Q' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Phrase_data.sv:61]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Phrase_data.sv:61]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SpartanTracker/lab7_2/lab7_2.srcs/sources_1/imports/HDL/Phrase_data.sv:61]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1464.934 ; gain = 654.316
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2057.547 ; gain = 615.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -625,115 +620,125 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1464.934 ; gain = 654.316
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 2057.547 ; gain = 615.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1464.934 ; gain = 654.316
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 2057.547 ; gain = 615.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1464.934 ; gain = 654.316
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 2057.547 ; gain = 615.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1464.934 ; gain = 654.316
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 2057.547 ; gain = 615.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1464.934 ; gain = 654.316
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 2057.547 ; gain = 615.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1464.934 ; gain = 654.316
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 2057.547 ; gain = 615.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+----------------------------------+----------+
-|      |BlackBox name                     |Instances |
-+------+----------------------------------+----------+
-|1     |mb_block_xbar_0                   |         1|
-|2     |mb_block_axi_gpio_0_2             |         1|
-|3     |mb_block_axi_uartlite_0_0         |         1|
-|4     |mb_block_clk_wiz_0_0              |         1|
-|5     |mb_block_hdmi_text_controller_0_0 |         1|
-|6     |mb_block_mdm_1_0                  |         1|
-|7     |mb_block_microblaze_0_0           |         1|
-|8     |mb_block_microblaze_0_axi_intc_0  |         1|
-|9     |mb_block_rst_clk_wiz_1_100M_0     |         1|
-|10    |mb_block_axi_quad_spi_0_0         |         1|
-|11    |mb_block_clk_wiz_1_0              |         1|
-|12    |mb_block_axi_timer_0_0            |         1|
-|13    |mb_block_axi_gpio_0_1             |         1|
-|14    |mb_block_axi_gpio_1_0             |         1|
-|15    |mb_block_axi_gpio_0_0             |         1|
-|16    |mb_block_dlmb_bram_if_cntlr_0     |         1|
-|17    |mb_block_dlmb_v10_0               |         1|
-|18    |mb_block_ilmb_bram_if_cntlr_0     |         1|
-|19    |mb_block_ilmb_v10_0               |         1|
-|20    |mb_block_lmb_bram_0               |         1|
-+------+----------------------------------+----------+
++------+---------------------------------+----------+
+|      |BlackBox name                    |Instances |
++------+---------------------------------+----------+
+|1     |mb_block_xbar_0                  |         1|
+|2     |mb_block_axi_gpio_0_2            |         1|
+|3     |mb_block_axi_uartlite_0_0        |         1|
+|4     |mb_block_clk_wiz_0_0             |         1|
+|5     |mb_block_hdmi_tc_v2_0_0          |         1|
+|6     |mb_block_mdm_1_0                 |         1|
+|7     |mb_block_microblaze_0_0          |         1|
+|8     |mb_block_microblaze_0_axi_intc_0 |         1|
+|9     |mb_block_rst_clk_wiz_1_100M_0    |         1|
+|10    |mb_block_axi_quad_spi_0_0        |         1|
+|11    |mb_block_clk_wiz_1_0             |         1|
+|12    |mb_block_axi_timer_0_0           |         1|
+|13    |mb_block_axi_gpio_0_1            |         1|
+|14    |mb_block_axi_gpio_1_0            |         1|
+|15    |mb_block_axi_gpio_0_0            |         1|
+|16    |mb_block_dlmb_bram_if_cntlr_0    |         1|
+|17    |mb_block_dlmb_v10_0              |         1|
+|18    |mb_block_ilmb_bram_if_cntlr_0    |         1|
+|19    |mb_block_ilmb_v10_0              |         1|
+|20    |mb_block_lmb_bram_0              |         1|
++------+---------------------------------+----------+
 
 Report Cell Usage: 
-+------+--------------------------------+------+
-|      |Cell                            |Count |
-+------+--------------------------------+------+
-|1     |mb_block_axi_gpio_0             |     3|
-|4     |mb_block_axi_gpio_1             |     1|
-|5     |mb_block_axi_quad_spi_0         |     1|
-|6     |mb_block_axi_timer_0            |     1|
-|7     |mb_block_axi_uartlite_0         |     1|
-|8     |mb_block_clk_wiz_0              |     1|
-|9     |mb_block_clk_wiz_1              |     1|
-|10    |mb_block_dlmb_bram_if_cntlr     |     1|
-|11    |mb_block_dlmb_v10               |     1|
-|12    |mb_block_hdmi_text_controller_0 |     1|
-|13    |mb_block_ilmb_bram_if_cntlr     |     1|
-|14    |mb_block_ilmb_v10               |     1|
-|15    |mb_block_lmb_bram               |     1|
-|16    |mb_block_mdm_1                  |     1|
-|17    |mb_block_microblaze_0           |     1|
-|18    |mb_block_microblaze_0_axi_intc  |     1|
-|19    |mb_block_rst_clk_wiz_1_100M     |     1|
-|20    |mb_block_xbar                   |     1|
-|21    |LUT1                            |     1|
-|22    |IBUF                            |     4|
-|23    |OBUF                            |     7|
-|24    |OBUFT                           |     1|
-+------+--------------------------------+------+
++------+-------------------------------+------+
+|      |Cell                           |Count |
++------+-------------------------------+------+
+|1     |mb_block_axi_gpio_0            |     3|
+|4     |mb_block_axi_gpio_1            |     1|
+|5     |mb_block_axi_quad_spi_0        |     1|
+|6     |mb_block_axi_timer_0           |     1|
+|7     |mb_block_axi_uartlite_0        |     1|
+|8     |mb_block_clk_wiz_0             |     1|
+|9     |mb_block_clk_wiz_1             |     1|
+|10    |mb_block_dlmb_bram_if_cntlr    |     1|
+|11    |mb_block_dlmb_v10              |     1|
+|12    |mb_block_hdmi_tc_v2_0          |     1|
+|13    |mb_block_ilmb_bram_if_cntlr    |     1|
+|14    |mb_block_ilmb_v10              |     1|
+|15    |mb_block_lmb_bram              |     1|
+|16    |mb_block_mdm_1                 |     1|
+|17    |mb_block_microblaze_0          |     1|
+|18    |mb_block_microblaze_0_axi_intc |     1|
+|19    |mb_block_rst_clk_wiz_1_100M    |     1|
+|20    |mb_block_xbar                  |     1|
+|21    |CARRY4                         |     4|
+|22    |LUT1                           |     2|
+|23    |LUT2                           |     9|
+|24    |LUT3                           |     4|
+|25    |LUT4                           |     3|
+|26    |LUT5                           |    10|
+|27    |LUT6                           |    30|
+|28    |IBUF                           |     5|
+|29    |OBUF                           |    31|
+|30    |OBUFT                          |     1|
++------+-------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1464.934 ; gain = 654.316
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 2057.547 ; gain = 615.953
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 24 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 1464.934 ; gain = 542.684
-Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1464.934 ; gain = 654.316
+Synthesis finished with 0 errors, 3 critical warnings and 23 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 2057.547 ; gain = 542.191
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 2057.547 ; gain = 615.953
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1464.934 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2057.547 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1464.934 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2057.547 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: b3be9136
+Synth Design complete, checksum: ea911007
 INFO: [Common 17-83] Releasing license: Synthesis
-143 Infos, 139 Warnings, 1 Critical Warnings and 0 Errors encountered.
+145 Infos, 135 Warnings, 4 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:52 . Memory (MB): peak = 1464.934 ; gain = 1030.684
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 2057.547 ; gain = 991.539
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.runs/synth_1/tracker_top.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'D:/SpartanTracker/lab7_2/lab7_2.runs/synth_1/tracker_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file tracker_top_utilization_synth.rpt -pb tracker_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Dec  8 06:24:39 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 11 21:40:49 2025...

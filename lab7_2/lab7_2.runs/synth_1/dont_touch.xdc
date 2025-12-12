@@ -69,7 +69,7 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_block_cl
 # IP: bd/mb_block/ip/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_block_axi_gpio_0_2 || ORIG_REF_NAME==mb_block_axi_gpio_0_2} -quiet] -quiet
 
-# IP: bd/mb_block/ip/mb_block_hdmi_text_controller_0_0/mb_block_hdmi_text_controller_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_block_hdmi_text_controller_0_0 || ORIG_REF_NAME==mb_block_hdmi_text_controller_0_0} -quiet] -quiet
+# IP: bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_block_hdmi_tc_v2_0_0 || ORIG_REF_NAME==mb_block_hdmi_tc_v2_0_0} -quiet] -quiet
 
-# XDC: c:/Users/Administrator/ECE385/vivado/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/mb_block_ooc.xdc
+# XDC: d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/mb_block_ooc.xdc

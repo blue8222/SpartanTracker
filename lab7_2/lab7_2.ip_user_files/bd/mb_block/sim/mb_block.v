@@ -1,8 +1,8 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-//Date        : Mon Dec  8 05:50:24 2025
-//Host        : LAPTOP-9093UH2M running 64-bit major release  (build 9200)
+//Date        : Thu Dec 11 20:53:10 2025
+//Host        : hein_yoga running 64-bit major release  (build 9200)
 //Command     : generate_target mb_block.bd
 //Design      : mb_block
 //Purpose     : IP block netlist
@@ -1219,61 +1219,73 @@ module mb_block
     HDMI_0_tmds_data_p,
     clk_100MHz,
     clk_12_288Mhz,
-    cursor_x_0,
-    cursor_x_tri_i,
-    cursor_y_0,
-    cursor_y_tri_i,
+    cursor_x_1,
+    cursor_xy_tri_i,
+    cursor_y_1,
+    enb_pixcodes_tri_i,
     gpio_usb_int_tri_i,
-    gpio_usb_keycode_0_tri_o,
-    gpio_usb_keycode_1_tri_o,
     gpio_usb_rst_tri_o,
+    hex_grid_a_0,
+    hex_grid_b_0,
+    hex_seg_a_0,
+    hex_seg_b_0,
     locked,
+    phrase_input_0,
+    pix_codes_0,
     reset_rtl_0,
+    selection_type_0,
     uart_rtl_0_rxd,
     uart_rtl_0_txd,
     usb_spi_miso,
     usb_spi_mosi,
     usb_spi_sclk,
-    usb_spi_ss,
-    vsync_out_0);
+    usb_spi_ss);
   (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI_0 TMDS_CLK_N" *) output HDMI_0_tmds_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI_0 TMDS_CLK_P" *) output HDMI_0_tmds_clk_p;
   (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI_0 TMDS_DATA_N" *) output [2:0]HDMI_0_tmds_data_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI_0 TMDS_DATA_P" *) output [2:0]HDMI_0_tmds_data_p;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_100MHZ CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_100MHZ, CLK_DOMAIN mb_block_clk_100MHz, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk_100MHz;
   output clk_12_288Mhz;
-  output [6:0]cursor_x_0;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 cursor_x " *) input [6:0]cursor_x_tri_i;
-  output [6:0]cursor_y_0;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 cursor_y " *) input [6:0]cursor_y_tri_i;
+  output [6:0]cursor_x_1;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 cursor_xy TRI_I" *) input [13:0]cursor_xy_tri_i;
+  output [6:0]cursor_y_1;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 enb_pixcodes TRI_I" *) input [14:0]enb_pixcodes_tri_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_usb_int TRI_I" *) input [0:0]gpio_usb_int_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_usb_keycode_0 TRI_O" *) output [31:0]gpio_usb_keycode_0_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_usb_keycode_1 TRI_O" *) output [31:0]gpio_usb_keycode_1_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_usb_rst TRI_O" *) output [0:0]gpio_usb_rst_tri_o;
+  output [3:0]hex_grid_a_0;
+  output [3:0]hex_grid_b_0;
+  output [7:0]hex_seg_a_0;
+  output [7:0]hex_seg_b_0;
   output locked;
+  input [15:0]phrase_input_0;
+  output [13:0]pix_codes_0;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET_RTL_0 RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET_RTL_0, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input reset_rtl_0;
+  input [1:0]selection_type_0;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_rtl_0 RxD" *) input uart_rtl_0_rxd;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_rtl_0 TxD" *) output uart_rtl_0_txd;
   input usb_spi_miso;
   output usb_spi_mosi;
   output usb_spi_sclk;
   output [0:0]usb_spi_ss;
-  output vsync_out_0;
 
-  wire [6:0]axi_cursor_GPIO2_TRI_I;
-  wire [6:0]axi_cursor_GPIO_TRI_I;
+  wire [14:0]axi_cursor_GPIO2_TRI_I;
+  wire [13:0]axi_cursor_GPIO_TRI_I;
   wire axi_uartlite_0_UART_RxD;
   wire axi_uartlite_0_UART_TxD;
   wire axi_uartlite_0_interrupt;
   wire clk_100MHz_1;
   wire clk_wiz_0_locked;
-  wire [6:0]hdmi_tc_0_cursor_x;
-  wire [6:0]hdmi_tc_0_cursor_y;
-  wire hdmi_tc_0_vsync_out;
-  wire hdmi_text_controller_0_HDMI_TMDS_CLK_N;
-  wire hdmi_text_controller_0_HDMI_TMDS_CLK_P;
-  wire [2:0]hdmi_text_controller_0_HDMI_TMDS_DATA_N;
-  wire [2:0]hdmi_text_controller_0_HDMI_TMDS_DATA_P;
+  wire [13:0]hdmi_tc_0_pix_codes;
+  wire hdmi_tc_v2_0_HDMI_TMDS_CLK_N;
+  wire hdmi_tc_v2_0_HDMI_TMDS_CLK_P;
+  wire [2:0]hdmi_tc_v2_0_HDMI_TMDS_DATA_N;
+  wire [2:0]hdmi_tc_v2_0_HDMI_TMDS_DATA_P;
+  wire [6:0]hdmi_tc_v2_0_cursor_x;
+  wire [6:0]hdmi_tc_v2_0_cursor_y;
+  wire [3:0]hdmi_tc_v2_0_hex_grid_a;
+  wire [3:0]hdmi_tc_v2_0_hex_grid_b;
+  wire [7:0]hdmi_tc_v2_0_hex_seg_a;
+  wire [7:0]hdmi_tc_v2_0_hex_seg_b;
   wire mdm_1_debug_sys_rst;
   wire microblaze_0_Clk;
   wire [31:0]microblaze_0_axi_dp_ARADDR;
@@ -1481,10 +1493,12 @@ module mb_block
   wire [0:1]microblaze_0_interrupt_ACK;
   wire [31:0]microblaze_0_interrupt_ADDRESS;
   wire microblaze_0_interrupt_INTERRUPT;
+  wire [15:0]phrase_input_0_1;
   wire reset_rtl_0_1;
   wire [0:0]rst_clk_wiz_1_100M_bus_struct_reset;
   wire rst_clk_wiz_1_100M_mb_reset;
   wire [0:0]rst_clk_wiz_1_100M_peripheral_aresetn;
+  wire [1:0]selection_type_0_1;
   wire spi_usb_io0_o;
   wire spi_usb_ip2intc_irpt;
   wire spi_usb_sck_o;
@@ -1494,35 +1508,39 @@ module mb_block
   wire timer_usb_axi_interrupt;
   wire [0:0]usb_int_GPIO_TRI_I;
   wire usb_int_ip2intc_irpt;
-  wire [31:0]usb_keycode_GPIO2_TRI_O;
-  wire [31:0]usb_keycode_GPIO_TRI_O;
+  wire [31:0]usb_keycode_gpio2_io_o;
+  wire [31:0]usb_keycode_gpio_io_o;
   wire [0:0]usb_rst_GPIO_TRI_O;
   wire usb_spi_miso_1;
   wire [3:0]xlconcat_0_dout;
 
-  assign HDMI_0_tmds_clk_n = hdmi_text_controller_0_HDMI_TMDS_CLK_N;
-  assign HDMI_0_tmds_clk_p = hdmi_text_controller_0_HDMI_TMDS_CLK_P;
-  assign HDMI_0_tmds_data_n[2:0] = hdmi_text_controller_0_HDMI_TMDS_DATA_N;
-  assign HDMI_0_tmds_data_p[2:0] = hdmi_text_controller_0_HDMI_TMDS_DATA_P;
-  assign axi_cursor_GPIO2_TRI_I = cursor_y_tri_i[6:0];
-  assign axi_cursor_GPIO_TRI_I = cursor_x_tri_i[6:0];
+  assign HDMI_0_tmds_clk_n = hdmi_tc_v2_0_HDMI_TMDS_CLK_N;
+  assign HDMI_0_tmds_clk_p = hdmi_tc_v2_0_HDMI_TMDS_CLK_P;
+  assign HDMI_0_tmds_data_n[2:0] = hdmi_tc_v2_0_HDMI_TMDS_DATA_N;
+  assign HDMI_0_tmds_data_p[2:0] = hdmi_tc_v2_0_HDMI_TMDS_DATA_P;
+  assign axi_cursor_GPIO2_TRI_I = enb_pixcodes_tri_i[14:0];
+  assign axi_cursor_GPIO_TRI_I = cursor_xy_tri_i[13:0];
   assign axi_uartlite_0_UART_RxD = uart_rtl_0_rxd;
   assign clk_100MHz_1 = clk_100MHz;
   assign clk_12_288Mhz = synth_clock_clk_out1;
-  assign cursor_x_0[6:0] = hdmi_tc_0_cursor_x;
-  assign cursor_y_0[6:0] = hdmi_tc_0_cursor_y;
-  assign gpio_usb_keycode_0_tri_o[31:0] = usb_keycode_GPIO_TRI_O;
-  assign gpio_usb_keycode_1_tri_o[31:0] = usb_keycode_GPIO2_TRI_O;
+  assign cursor_x_1[6:0] = hdmi_tc_v2_0_cursor_x;
+  assign cursor_y_1[6:0] = hdmi_tc_v2_0_cursor_y;
   assign gpio_usb_rst_tri_o[0] = usb_rst_GPIO_TRI_O;
+  assign hex_grid_a_0[3:0] = hdmi_tc_v2_0_hex_grid_a;
+  assign hex_grid_b_0[3:0] = hdmi_tc_v2_0_hex_grid_b;
+  assign hex_seg_a_0[7:0] = hdmi_tc_v2_0_hex_seg_a;
+  assign hex_seg_b_0[7:0] = hdmi_tc_v2_0_hex_seg_b;
   assign locked = synth_clock_locked;
+  assign phrase_input_0_1 = phrase_input_0[15:0];
+  assign pix_codes_0[13:0] = hdmi_tc_0_pix_codes;
   assign reset_rtl_0_1 = reset_rtl_0;
+  assign selection_type_0_1 = selection_type_0[1:0];
   assign uart_rtl_0_txd = axi_uartlite_0_UART_TxD;
   assign usb_int_GPIO_TRI_I = gpio_usb_int_tri_i[0];
   assign usb_spi_miso_1 = usb_spi_miso;
   assign usb_spi_mosi = spi_usb_io0_o;
   assign usb_spi_sclk = spi_usb_sck_o;
   assign usb_spi_ss[0] = spi_usb_ss_o;
-  assign vsync_out_0 = hdmi_tc_0_vsync_out;
   mb_block_axi_gpio_0_2 axi_cursor
        (.gpio2_io_i(axi_cursor_GPIO2_TRI_I),
         .gpio_io_i(axi_cursor_GPIO_TRI_I),
@@ -1573,7 +1591,7 @@ module mb_block
         .clk_out1(microblaze_0_Clk),
         .locked(clk_wiz_0_locked),
         .reset(mdm_1_debug_sys_rst));
-  mb_block_hdmi_text_controller_0_0 hdmi_tc_0
+  mb_block_hdmi_tc_v2_0_0 hdmi_tc_v2_0
        (.axi_aclk(microblaze_0_Clk),
         .axi_araddr(microblaze_0_axi_periph_M01_AXI_ARADDR[15:0]),
         .axi_aresetn(rst_clk_wiz_1_100M_peripheral_aresetn),
@@ -1595,13 +1613,21 @@ module mb_block
         .axi_wready(microblaze_0_axi_periph_M01_AXI_WREADY),
         .axi_wstrb(microblaze_0_axi_periph_M01_AXI_WSTRB),
         .axi_wvalid(microblaze_0_axi_periph_M01_AXI_WVALID),
-        .cursor_x(hdmi_tc_0_cursor_x),
-        .cursor_y(hdmi_tc_0_cursor_y),
-        .hdmi_clk_n(hdmi_text_controller_0_HDMI_TMDS_CLK_N),
-        .hdmi_clk_p(hdmi_text_controller_0_HDMI_TMDS_CLK_P),
-        .hdmi_tx_n(hdmi_text_controller_0_HDMI_TMDS_DATA_N),
-        .hdmi_tx_p(hdmi_text_controller_0_HDMI_TMDS_DATA_P),
-        .vsync_out(hdmi_tc_0_vsync_out));
+        .cursor_x(hdmi_tc_v2_0_cursor_x),
+        .cursor_y(hdmi_tc_v2_0_cursor_y),
+        .hdmi_clk_n(hdmi_tc_v2_0_HDMI_TMDS_CLK_N),
+        .hdmi_clk_p(hdmi_tc_v2_0_HDMI_TMDS_CLK_P),
+        .hdmi_tx_n(hdmi_tc_v2_0_HDMI_TMDS_DATA_N),
+        .hdmi_tx_p(hdmi_tc_v2_0_HDMI_TMDS_DATA_P),
+        .hex_grid_a_0(hdmi_tc_v2_0_hex_grid_a),
+        .hex_grid_b_0(hdmi_tc_v2_0_hex_grid_b),
+        .hex_seg_a_0(hdmi_tc_v2_0_hex_seg_a),
+        .hex_seg_b_0(hdmi_tc_v2_0_hex_seg_b),
+        .keycode_0(usb_keycode_gpio_io_o),
+        .keycode_1(usb_keycode_gpio2_io_o),
+        .phrase_input(phrase_input_0_1),
+        .pix_codes(hdmi_tc_0_pix_codes),
+        .selection_type(selection_type_0_1));
   mb_block_mdm_1_0 mdm_1
        (.Dbg_Capture_0(microblaze_0_debug_CAPTURE),
         .Dbg_Clk_0(microblaze_0_debug_CLK),
@@ -1952,7 +1978,7 @@ module mb_block
         .ss_i(1'b0),
         .ss_o(spi_usb_ss_o));
   mb_block_clk_wiz_1_0 synth_clock
-       (.clk_in1(clk_100MHz_1),
+       (.clk_in1(microblaze_0_Clk),
         .clk_out1(synth_clock_clk_out1),
         .locked(synth_clock_locked),
         .resetn(reset_rtl_0_1));
@@ -2003,8 +2029,8 @@ module mb_block
         .s_axi_wstrb(microblaze_0_axi_periph_M06_AXI_WSTRB),
         .s_axi_wvalid(microblaze_0_axi_periph_M06_AXI_WVALID));
   mb_block_axi_gpio_1_0 usb_keycode
-       (.gpio2_io_o(usb_keycode_GPIO2_TRI_O),
-        .gpio_io_o(usb_keycode_GPIO_TRI_O),
+       (.gpio2_io_o(usb_keycode_gpio2_io_o),
+        .gpio_io_o(usb_keycode_gpio_io_o),
         .s_axi_aclk(microblaze_0_Clk),
         .s_axi_araddr(microblaze_0_axi_periph_M07_AXI_ARADDR[8:0]),
         .s_axi_aresetn(rst_clk_wiz_1_100M_peripheral_aresetn),
