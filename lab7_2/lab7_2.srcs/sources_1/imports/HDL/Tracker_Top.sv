@@ -54,7 +54,6 @@ module tracker_top(
     logic clk_25MHz, clk_125MHz;
     logic clk_48khz, clk_1536khz, clk_12_288Mhz;
     
-    logic [6:0] cursor_x, cursor_y;
     logic [1:0] user_edit;
     logic [13:0] cursor_xy;
     
@@ -68,7 +67,7 @@ module tracker_top(
     assign phraseData[2] = phraseData_2;
     assign phraseData[3] = phraseData_3;
     
-    logic [3:0] line_count;
+    logic [3:0] row;
     
     logic [15:0] output_pcm;
     
@@ -80,9 +79,7 @@ module tracker_top(
     
     logic [13:0] pix_codes;
     
-    
     assign reset_active_high = reset_rtl_0;  
-    assign cursor_xy = {cursor_x, cursor_y};
 
     mb_block mb_block_i (
         .clk_100MHz(clk_100MHz),
@@ -108,41 +105,35 @@ module tracker_top(
         .usb_spi_sclk(usb_spi_sclk),
         .usb_spi_ss(usb_spi_ss),
         
-        //INPUTS
-        .phrase_input_0(phrase_input),
-        .selection_type_0(selection_type),
         //cursor data
-        .cursor_xy_tri_i(cursor_xy),
         .enb_pixcodes_tri_i({entry_modifiable, pix_codes}),
         
         //OUTPUTS
-        .cursor_y_1(cursor_y),
-        .cursor_x_1(cursor_x),
-        .user_edit_0(user_edit),
-        .pix_codes_0(pix_codes)
+        .cursor_xy_0(cursor_xy),
+        .user_edit_0(user_edit)
     );
 
     //dac clock generation
     clk_divider clk_divider_1 (
-        .clk_12Mhz(clk_12_288mhz),
+        .clk_12Mhz(clk_12_288Mhz),
         .reset(reset_active_high),
 
         .clk_48khz(clk_48khz),
         .clk_1536khz(clk_1536khz)
     );
+
     //phrase playback module
-    
     playback_phrase playback_phrase_i (
         .clk(clk_100MHz),
-        .reset_active_high(reset_active_high),
-        .line_count(line_count),
-        .tempo(tempo),
+        .tempo(9'd120),
         .loop_enable(loop_enable),
         .play_enable(play_switch),
-        
+
+        .reset_active_high(reset_active_high),
         .current_entry(phraseData),
         
-        .output_stream(output_pcm)
+        .output_stream(output_pcm),
+        .row(row)
     );
     
     //serialization module for converting stereo PCM 16 with 12S protocall
@@ -153,18 +144,17 @@ module tracker_top(
         .pcm_data_right(output_pcm),             // 16-bit right channel PCM
         .pcm_data_valid(locked),                // PCM data valid check
         .serial_data_out(output_stream),        //serial data out
-        .bit_clock_out(bit_clock_out),          // Output bit clock to drive DAC
+        .bit_clock_out(bit_clk_out),          // Output bit clock to drive DAC
         .LR_select(LR_select)                   // Left/Right channel select (0=Left, 1=Right)
     );
-    
 
     PhraseData PhraseData_1 (
         .clk(clk_100MHz), //100Mhz clock
         .rst_active_high(reset_active_high),
         
         .play_pause(play_switch),
-        .cursor_x(cursor_x),
-        .cursor_y(cursor_y),
+        .cursor_x(cursor_xy[13:7]),
+        .cursor_y(cursor_xy[6:0]),
 
         .user_edit(user_edit),
         .row(row),
@@ -179,11 +169,20 @@ module tracker_top(
         .selection(selection_type)
     );
 
+    PixelCode PixelCode_1 (
+        .clk(clk_100MHz),    
+        .phrase_input(phrase_input), //16 bit selection
+        .selection_type(selection_type), //what is currently selected 
+        // (00: note | 01: octave | 10: instrument | 11: volume)
+        
+        .pix_codes(pix_codes)
+    );
+
     // Hex units that display contents of sw and sum register in hex
     hex_driver hex_a (
         .clk            (clk_100MHz),
         .reset          (reset_active_high),
-        .in             ({phrase_input[15:12], phrase_input[11:8], phrase_input[7:4], phrase_input[3:0]}),
+        .in             ({phraseData_0[15:12], phraseData_0[11:8], phraseData_0[7:4], phraseData_0[3:0]}),
         .hex_seg        (hex_seg_a_0),
         .hex_grid       (hex_grid_a_0)
     );
@@ -191,7 +190,7 @@ module tracker_top(
     hex_driver hex_b (
         .clk            (clk_100MHz),
         .reset          (reset_active_high),
-        .in             ({{entry_modifiable, 3'b000}, 4'b0000, 4'b0000, {2'b00, selection_type}}),
+        .in             ({output_pcm[15:12], output_pcm[11:8], output_pcm[7:4], output_pcm[3:0]}),
         .hex_seg        (hex_seg_b_0),
         .hex_grid       (hex_grid_b_0)
     );

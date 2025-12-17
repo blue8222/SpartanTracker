@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Dec 11 22:28:22 2025" VIVADOVERSION="2022.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Dec 12 08:20:22 2025" VIVADOVERSION="2022.2">
 
   <SYSTEMINFO ARCH="spartan7" DEVICE="7s50" NAME="mb_block" PACKAGE="csga324" SPEEDGRADE="-1"/>
 
@@ -42,11 +42,6 @@
     <PORT DIR="I" LEFT="0" NAME="gpio_usb_int_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="usb_int_gpio_io_i">
       <CONNECTIONS>
         <CONNECTION INSTANCE="usb_int" PORT="gpio_io_i"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="13" NAME="cursor_xy_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_cursor_gpio_io_i">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_cursor" PORT="gpio_io_i"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="14" NAME="enb_pixcodes_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_cursor_gpio2_io_i">
@@ -95,34 +90,14 @@
         <CONNECTION INSTANCE="synth_clock" PORT="locked"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="15" NAME="phrase_input_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_phrase_input_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="phrase_input"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="1" NAME="selection_type_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_selection_type_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="selection_type"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="6" NAME="cursor_x_1" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_cursor_x">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="cursor_x"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="6" NAME="cursor_y_1" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_cursor_y">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="cursor_y"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="13" NAME="pix_codes_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_pix_codes">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="pix_codes"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="O" LEFT="1" NAME="user_edit_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_user_edit">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="user_edit"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="13" NAME="cursor_xy_0" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_cursor_xy">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="cursor_xy"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -150,11 +125,6 @@
     <BUSINTERFACE BUSNAME="usb_int_GPIO" NAME="gpio_usb_int" TYPE="INITIATOR">
       <PORTMAPS>
         <PORTMAP LOGICAL="TRI_I" PHYSICAL="gpio_usb_int_tri_i"/>
-      </PORTMAPS>
-    </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="axi_cursor_GPIO" NAME="cursor_xy" TYPE="INITIATOR">
-      <PORTMAPS>
-        <PORTMAP LOGICAL="TRI_I" PHYSICAL="cursor_xy_tri_i"/>
       </PORTMAPS>
     </BUSINTERFACE>
     <BUSINTERFACE BUSNAME="axi_cursor_GPIO2" NAME="enb_pixcodes" TYPE="INITIATOR">
@@ -455,9 +425,9 @@
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M08_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="13" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_cursor_gpio_io_i">
+        <PORT DIR="I" LEFT="13" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_cursor_xy">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="mb_block_imp" PORT="cursor_xy_tri_i"/>
+            <CONNECTION INSTANCE="hdmi_tc_v2_0" PORT="cursor_xy"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="14" NAME="gpio2_io_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_cursor_gpio2_io_i">
@@ -519,7 +489,7 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="axi_cursor_GPIO" NAME="GPIO" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="GPIO" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="TRI_I" PHYSICAL="gpio_io_i"/>
           </PORTMAPS>
@@ -1533,7 +1503,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="44" FULLNAME="/hdmi_tc_v2_0" HWVERSION="1.0" INSTANCE="hdmi_tc_v2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="hdmi_tc_v2" VLNV="xilinx.com:user:hdmi_tc_v2:1.0">
+    <MODULE COREREVISION="46" FULLNAME="/hdmi_tc_v2_0" HWVERSION="1.0" INSTANCE="hdmi_tc_v2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="hdmi_tc_v2" VLNV="xilinx.com:user:hdmi_tc_v2:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="AXI" NAME="AXI_reg" RANGE="4096" USAGE="register"/>
@@ -1557,29 +1527,10 @@
             <CONNECTION INSTANCE="usb_keycode" PORT="gpio2_io_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="phrase_input" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_phrase_input_0">
+        <PORT DIR="O" LEFT="13" NAME="cursor_xy" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_cursor_xy">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="phrase_input_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="selection_type" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_selection_type_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="selection_type_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="6" NAME="cursor_x" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_cursor_x">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="cursor_x_1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="6" NAME="cursor_y" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_cursor_y">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="cursor_y_1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="13" NAME="pix_codes" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_pix_codes">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="pix_codes_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="cursor_xy_0"/>
+            <CONNECTION INSTANCE="axi_cursor" PORT="gpio_io_i"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="1" NAME="user_edit" RIGHT="0" SIGIS="undef" SIGNAME="hdmi_tc_v2_0_user_edit">

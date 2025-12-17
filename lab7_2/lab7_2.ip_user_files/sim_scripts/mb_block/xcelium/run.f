@@ -152,13 +152,12 @@
   "../../../bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/src/VRAMBlockMemory/sim/VRAMBlockMemory.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib -sv \
-  "../../../bd/mb_block/ipshared/7782/hdl/Color_Mapper.sv" \
-  "../../../bd/mb_block/ipshared/7782/hdl/PixelCode.sv" \
-  "../../../bd/mb_block/ipshared/7782/hdl/VGA_controller.sv" \
-  "../../../bd/mb_block/ipshared/7782/hdl/font_rom.sv" \
-  "../../../bd/mb_block/ipshared/7782/hdl/hdmi_text_controller_v1_0_AXI.sv" \
-  "../../../bd/mb_block/ipshared/7782/hdl/keycode_mapper.sv" \
-  "../../../bd/mb_block/ipshared/7782/hdl/hdmi_text_controller_v1_0.sv" \
+  "../../../bd/mb_block/ipshared/4f90/hdl/Color_Mapper.sv" \
+  "../../../bd/mb_block/ipshared/4f90/hdl/VGA_controller.sv" \
+  "../../../bd/mb_block/ipshared/4f90/hdl/font_rom.sv" \
+  "../../../bd/mb_block/ipshared/4f90/hdl/hdmi_text_controller_v1_0_AXI.sv" \
+  "../../../bd/mb_block/ipshared/4f90/hdl/keycode_mapper.sv" \
+  "../../../bd/mb_block/ipshared/4f90/hdl/hdmi_text_controller_v1_0.sv" \
   "../../../bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/sim/mb_block_hdmi_tc_v2_0_0.sv" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \

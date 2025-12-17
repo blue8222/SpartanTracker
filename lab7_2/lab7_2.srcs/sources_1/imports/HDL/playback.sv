@@ -13,10 +13,10 @@ module playback_phrase (
     
     //outputs 
     output logic [15:0] output_stream,
-    output logic [3:0] line_count //tracks the current position of the playhead (0 - 15)
+    output logic [3:0] row //tracks the current position of the playhead (0 - 15)
 );
 
-    // Precomputed constant: 2^48 / (100e6 * 60) ≈ 46912.496
+    // Precomputed constant: 2^48 / (100e6 * 60) â‰ˆ 46912.496
     localparam int unsigned TEMPO_SCALE = 32'd46912;
     
     localparam ACC_WIDTH = 48;
@@ -92,26 +92,29 @@ module playback_phrase (
     end
     
     // Tempo Clock generation:
+    
+    logic [ACC_WIDTH-1:0] next_acc;
+    logic next_tempo_clk;
+    
     always_ff @(posedge clk) begin
+        next_acc = acc + inc;
+        next_tempo_clk = next_acc[ACC_WIDTH-1];
         if (reset_active_high || ~play_enable) begin
             acc <= 0;
-            line_count <= 4'd0;
-        end else begin
-            if (tempo == 0) begin
-                acc <= 0;  // Stop if tempo is 0
-            end else begin
-                acc <= acc + inc;
+            row <= 4'd0;
+            tempo_clk_d <= 1'b0;
+        end else if (play_enable) begin
+            acc <= acc + inc;
+            if(tempo_clk && !tempo_clk_d) begin
+                if (row == 4'd15) begin
+                    row <= loop_enable ? 4'd0 : 4'd15;
+                end else begin
+                    row <= row + 1;
+                end
             end
+            tempo_clk_d <= tempo_clk;
         end
     end
-
-    // edge detect on tempo bit (tempo_clk is continuous from acc[MSB])
-    always_ff @(posedge clk) begin
-        tempo_clk_d <= tempo_clk;
-        if (play_enable && tempo_clk && !tempo_clk_d)
-            line_count <= line_count + 1;
-    end
-
 
     //freq word assignment based on note
     //based on 440 hz standard

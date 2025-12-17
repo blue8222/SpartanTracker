@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xA75AF7897F7FEA82",
+      "boundary_crc": "0x74ED062B552E1D23",
       "device": "xc7s50csga324-1",
       "gen_directory": "../../../../lab7_2.gen/sources_1/bd/mb_block",
       "name": "mb_block",
@@ -116,19 +116,6 @@
           }
         }
       },
-      "cursor_xy": {
-        "mode": "Master",
-        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
-        "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
-        "port_maps": {
-          "TRI_I": {
-            "physical_name": "cursor_xy_tri_i",
-            "direction": "I",
-            "left": "13",
-            "right": "0"
-          }
-        }
-      },
       "enb_pixcodes": {
         "mode": "Master",
         "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
@@ -217,34 +204,14 @@
       "locked": {
         "direction": "O"
       },
-      "phrase_input_0": {
-        "direction": "I",
-        "left": "15",
-        "right": "0"
-      },
-      "selection_type_0": {
-        "direction": "I",
-        "left": "1",
-        "right": "0"
-      },
-      "cursor_x_1": {
-        "direction": "O",
-        "left": "6",
-        "right": "0"
-      },
-      "cursor_y_1": {
-        "direction": "O",
-        "left": "6",
-        "right": "0"
-      },
-      "pix_codes_0": {
-        "direction": "O",
-        "left": "13",
-        "right": "0"
-      },
       "user_edit_0": {
         "direction": "O",
         "left": "1",
+        "right": "0"
+      },
+      "cursor_xy_0": {
+        "direction": "O",
+        "left": "13",
         "right": "0"
       }
     },
@@ -1734,12 +1701,6 @@
       }
     },
     "interface_nets": {
-      "axi_cursor_GPIO": {
-        "interface_ports": [
-          "cursor_xy",
-          "axi_cursor/GPIO"
-        ]
-      },
       "axi_cursor_GPIO2": {
         "interface_ports": [
           "enb_pixcodes",
@@ -1874,22 +1835,11 @@
           "rst_clk_wiz_1_100M/dcm_locked"
         ]
       },
-      "hdmi_tc_0_pix_codes": {
+      "hdmi_tc_v2_0_cursor_xy": {
         "ports": [
-          "hdmi_tc_v2_0/pix_codes",
-          "pix_codes_0"
-        ]
-      },
-      "hdmi_tc_v2_0_cursor_x": {
-        "ports": [
-          "hdmi_tc_v2_0/cursor_x",
-          "cursor_x_1"
-        ]
-      },
-      "hdmi_tc_v2_0_cursor_y": {
-        "ports": [
-          "hdmi_tc_v2_0/cursor_y",
-          "cursor_y_1"
+          "hdmi_tc_v2_0/cursor_xy",
+          "cursor_xy_0",
+          "axi_cursor/gpio_io_i"
         ]
       },
       "hdmi_tc_v2_0_user_edit": {
@@ -1936,12 +1886,6 @@
           "hdmi_tc_v2_0/axi_aclk"
         ]
       },
-      "phrase_input_0_1": {
-        "ports": [
-          "phrase_input_0",
-          "hdmi_tc_v2_0/phrase_input"
-        ]
-      },
       "reset_rtl_0_1": {
         "ports": [
           "reset_rtl_0",
@@ -1985,12 +1929,6 @@
           "axi_cursor/s_axi_aresetn",
           "microblaze_0_axi_periph/M08_ARESETN",
           "hdmi_tc_v2_0/axi_aresetn"
-        ]
-      },
-      "selection_type_0_1": {
-        "ports": [
-          "selection_type_0",
-          "hdmi_tc_v2_0/selection_type"
         ]
       },
       "spi_usb_io0_o": {

@@ -4,7 +4,7 @@
     "xci_name": "mb_block_hdmi_tc_v2_0_0",
     "cell_name": "hdmi_tc_v2_0",
     "component_reference": "xilinx.com:user:hdmi_tc_v2:1.0",
-    "ip_revision": "44",
+    "ip_revision": "46",
     "gen_directory": "../../../../../../lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0",
     "parameters": {
       "component_parameters": {
@@ -35,7 +35,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "44" } ],
+        "IPREVISION": [ { "value": "46" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
@@ -48,11 +48,7 @@
       "ports": {
         "keycode_0": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
         "keycode_1": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
-        "phrase_input": [ { "direction": "in", "size_left": "15", "size_right": "0" } ],
-        "selection_type": [ { "direction": "in", "size_left": "1", "size_right": "0" } ],
-        "cursor_x": [ { "direction": "out", "size_left": "6", "size_right": "0" } ],
-        "cursor_y": [ { "direction": "out", "size_left": "6", "size_right": "0" } ],
-        "pix_codes": [ { "direction": "out", "size_left": "13", "size_right": "0" } ],
+        "cursor_xy": [ { "direction": "out", "size_left": "13", "size_right": "0" } ],
         "user_edit": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
         "hdmi_clk_n": [ { "direction": "out" } ],
         "hdmi_clk_p": [ { "direction": "out" } ],

@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:D:/SpartanTracker/lab7_2/lab7_2.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc rfile:../../../lab7_2.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/viv/SpartanTracker/lab7_2/lab7_2.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc rfile:../../../lab7_2.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN N15 [get_ports clk_100MHz]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]

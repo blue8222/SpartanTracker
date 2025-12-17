@@ -1,6 +1,111 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Fri Dec 12 08:20:07 2025
+| Host         : hein_yoga running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_hdmi_tc_v2_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of mb_block_hdmi_tc_v2_0_0 (xilinx.com:user:hdmi_tc_v2:1.0) from (Rev. 45) to (Rev. 46)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Fri Dec 12 07:03:44 2025
+| Host         : hein_yoga running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_hdmi_tc_v2_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of mb_block_hdmi_tc_v2_0_0 (xilinx.com:user:hdmi_tc_v2:1.0) from (Rev. 44) to (Rev. 45)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'mb_block_hdmi_tc_v2_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'cursor_x'
+
+-Upgrade has removed port 'cursor_y'
+
+-Upgrade has removed port 'phrase_input'
+
+-Upgrade has removed port 'pix_codes'
+
+-Upgrade has removed port 'selection_type'
+
+-Upgrade has added port 'cursor_xy'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Fri Dec 12 06:58:11 2025
+| Host         : hein_yoga running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_hdmi_tc_v2_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of mb_block_hdmi_tc_v2_0_0 (xilinx.com:user:hdmi_tc_v2:1.0 (Rev. 44)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Thu Dec 11 23:18:23 2025
+| Host         : hein_yoga running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_hdmi_tc_v2_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of mb_block_hdmi_tc_v2_0_0 (xilinx.com:user:hdmi_tc_v2:1.0 (Rev. 44)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
 | Date         : Thu Dec 11 22:26:33 2025
 | Host         : hein_yoga running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

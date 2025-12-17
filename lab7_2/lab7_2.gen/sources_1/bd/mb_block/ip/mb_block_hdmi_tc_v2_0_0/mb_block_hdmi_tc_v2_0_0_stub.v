@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Thu Dec 11 22:27:51 2025
+// Date        : Fri Dec 12 08:21:08 2025
 // Host        : hein_yoga running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0_stub.v
+//               d:/viv/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0_stub.v
 // Design      : mb_block_hdmi_tc_v2_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7s50csga324-1
@@ -14,19 +14,15 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "hdmi_text_controller_v1_0,Vivado 2022.2" *)
-module mb_block_hdmi_tc_v2_0_0(keycode_0, keycode_1, phrase_input, 
-  selection_type, cursor_x, cursor_y, pix_codes, user_edit, hdmi_clk_n, hdmi_clk_p, hdmi_tx_n, 
-  hdmi_tx_p, axi_aclk, axi_aresetn, axi_awaddr, axi_awprot, axi_awvalid, axi_awready, axi_wdata, 
-  axi_wstrb, axi_wvalid, axi_wready, axi_bresp, axi_bvalid, axi_bready, axi_araddr, axi_arprot, 
-  axi_arvalid, axi_arready, axi_rdata, axi_rresp, axi_rvalid, axi_rready)
-/* synthesis syn_black_box black_box_pad_pin="keycode_0[31:0],keycode_1[31:0],phrase_input[15:0],selection_type[1:0],cursor_x[6:0],cursor_y[6:0],pix_codes[13:0],user_edit[1:0],hdmi_clk_n,hdmi_clk_p,hdmi_tx_n[2:0],hdmi_tx_p[2:0],axi_aclk,axi_aresetn,axi_awaddr[15:0],axi_awprot[2:0],axi_awvalid,axi_awready,axi_wdata[31:0],axi_wstrb[3:0],axi_wvalid,axi_wready,axi_bresp[1:0],axi_bvalid,axi_bready,axi_araddr[15:0],axi_arprot[2:0],axi_arvalid,axi_arready,axi_rdata[31:0],axi_rresp[1:0],axi_rvalid,axi_rready" */;
+module mb_block_hdmi_tc_v2_0_0(keycode_0, keycode_1, cursor_xy, user_edit, 
+  hdmi_clk_n, hdmi_clk_p, hdmi_tx_n, hdmi_tx_p, axi_aclk, axi_aresetn, axi_awaddr, axi_awprot, 
+  axi_awvalid, axi_awready, axi_wdata, axi_wstrb, axi_wvalid, axi_wready, axi_bresp, axi_bvalid, 
+  axi_bready, axi_araddr, axi_arprot, axi_arvalid, axi_arready, axi_rdata, axi_rresp, axi_rvalid, 
+  axi_rready)
+/* synthesis syn_black_box black_box_pad_pin="keycode_0[31:0],keycode_1[31:0],cursor_xy[13:0],user_edit[1:0],hdmi_clk_n,hdmi_clk_p,hdmi_tx_n[2:0],hdmi_tx_p[2:0],axi_aclk,axi_aresetn,axi_awaddr[15:0],axi_awprot[2:0],axi_awvalid,axi_awready,axi_wdata[31:0],axi_wstrb[3:0],axi_wvalid,axi_wready,axi_bresp[1:0],axi_bvalid,axi_bready,axi_araddr[15:0],axi_arprot[2:0],axi_arvalid,axi_arready,axi_rdata[31:0],axi_rresp[1:0],axi_rvalid,axi_rready" */;
   input [31:0]keycode_0;
   input [31:0]keycode_1;
-  input [15:0]phrase_input;
-  input [1:0]selection_type;
-  output [6:0]cursor_x;
-  output [6:0]cursor_y;
-  output [13:0]pix_codes;
+  output [13:0]cursor_xy;
   output [1:0]user_edit;
   output hdmi_clk_n;
   output hdmi_clk_p;

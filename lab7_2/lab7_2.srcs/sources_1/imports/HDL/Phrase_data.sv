@@ -2,9 +2,7 @@ module PhraseData (
     input  logic        clk,               // 100MHz clock
     input  logic        rst_active_high,
     
-
     // playback / editing I/O
-   
     input  logic        play_pause,        // play: 1, pause:0 (no edits allowed when playing)
     input  logic [6:0]  cursor_x,
     input  logic [6:0]  cursor_y,
@@ -22,7 +20,6 @@ module PhraseData (
     output logic [1:0] selection                // index to indicated note/oct/vol/in within one phrase col
 );
 
-//-----------------------------------------------------------------
 // parameters / locals
 localparam int column_offset = 18; // spaces between phrase columns
 localparam int note_col = 6;  // start offsets of subfields inside a group
@@ -36,132 +33,201 @@ logic [15:0] PhraseRegs_1 [0:15];
 logic [15:0] PhraseRegs_2 [0:15];
 logic [15:0] PhraseRegs_3 [0:15];
 
-// state signals
-logic [1:0]  phrase_entry;   // which channel is selected (0..3)
-logic [3:0]  edit_row_idx;   // mapped row index (0..15)
+logic [1:0]  phrase_entry_r;
+logic [3:0]  edit_row_idx_r;
+logic [1:0]  selection_r;
+logic        entry_modifiable_r;
+logic        edit_pulse_r;
 
-logic [1:0] user_edit_prev;
-logic       edit_pulse;
+logic [15:0] initial_val_r;
+logic [15:0] computed_new_val_r;
 
+// signals computed combinationally each cycle (stage0)
+logic [1:0]  phrase_entry_c;
+logic [4:0]  offsetted_cursor_x_c; // up to 17, so 5 bits
+logic [3:0]  edit_row_idx_c;
+logic [1:0]  selection_c;
+logic        entry_modifiable_c;
 
-// combinational: compute initial_val/new_val when entry_modifiable
-logic [15:0] initial_val;
-logic [15:0] computed_new_val;
-logic [1:0]  param_type;
+// edge detect of user_edit (synchronous)
+logic [1:0] user_edit_prev_r;
+logic       edit_pulse_c;
 
-integer i, j;
+logic [6:0] base;
+logic [2:0] div16;
 
-// synchronous reset for PhraseRegs (combined reset + keep normal writes later)
-always_ff @(posedge clk) begin
-    if (rst_active_high) begin
-        for (i = 0; i < 16; i++) begin
-            PhraseRegs_0[i] <= '1;
-            PhraseRegs_1[i] <= '1;
-            PhraseRegs_2[i] <= '1;
-            PhraseRegs_3[i] <= '1;
-        end
-    end else begin
-        
-        if (edit_pulse && entry_modifiable) begin
-            unique case (phrase_entry)
-                2'b00: PhraseRegs_0[edit_row_idx] <= computed_new_val;
-                2'b01: PhraseRegs_1[edit_row_idx] <= computed_new_val;
-                2'b10: PhraseRegs_2[edit_row_idx] <= computed_new_val;
-                2'b11: PhraseRegs_3[edit_row_idx] <= computed_new_val;
-            endcase
-        end
-    end
-end
-
-always_comb begin
-
-    selection = get_parameter(phrase_entry, cursor_x);
-
-    unique case (phrase_entry)
-        2'b00 : active_register = PhraseRegs_0[edit_row_idx];
-        2'b01 : active_register = PhraseRegs_1[edit_row_idx];
-        2'b10 : active_register = PhraseRegs_2[edit_row_idx];
-        2'b11 : active_register = PhraseRegs_3[edit_row_idx];
-        default : active_register = '1;
-    endcase 
-
-end
-
-function automatic get_parameter(
-    input logic [1:0] phrase_entry,
-    input logic [6:0] cursor_x
-);
-    int base_x;
-
-    // Compute base column for the current phrase entry
-    base_x = phrase_entry * column_offset;
-
-    // Check all parameter columns
-    for (int i = 0; i < 4; i++) begin
-        int col_x;
-        unique case (i)
-            0: col_x = note_col;
-            1: col_x = oct_col;
-            2: col_x = vol_col;
-            3: col_x = instr_col;
-        endcase
-
-        if (cursor_x == base_x + col_x || cursor_x == base_x + col_x + 1)
-            return i[1:0];
-    end
-       //this state should not occur
-       
-    
-endfunction
-
-//-----------------------------------------------------------------
-// detect whether the cursor is in a modifiable entry and which channel (phrase_entry)
+// loop indices
+integer i;
 
 always_comb begin
     // defaults
-    entry_modifiable = 1'b0;
-    phrase_entry     = 2'b00;
-    edit_row_idx     = 4'd0;
+    phrase_entry_c = 2'd0;
+    offsetted_cursor_x_c = 5'd0;
+    edit_row_idx_c = 4'd0;
+    entry_modifiable_c = 1'b0;
+    selection_c = 2'd0;
+    div16 = '0;
 
-    // only allow edits when paused
-    if (!play_pause) begin
-        // visible/editable rows mapped from cursor_y range 9..24
-        if (cursor_y >= 7'd9 && cursor_y <= 7'd24) begin
-            // compute edit row index 0..15
-            edit_row_idx = logic'(cursor_y - 7'd9);
+    // only allow editing when paused and y in the phrase rows
+    if (!play_pause && (cursor_y >= 7'd8) && (cursor_y <= 7'd24)) begin
+        edit_row_idx_c = cursor_y - 7'd8;
 
-            // scan which horizontal group (j = 0,18,36,54) contains cursor_x
-            for (j = 0; j < 4*column_offset; j = j + column_offset) begin
-                // if inside sub-column for channel 0..3 inside this group
-                if (cursor_x == note_col + j)
-                begin
-                    entry_modifiable = 1'b1;
-                    phrase_entry = 2'b00;
-                    break;
-                end
-                else if (cursor_x == oct_col + j)
-                begin
-                    entry_modifiable = 1'b1;
-                    phrase_entry = 2'b01;
-                    break;
-                end
-                else if (cursor_x == vol_col + j)
-                begin
-                    entry_modifiable = 1'b1;
-                    phrase_entry = 2'b10;
-                    break;
-                end 
-                else if (cursor_x == instr_col + j)
-                begin
-                    entry_modifiable = 1'b1;
-                    phrase_entry = 2'b11;
-                    break;
-                end
-            end
+        // compute phrase_entry = (cursor_x - 6) / 16  but done with shift
+        if (cursor_x >= 7'd6) begin
+            div16 = (cursor_x - 7'd6) >> 4;
+            if (div16 > 3)
+                phrase_entry_c = 2'd3;
+            else
+                phrase_entry_c = div16[1:0];
+        end else begin
+            phrase_entry_c = 2'd0;
+        end
+
+        // compute base = 6 + phrase_entry*18  (18 = 16 + 2)
+        base = 7'd6 + (({5'd0,phrase_entry_c} << 4) + ({5'd0,phrase_entry_c} << 1));
+        if (cursor_x >= base)
+            offsetted_cursor_x_c = cursor_x - base;
+        else
+            offsetted_cursor_x_c = 5'd31; // out of range
+
+        // entry_modifiable: offset < 10 AND offset % 3 == 0
+        entry_modifiable_c = (offsetted_cursor_x_c < 5'd10) &&
+                             ( (offsetted_cursor_x_c == 5'd0) ||
+                               (offsetted_cursor_x_c == 5'd3) ||
+                               (offsetted_cursor_x_c == 5'd6) ||
+                               (offsetted_cursor_x_c == 5'd9) );
+
+        // selection mapping: offset 0->0, 3->1, 6->2, 9->3
+        unique case (offsetted_cursor_x_c)
+            5'd0: selection_c = 2'd0;
+            5'd3: selection_c = 2'd1;
+            5'd6: selection_c = 2'd2;
+            5'd9: selection_c = 2'd3;
+            default: selection_c = 2'd0;
+        endcase
+    end
+end
+
+always_ff @(posedge clk or posedge rst_active_high) begin
+    if (rst_active_high) begin
+        user_edit_prev_r <= 2'b00;
+        edit_pulse_r     <= 1'b0;
+    end else begin
+        edit_pulse_r <= (user_edit != 2'b00) && (user_edit_prev_r == 2'b00);
+        user_edit_prev_r <= user_edit;
+    end
+end
+
+always_ff @(posedge clk or posedge rst_active_high) begin
+    if (rst_active_high) begin
+        edit_row_idx_r     <= 4'd0;
+        phrase_entry_r     <= 2'd0;
+        selection_r        <= 2'd0;
+        entry_modifiable_r <= 1'b0;
+    end else begin
+        edit_row_idx_r     <= edit_row_idx_c;
+        phrase_entry_r     <= phrase_entry_c;
+        selection_r        <= selection_c;
+        entry_modifiable_r <= entry_modifiable_c;
+    end
+end
+
+// register edit_pulse into same timing domain as other stage regs
+logic edit_pulse_stage1;
+always_ff @(posedge clk or posedge rst_active_high) begin
+    if (rst_active_high) begin
+        edit_pulse_stage1 <= 1'b0;
+    end else begin
+        edit_pulse_stage1 <= edit_pulse_r;
+    end
+end
+
+always_ff @(posedge clk or posedge rst_active_high) begin
+    if (rst_active_high) begin
+        initial_val_r <= 16'hFFFF;
+    end else begin
+        if (entry_modifiable_r) begin
+            unique case (phrase_entry_r)
+                2'b00: initial_val_r <= PhraseRegs_0[edit_row_idx_r];
+                2'b01: initial_val_r <= PhraseRegs_1[edit_row_idx_r];
+                2'b10: initial_val_r <= PhraseRegs_2[edit_row_idx_r];
+                2'b11: initial_val_r <= PhraseRegs_3[edit_row_idx_r];
+                default: initial_val_r <= 16'hFFFF;
+            endcase
+        end else begin
+            initial_val_r <= 16'hFFFF;
         end
     end
 end
 
+always_ff @(posedge clk or posedge rst_active_high) begin
+    if (rst_active_high) begin
+        computed_new_val_r <= 16'hFFFF;
+    end else begin
+        // call new_value with registered selection & registered initial value
+        computed_new_val_r <= new_value(selection_r, initial_val_r, user_edit);
+    end
+end
+
+always_ff @(posedge clk or posedge rst_active_high) begin
+    if (rst_active_high) begin
+        for (i = 0; i < 16; i++)
+            PhraseRegs_0[i] <= '1;
+    end else begin
+        if (edit_pulse_stage1 && entry_modifiable_r && phrase_entry_r == 2'b00)
+            PhraseRegs_0[edit_row_idx_r] <= computed_new_val_r;
+    end
+end
+
+always_ff @(posedge clk or posedge rst_active_high) begin
+    if (rst_active_high) begin
+        for (i = 0; i < 16; i++)
+            PhraseRegs_1[i] <= '1;
+    end else begin
+        if (edit_pulse_stage1 && entry_modifiable_r && phrase_entry_r == 2'b01)
+            PhraseRegs_1[edit_row_idx_r] <= computed_new_val_r;
+    end
+end
+
+always_ff @(posedge clk or posedge rst_active_high) begin
+    if (rst_active_high) begin
+        for (i = 0; i < 16; i++)
+            PhraseRegs_2[i] <= '1;
+    end else begin
+        if (edit_pulse_stage1 && entry_modifiable_r && phrase_entry_r == 2'b10)
+            PhraseRegs_2[edit_row_idx_r] <= computed_new_val_r;
+    end
+end
+
+always_ff @(posedge clk or posedge rst_active_high) begin
+    if (rst_active_high) begin
+        for (i = 0; i < 16; i++)
+            PhraseRegs_3[i] <= '1;
+    end else begin
+        if (edit_pulse_stage1 && entry_modifiable_r && phrase_entry_r == 2'b11)
+            PhraseRegs_3[edit_row_idx_r] <= computed_new_val_r;
+    end
+end
+
+always_comb begin
+    channel_0 = PhraseRegs_0[row];
+    channel_1 = PhraseRegs_1[row];
+    channel_2 = PhraseRegs_2[row];
+    channel_3 = PhraseRegs_3[row];
+end
+
+always_comb begin
+    unique case (phrase_entry_r)
+        2'b00 : active_register = PhraseRegs_0[edit_row_idx_r];
+        2'b01 : active_register = PhraseRegs_1[edit_row_idx_r];
+        2'b10 : active_register = PhraseRegs_2[edit_row_idx_r];
+        2'b11 : active_register = PhraseRegs_3[edit_row_idx_r];
+        default : active_register = 16'hFFFF;
+    endcase 
+end
+
+assign selection = selection_r;
+assign entry_modifiable = entry_modifiable_r;
 
 function automatic [15:0] new_value(
     input logic [1:0]  param_type,   // 00: note | 01: octave | 10: vol | 11: inst
@@ -246,50 +312,5 @@ function automatic [15:0] new_value(
     return result;
 endfunction
 
-
-always_comb begin
-    // defaults to avoid latches
-    initial_val      = 16'hFFFF;
-    computed_new_val = 16'hFFFF;
-    param_type       = 2'b00;
-
-    if (entry_modifiable) begin
-        param_type = get_parameter(phrase_entry, cursor_x);
-
-        unique case (phrase_entry)
-            2'b00: initial_val = PhraseRegs_0[edit_row_idx];
-            2'b01: initial_val = PhraseRegs_1[edit_row_idx];
-            2'b10: initial_val = PhraseRegs_2[edit_row_idx];
-            2'b11: initial_val = PhraseRegs_3[edit_row_idx];
-            default: initial_val = 16'hFFFF;
-        endcase
-
-        computed_new_val = new_value(param_type, initial_val, user_edit);
-    end
-end
-
-//-----------------------------------------------------------------
-// detect rising-edge of user_edit (00 -> non-zero) using clk
-
-
-always_ff @(posedge clk or posedge rst_active_high) begin
-    if (rst_active_high) begin
-        user_edit_prev <= 2'b00;
-        edit_pulse     <= 1'b0;
-    end else begin
-        edit_pulse <= (user_edit != 2'b00) && (user_edit_prev == 2'b00);
-        user_edit_prev <= user_edit;
-    end
-end
-
-
-//-----------------------------------------------------------------
-// playback read logic (combinational)
-always_comb begin
-    channel_0 = PhraseRegs_0[row];
-    channel_1 = PhraseRegs_1[row];
-    channel_2 = PhraseRegs_2[row];
-    channel_3 = PhraseRegs_3[row];
-end
-
 endmodule
+

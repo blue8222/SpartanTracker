@@ -72,4 +72,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_block_ax
 # IP: bd/mb_block/ip/mb_block_hdmi_tc_v2_0_0/mb_block_hdmi_tc_v2_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_block_hdmi_tc_v2_0_0 || ORIG_REF_NAME==mb_block_hdmi_tc_v2_0_0} -quiet] -quiet
 
-# XDC: d:/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/mb_block_ooc.xdc
+# XDC: d:/viv/SpartanTracker/lab7_2/lab7_2.gen/sources_1/bd/mb_block/mb_block_ooc.xdc

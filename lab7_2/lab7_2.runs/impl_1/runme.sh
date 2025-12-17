@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/SpartanTracker/lab7_2/lab7_2.runs/impl_1'
+HD_PWD='D:/viv/SpartanTracker/lab7_2/lab7_2.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

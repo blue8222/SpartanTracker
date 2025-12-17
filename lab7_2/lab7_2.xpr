@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="61" Path="D:/SpartanTracker/lab7_2/lab7_2.xpr">
+<Project Version="7" Minor="61" Path="D:/viv/SpartanTracker/lab7_2/lab7_2.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="100ebcae764246a78e2c716189a90b87"/>
@@ -65,13 +65,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="142"/>
-    <Option Name="WTModelSimExportSim" Val="142"/>
-    <Option Name="WTQuestaExportSim" Val="142"/>
+    <Option Name="WTXSimExportSim" Val="147"/>
+    <Option Name="WTModelSimExportSim" Val="147"/>
+    <Option Name="WTQuestaExportSim" Val="147"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="142"/>
-    <Option Name="WTRivieraExportSim" Val="142"/>
-    <Option Name="WTActivehdlExportSim" Val="142"/>
+    <Option Name="WTVcsExportSim" Val="147"/>
+    <Option Name="WTRivieraExportSim" Val="147"/>
+    <Option Name="WTActivehdlExportSim" Val="147"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -159,6 +159,13 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../recent/SpartanTracker/HDL/Phrase_data.sv"/>
           <Attr Name="ImportTime" Val="1765316991"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/HDL/PixelCode.sv">
+        <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

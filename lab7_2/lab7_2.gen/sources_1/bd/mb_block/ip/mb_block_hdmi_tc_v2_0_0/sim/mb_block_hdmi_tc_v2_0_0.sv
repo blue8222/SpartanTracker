@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:hdmi_tc_v2:1.0
-// IP Revision: 44
+// IP Revision: 46
 
 `timescale 1ns/1ps
 
@@ -56,11 +56,7 @@
 module mb_block_hdmi_tc_v2_0_0 (
   keycode_0,
   keycode_1,
-  phrase_input,
-  selection_type,
-  cursor_x,
-  cursor_y,
-  pix_codes,
+  cursor_xy,
   user_edit,
   hdmi_clk_n,
   hdmi_clk_p,
@@ -91,11 +87,7 @@ module mb_block_hdmi_tc_v2_0_0 (
 
 input wire [31 : 0] keycode_0;
 input wire [31 : 0] keycode_1;
-input wire [15 : 0] phrase_input;
-input wire [1 : 0] selection_type;
-output wire [6 : 0] cursor_x;
-output wire [6 : 0] cursor_y;
-output wire [13 : 0] pix_codes;
+output wire [13 : 0] cursor_xy;
 output wire [1 : 0] user_edit;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME hdmi_clk_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 hdmi_clk_n CLK, xilinx.com:interface:hdmi:2.0 HDMI TMDS_CLK_N" *)
@@ -160,11 +152,7 @@ input wire axi_rready;
   ) inst (
     .keycode_0(keycode_0),
     .keycode_1(keycode_1),
-    .phrase_input(phrase_input),
-    .selection_type(selection_type),
-    .cursor_x(cursor_x),
-    .cursor_y(cursor_y),
-    .pix_codes(pix_codes),
+    .cursor_xy(cursor_xy),
     .user_edit(user_edit),
     .hdmi_clk_n(hdmi_clk_n),
     .hdmi_clk_p(hdmi_clk_p),
